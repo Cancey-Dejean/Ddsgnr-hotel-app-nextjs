@@ -1,0 +1,84 @@
+import React from "react"
+
+type Props = {}
+
+const Reviews = (props: Props) => {
+  return (
+    <div
+      className={`bg-[white] flex justify-center items-center flex-col max-w-[1440px] box-border px-16 py-28`}
+    >
+      <div
+        className={`flex justify-between items-center flex-row gap-2 grow-0 shrink-0 basis-auto box-border pr-[9.5px]`}
+      >
+        <div
+          className={`[background:url(https://s3-alpha-sig.figma.com/img/5c11/97f6/8e131ba114c3e828423acb36cd9c907d?Expires=1693785600&Signature=QTOcvenwuttbBxHACqqO1JQdpbo8NddHLBIw~Jhk2J-V4SmYAkDMhLbkI6g9TZ00Mwidr5maNF~piDNbeFakSXLuCh11qIcGCc-7XDnH1jTOjJ7MoidjtRstmIWWxIVPjhO0g7wo7Kg5AIFN8Yj3gRTdB4UiLSp5-SCcH3I5E7ttjzMPDuKcH~6WV5h~7Z-4rhwrrG3cgcC6cWzjDtymU2dXQji~uX40st2tgJoH3pguCo9ydzcTjaNALclXqKh~4Q67WUEVno52n9CQ3PKE4jP4BpeYf3m81XvupF-Mn6FfGxoqfB5L3EfIPyX7W2QuFGnWhV~KA6ATTNX-TryHsA\_\_&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4)] bg-cover bg-no-repeat flex justify-center items-center flex-col grow shrink-0 basis-[616px] box-border pt-[269px] pb-[268px]`}
+        >
+          <img
+            className={`w-[129px] h-[103px] max-w-[initial] grow-0 shrink-0 basis-auto box-border block content-[url('data:image/svg+xml;charset=utf8,%3Csvg%20viewBox%3D%27307.5000%20380.3000%20129.0000%20103.4000%27%20fill%3D%27none%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20xmlns%3Axlink%3D%27http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%27%20id%3D%274d02b27f%27%20x%3D%270%27%20y%3D%270%27%3E%3Cg%20id%3D%27Testimonial%20%2F%2016%20%2F%27%3E%3Cg%20id%3D%27Content%27%3E%3Cg%20id%3D%27Placeholder%20%2F%20Lightbox%27%3E%3Cg%20id%3D%27Play%20Button%27%3E%3Cpath%20id%3D%27Vector%27%20fill-rule%3D%27evenodd%27%20clip-rule%3D%27evenodd%27%20d%3D%27M320.8%20380.8H423.2C430.269%20380.8%20436%20386.531%20436%20393.6V470.4C436%20477.469%20430.269%20483.2%20423.2%20483.2H320.8C313.731%20483.2%20308%20477.469%20308%20470.4V393.6C308%20386.531%20313.731%20380.8%20320.8%20380.8ZM366.688%20452.608L391.584%20435.968C392.925%20435.094%20393.734%20433.601%20393.734%20432C393.734%20430.399%20392.925%20428.906%20391.584%20428.032L366.688%20411.392C365.218%20410.399%20363.32%20410.297%20361.752%20411.128C360.185%20411.958%20359.203%20413.586%20359.2%20415.36V448.64C359.203%20450.414%20360.185%20452.042%20361.752%20452.872C363.32%20453.703%20365.218%20453.601%20366.688%20452.608Z%27%20fill%3D%27black%27%20fill-opacity%3D%270.45%27%2F%3E%3C%2Fg%3E%3Cg%20id%3D%27Play%20Button\_2%27%3E%3Cpath%20id%3D%27Vector\_2%27%20fill-rule%3D%27evenodd%27%20clip-rule%3D%27evenodd%27%20d%3D%27M345.333%20432C345.333%20417.272%20357.272%20405.333%20372%20405.333C379.072%20405.333%20385.855%20408.143%20390.856%20413.144C395.857%20418.145%20398.666%20424.928%20398.666%20432C398.666%20446.728%20386.727%20458.667%20372%20458.667C357.272%20458.667%20345.333%20446.728%20345.333%20432ZM367.12%20443.413L382.666%20433.707C383.248%20433.334%20383.6%20432.691%20383.6%20432C383.6%20431.309%20383.248%20430.666%20382.666%20430.293L367.066%20420.587C366.452%20420.199%20365.676%20420.175%20365.039%20420.524C364.402%20420.873%20364.004%20421.54%20364%20422.267V441.733C363.991%20442.477%20364.396%20443.165%20365.051%20443.517C365.706%20443.87%20366.503%20443.83%20367.12%20443.413Z%27%20fill%3D%27white%27%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3Cdefs%2F%3E%3C%2Fsvg%3E')]`}
+          />
+        </div>
+        <div
+          className={`flex justify-center items-stretch flex-col gap-[31px] grow-0 shrink basis-auto box-border py-[199px]`}
+        >
+          <img
+            className={`w-[117px] h-5 max-w-[initial] grow-0 shrink-0 basis-auto box-border block content-[url('data:image/svg+xml;charset=utf8,%3Csvg%20viewBox%3D%27759.5000%20310.0560%20117.0000%2019.8888%27%20fill%3D%27none%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20xmlns%3Axlink%3D%27http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%27%20id%3D%2773283459%27%20x%3D%270%27%20y%3D%270%27%3E%3Cg%20id%3D%27Testimonial%20%2F%2016%20%2F%27%3E%3Cg%20id%3D%27Content%27%3E%3Cg%20id%3D%27Content\_2%27%20clip-path%3D%27url%28%23clip0\_1\_8710%29%27%3E%3Cg%20id%3D%27Stars%27%20clip-path%3D%27url%28%23clip1\_1\_8710%29%27%3E%3Cpath%20id%3D%27Vector\_3%27%20d%3D%27M769.071%20311.168C769.415%20310.352%20770.585%20310.352%20770.929%20311.168L772.958%20315.987C773.103%20316.331%20773.431%20316.566%20773.807%20316.596L779.073%20317.013C779.965%20317.084%20780.327%20318.184%20779.647%20318.759L775.635%20322.154C775.348%20322.397%20775.223%20322.777%20775.311%20323.14L776.536%20328.217C776.744%20329.077%20775.797%20329.757%20775.033%20329.296L770.525%20326.575C770.202%20326.381%20769.797%20326.381%20769.475%20326.575L764.967%20329.296C764.203%20329.757%20763.256%20329.077%20763.464%20328.217L764.689%20323.14C764.777%20322.777%20764.652%20322.397%20764.365%20322.154L760.353%20318.759C759.673%20318.184%20760.035%20317.084%20760.927%20317.013L766.193%20316.596C766.569%20316.566%20766.897%20316.331%20767.042%20315.987L769.071%20311.168Z%27%20fill%3D%27black%27%2F%3E%3Cpath%20id%3D%27Vector\_4%27%20d%3D%27M793.071%20311.168C793.415%20310.352%20794.585%20310.352%20794.929%20311.168L796.958%20315.987C797.103%20316.331%20797.431%20316.566%20797.807%20316.596L803.073%20317.013C803.965%20317.084%20804.327%20318.184%20803.647%20318.759L799.635%20322.154C799.348%20322.397%20799.223%20322.777%20799.311%20323.14L800.536%20328.217C800.744%20329.077%20799.797%20329.757%20799.033%20329.296L794.525%20326.575C794.202%20326.381%20793.797%20326.381%20793.475%20326.575L788.967%20329.296C788.203%20329.757%20787.256%20329.077%20787.464%20328.217L788.689%20323.14C788.777%20322.777%20788.652%20322.397%20788.365%20322.154L784.353%20318.759C783.673%20318.184%20784.035%20317.084%20784.927%20317.013L790.193%20316.596C790.569%20316.566%20790.897%20316.331%20791.042%20315.987L793.071%20311.168Z%27%20fill%3D%27black%27%2F%3E%3Cpath%20id%3D%27Vector\_5%27%20d%3D%27M817.071%20311.168C817.415%20310.352%20818.585%20310.352%20818.929%20311.168L820.958%20315.987C821.103%20316.331%20821.431%20316.566%20821.807%20316.596L827.073%20317.013C827.965%20317.084%20828.327%20318.184%20827.647%20318.759L823.635%20322.154C823.348%20322.397%20823.223%20322.777%20823.311%20323.14L824.536%20328.217C824.744%20329.077%20823.797%20329.757%20823.033%20329.296L818.525%20326.575C818.202%20326.381%20817.797%20326.381%20817.475%20326.575L812.967%20329.296C812.203%20329.757%20811.256%20329.077%20811.464%20328.217L812.689%20323.14C812.777%20322.777%20812.652%20322.397%20812.365%20322.154L808.353%20318.759C807.673%20318.184%20808.035%20317.084%20808.927%20317.013L814.193%20316.596C814.569%20316.566%20814.897%20316.331%20815.042%20315.987L817.071%20311.168Z%27%20fill%3D%27black%27%2F%3E%3Cpath%20id%3D%27Vector\_6%27%20d%3D%27M841.071%20311.168C841.415%20310.352%20842.585%20310.352%20842.929%20311.168L844.958%20315.987C845.103%20316.331%20845.431%20316.566%20845.807%20316.596L851.073%20317.013C851.965%20317.084%20852.327%20318.184%20851.647%20318.759L847.635%20322.154C847.348%20322.397%20847.223%20322.777%20847.311%20323.14L848.536%20328.217C848.744%20329.077%20847.797%20329.757%20847.033%20329.296L842.525%20326.575C842.202%20326.381%20841.797%20326.381%20841.475%20326.575L836.967%20329.296C836.203%20329.757%20835.256%20329.077%20835.464%20328.217L836.689%20323.14C836.777%20322.777%20836.652%20322.397%20836.365%20322.154L832.353%20318.759C831.673%20318.184%20832.035%20317.084%20832.927%20317.013L838.193%20316.596C838.569%20316.566%20838.897%20316.331%20839.042%20315.987L841.071%20311.168Z%27%20fill%3D%27black%27%2F%3E%3Cpath%20id%3D%27Vector\_7%27%20d%3D%27M865.071%20311.168C865.415%20310.352%20866.585%20310.352%20866.929%20311.168L868.958%20315.987C869.103%20316.331%20869.431%20316.566%20869.807%20316.596L875.073%20317.013C875.965%20317.084%20876.327%20318.184%20875.647%20318.759L871.635%20322.154C871.348%20322.397%20871.223%20322.777%20871.311%20323.14L872.536%20328.217C872.744%20329.077%20871.797%20329.757%20871.033%20329.296L866.525%20326.575C866.202%20326.381%20865.797%20326.381%20865.475%20326.575L860.967%20329.296C860.203%20329.757%20859.256%20329.077%20859.464%20328.217L860.689%20323.14C860.777%20322.777%20860.652%20322.397%20860.365%20322.154L856.353%20318.759C855.673%20318.184%20856.035%20317.084%20856.927%20317.013L862.193%20316.596C862.569%20316.566%20862.897%20316.331%20863.042%20315.987L865.071%20311.168Z%27%20fill%3D%27black%27%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3Cdefs%3E%3CclipPath%20id%3D%27clip0\_1\_8710%27%3E%3Crect%20width%3D%27616%27%20height%3D%27242.889%27%20fill%3D%27white%27%20transform%3D%27translate%28760%20310.556%29%27%2F%3E%3C%2FclipPath%3E%3CclipPath%20id%3D%27clip1\_1\_8710%27%3E%3Crect%20width%3D%27116%27%20height%3D%2718.8889%27%20fill%3D%27white%27%20transform%3D%27translate%28760%20310.556%29%27%2F%3E%3C%2FclipPath%3E%3C%2Fdefs%3E%3C%2Fsvg%3E')]`}
+          />
+          <p
+            className={`grow-0 shrink-0 basis-auto box-border  text-2xl font-bold leading-[119.46666717529297%] text-[black]`}
+          >
+            &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Suspendisse varius enim in eros elementum tristique. Duis cursus, mi
+            quis viverra ornare, eros dolor interdum nulla, ut commodo diam
+            libero vitae erat.&quot;
+          </p>
+          <p
+            className={`grow-0 shrink-0 basis-auto box-border  text-base font-semibold text-[black] mt-px`}
+          >
+            Gordan Kelly
+          </p>
+        </div>
+      </div>
+      <div
+        className={`flex justify-between items-center flex-row gap-2 self-stretch grow-0 shrink-0 basis-auto box-border mt-6`}
+      >
+        <div
+          className={`flex justify-start items-center flex-row gap-2 grow-0 shrink-0 basis-auto box-border`}
+        >
+          <div
+            className={`bg-[black] h-2 w-2 grow-0 shrink-0 basis-auto box-border rounded-[50%]`}
+          />
+          <div
+            className={`bg-[#8d8d8d] h-2 w-2 grow-0 shrink-0 basis-auto box-border rounded-[50%]`}
+          />
+          <div
+            className={`bg-[#8d8d8d] h-2 w-2 grow-0 shrink-0 basis-auto box-border rounded-[50%]`}
+          />
+          <div
+            className={`bg-[#8d8d8d] h-2 w-2 grow-0 shrink-0 basis-auto box-border rounded-[50%]`}
+          />
+          <div
+            className={`bg-[#8d8d8d] h-2 w-2 grow-0 shrink-0 basis-auto box-border rounded-[50%]`}
+          />
+        </div>
+        <div
+          className={`flex justify-start items-stretch flex-row h-12 grow-0 shrink-0 basis-auto box-border`}
+        >
+          <div
+            className={`border flex justify-center items-stretch flex-col grow-0 shrink-0 basis-auto box-border px-3 rounded-[50px] border-[black] border-solid`}
+          >
+            {/* <SvgIcon1 className="grow-0 shrink-0 basis-auto box-border w-6 h-6 flex" /> */}
+            SVG Left Arrow
+          </div>
+          <div
+            className={`border flex justify-center items-stretch flex-col grow-0 shrink-0 basis-auto box-border ml-[15px] px-3 rounded-[50px] border-[black] border-solid`}
+          >
+            {/* <SvgIcon2 className="grow-0 shrink-0 basis-auto box-border w-6 h-6 flex" /> */}
+            SVG Right Arrow
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default Reviews
