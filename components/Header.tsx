@@ -1,30 +1,51 @@
-import NavigationMenu from "./NavigationMenu"
+import Image from "next/image";
+import NavigationMenu from "./NavigationMenu";
+import Wrapper from "./Wrapper";
+import ButtonLink from "./ButtonLink";
 
-type Props = {}
+const menuList = [
+  { label: "Home", url: "#" },
+  { label: "About", url: "#" },
+  { label: "Services", url: "#" },
+  { label: "Gallery", url: "#" },
+];
+
+type Props = {};
 
 const Header = ({}: Props) => {
   return (
-    <header
-      className={`bg-[white] flex justify-center items-center flex-row box-border py-4 px-16 border-t-0 border-x-0 border-b border-[#676767] border-solid`}
-    >
-      <div
-        className={`flex justify-center items-start flex-row grow-0 shrink-0 basis-auto box-border`}
-      >
-        <div className={`grow-0 shrink-0 basis-auto box-border`}>
-          <img
+    <header className="flex items-center justify-center bg-[white] py-4">
+      <Wrapper className="flex justify-between">
+        <div className="flex items-center gap-[7px]">
+          <Image
             src="/images/logo.svg"
-            className={`w-[34px] h-[31.5px] max-w-[initial]`}
+            className="h-[31px] w-[34px] object-contain"
+            alt="logo"
+            width={34}
+            height={31}
           />
+          <p className="text-[25px] font-bold">Ddsgnr</p>
         </div>
-        <p
-          className={`grow-0 shrink-0 basis-auto box-border text-[25px] font-bold text-[black] ml-[7px]`}
-        >
-          Ddsgnr
-        </p>
-      </div>
-      <NavigationMenu />
-    </header>
-  )
-}
 
-export default Header
+        <div className="flex items-center gap-8">
+          <NavigationMenu menuList={menuList} />
+
+          <div className="flex items-center gap-4">
+            <ButtonLink
+              linkable
+              variant="btn-border-dark"
+              size="btn-size-small"
+            >
+              Sign In
+            </ButtonLink>
+            <ButtonLink linkable variant="btn-primary" size="btn-size-small">
+              Get Started
+            </ButtonLink>
+          </div>
+        </div>
+      </Wrapper>
+    </header>
+  );
+};
+
+export default Header;

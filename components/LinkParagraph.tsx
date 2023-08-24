@@ -1,17 +1,17 @@
-import React from "react"
+import React from "react";
 
 type Props = {
-  linkText?: string
-}
+  linkText?: string;
+};
 
 const LinkParagraph = ({ linkText }: Props) => {
   return (
     <p
-      className={`box-border text-sm font-normal text-[black] first:mt-0 mt-[16.00px]`}
+      className={`mt-[16.00px] box-border text-sm font-normal text-[black] first:mt-0`}
     >
       {linkText}
     </p>
-  )
-}
+  );
+};
 
-export default LinkParagraph
+export default LinkParagraph;

@@ -1,22 +1,22 @@
-import React from "react"
+import React from "react";
 
 type Props = {
-  dynamicLinkText?: string
-  socialMediaPlatform1?: string
-}
+  dynamicLinkText?: string;
+  socialMediaPlatform1?: string;
+};
 
 const SocialCard = ({ dynamicLinkText, socialMediaPlatform1 }: Props) => {
   return (
     <div
-      className={`flex justify-between flex-row gap-2 grow-0 shrink-0 basis-auto box-border first:mt-0 items-center mt-[7.00px] pr-[3.00px]`}
+      className={`mt-[7.00px] box-border flex shrink-0 grow-0 basis-auto flex-row items-center justify-between gap-2 pr-[3.00px] first:mt-0`}
     >
       <p
-        className={`grow-0 shrink-0 basis-auto box-border text-sm font-normal text-[black]`}
+        className={`box-border shrink-0 grow-0 basis-auto text-sm font-normal text-[black]`}
       >
         {dynamicLinkText}
       </p>
       <div
-        className={`flex justify-start items-center flex-row grow-0 shrink-0 basis-auto box-border`}
+        className={`box-border flex shrink-0 grow-0 basis-auto flex-row items-center justify-start`}
       >
         SVG Icon
         {/* <SvgIcon1
@@ -24,13 +24,13 @@ const SocialCard = ({ dynamicLinkText, socialMediaPlatform1 }: Props) => {
           htmlOrSvgContent2={htmlOrSvgContent2}
         /> */}
         <p
-          className={`grow-0 shrink-0 basis-auto box-border text-sm font-normal text-[black] ml-3`}
+          className={`ml-3 box-border shrink-0 grow-0 basis-auto text-sm font-normal text-[black]`}
         >
           {socialMediaPlatform1}
         </p>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default SocialCard
+export default SocialCard;

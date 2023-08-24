@@ -1,18 +1,18 @@
-import React from "react"
-import LinkParagraph from "./LinkParagraph"
+import React from "react";
+import LinkParagraph from "./LinkParagraph";
 
 type Props = {
-  linkOptions?: {}[]
-}
+  linkOptions?: {}[];
+};
 
 const LinkList = ({ linkOptions = [] }: Props) => {
   return (
-    <div className={`box-border mt-6 pr-[23.5px]`}>
+    <div className={`mt-6 box-border pr-[23.5px]`}>
       {linkOptions.map((data, index) => {
-        return <LinkParagraph {...data} key={index} />
+        return <LinkParagraph {...data} key={index} />;
       })}
     </div>
-  )
-}
+  );
+};
 
-export default LinkList
+export default LinkList;

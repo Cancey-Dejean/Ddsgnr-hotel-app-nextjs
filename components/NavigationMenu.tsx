@@ -1,47 +1,29 @@
-import { Button } from "@mui/material"
+import { Button } from "@mui/material";
+import Link from "next/link";
+import { twMerge } from "tailwind-merge";
+import ButtonLink from "./ButtonLink";
 
-type NavigationMenuProps = {}
+type ListItem = {
+  label: string;
+  url: string;
+};
 
-const NavigationMenu = ({}: NavigationMenuProps) => {
+type NavigationMenuProps = {
+  menuList: ListItem[];
+};
+
+const NavigationMenu = ({ menuList = [] }: NavigationMenuProps) => {
   return (
-    <div
-      className={`bg-[white] flex justify-start items-center flex-row grow-0 shrink-0 basis-auto box-border ml-[629px]`}
-    >
-      <div
-        className={`flex justify-start items-center flex-row gap-8 grow-0 shrink-0 basis-auto box-border`}
-      >
-        <p
-          className={`grow-0 shrink-0 basis-auto box-border  text-base font-normal text-[black]`}
-        >
-          Home
-        </p>
-        <p
-          className={`grow-0 shrink-0 basis-auto box-border  text-base font-normal text-[black]`}
-        >
-          About
-        </p>
-        <p
-          className={`grow-0 shrink-0 basis-auto box-border  text-base font-normal text-[black]`}
-        >
-          Services
-        </p>
-        <p
-          className={`grow-0 shrink-0 basis-auto box-border  text-base font-normal text-[black]`}
-        >
-          Gallery
-        </p>
-      </div>
-      {/* Button Component starts here. We've generated code using MUI Base. See other options in "Component library" dropdown in Settings */}
-      <Button className="w-[91px] h-[42px] grow-0 shrink-0 basis-auto box-border border bg-transparent  text-base font-normal text-[black] cursor-pointer block ml-[31px] rounded-[5px] border-[black] border-solid">
-        Sign In
-      </Button>
+    <ul className="flex items-center justify-start gap-8">
+      {menuList.map((item, index) => (
+        <li key={index} className="">
+          <Link href={item.url} className={twMerge()}>
+            {item.label}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  );
+};
 
-      {/* Button Component starts here. We've generated code using MUI Base. See other options in "Component library" dropdown in Settings */}
-      <Button className="w-[123px] h-[42px] grow-0 shrink-0 basis-auto box-border border bg-[black]  text-base font-normal text-[white] cursor-pointer block ml-3.5 rounded-[5px] border-[black] border-solid">
-        Get Started
-      </Button>
-    </div>
-  )
-}
-
-export default NavigationMenu
+export default NavigationMenu;

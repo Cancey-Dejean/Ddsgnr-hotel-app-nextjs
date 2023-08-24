@@ -17,5 +17,34 @@
 }
 
 body {
-  @apply flex flex-col h-screen;
+  @apply flex h-screen flex-col;
+}
+
+.btn {
+  @apply rounded-[5px] border border-transparent  capitalize transition-all duration-[.3s] ease-in-out;
+}
+
+.btn-primary {
+  @apply border-black bg-black text-white hover:bg-black/80;
+}
+
+.btn-inverted {
+  @apply border-white bg-white text-black hover:border-black hover:bg-black hover:text-white;
+}
+
+.btn-border-dark {
+  @apply border-black bg-transparent text-black hover:bg-black hover:text-white;
+}
+
+.btn-border-light {
+  @apply border-white text-white hover:bg-white hover:text-black;
+}
+
+/* Button Sizes */
+.btn-size-base {
+  @apply px-6 py-3;
+}
+
+.btn-size-small {
+  @apply px-5 py-2;
 }

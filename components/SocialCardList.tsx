@@ -1,20 +1,20 @@
-import React from "react"
-import SocialCard from "./SocialCard"
+import React from "react";
+import SocialCard from "./SocialCard";
 
 type Props = {
-  socialCardsData?: {}[]
-}
+  socialCardsData?: {}[];
+};
 
 const SocialCardList = ({ socialCardsData = [] }: Props) => {
   return (
     <div
-      className={`flex justify-start items-stretch flex-col grow-0 shrink-0 basis-auto box-border mt-6 [&>*:nth-child(2)]:items-start`}
+      className={`mt-6 box-border flex shrink-0 grow-0 basis-auto flex-col items-stretch justify-start [&>*:nth-child(2)]:items-start`}
     >
       {socialCardsData.map((data, index) => {
-        return <SocialCard {...data} key={index} />
+        return <SocialCard {...data} key={index} />;
       })}
     </div>
-  )
-}
+  );
+};
 
-export default SocialCardList
+export default SocialCardList;
