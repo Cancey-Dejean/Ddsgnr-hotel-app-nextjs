@@ -11,26 +11,22 @@ import ButtonLink from "./ButtonLink";
 import { useState } from "react";
 
 type Props = {
-  handleChange?: () => void;
-  age?: number | string;
+  handleRoomChange?: () => void;
+  room?: number | string;
 };
 
 const BookingForm = ({}: Props) => {
-  const [age, setAge] = useState("");
+  const [room, setRoom] = useState("");
 
-  const handleChange = (event: SelectChangeEvent) => {
-    setAge(event.target.value);
+  const handleRoomChange = (event: SelectChangeEvent) => {
+    setRoom(event.target.value);
   };
 
   return (
     <section className="flex justify-between gap-[26] py-[55px]">
       <Wrapper className="flex items-start gap-[26px]">
         <form className="flex-1">
-          <label
-            className={` mb-[7.5px] block text-base font-normal text-[black]`}
-          >
-            Check in
-          </label>
+          <label className="mb-[8px] block text-base">Check in</label>
           <TextField
             hiddenLabel
             id="checkIn"
@@ -40,11 +36,7 @@ const BookingForm = ({}: Props) => {
         </form>
 
         <div className="flex-1">
-          <label
-            className={` mb-[7.5px] block text-base font-normal text-[black]`}
-          >
-            Check out
-          </label>
+          <label className="mb-[8px] block text-base">Check out</label>
           <TextField
             hiddenLabel
             id="checkOut"
@@ -54,20 +46,16 @@ const BookingForm = ({}: Props) => {
         </div>
 
         <div className="flex-1">
-          <label
-            className={` mb-[7.5px] block text-base font-normal text-[black]`}
-          >
-            Room
-          </label>
+          <label className="mb-[8px] block text-base">Room</label>
 
           <FormControl fullWidth className="dropdown__select">
             <Select
-              onChange={handleChange}
+              onChange={handleRoomChange}
               displayEmpty
-              value={age}
-              label="Age"
+              value={room}
+              label="Room"
               placeholder="Select Room"
-              renderValue={age !== "" ? undefined : () => <p>Answer</p>}
+              renderValue={room !== "" ? undefined : () => <p>Answer</p>}
             >
               <MenuItem value="Executive">Executive</MenuItem>
               <MenuItem value="Deluxe">Deluxe</MenuItem>
@@ -78,11 +66,7 @@ const BookingForm = ({}: Props) => {
         </div>
 
         <div className="flex-1">
-          <label
-            className={` mb-[7.5px] block text-base font-normal text-[black]`}
-          >
-            Guests
-          </label>
+          <label className="mb-[8px] block text-base">Guests</label>
           <TextField
             hiddenLabel
             id="numberOfGuests"
