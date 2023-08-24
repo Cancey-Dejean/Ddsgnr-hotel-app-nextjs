@@ -1,31 +1,43 @@
 import {
   TextField,
-  Button,
   MenuItem,
   FormControl,
   Select,
+  SelectChangeEvent,
+  InputLabel,
 } from "@mui/material";
 import Wrapper from "./Wrapper";
 import ButtonLink from "./ButtonLink";
+import { useState } from "react";
 
 type Props = {
   handleChange?: () => void;
   age?: number | string;
 };
 
-const BookingForm = ({ handleChange, age }: Props) => {
+const BookingForm = ({}: Props) => {
+  const [age, setAge] = useState("");
+
+  const handleChange = (event: SelectChangeEvent) => {
+    setAge(event.target.value);
+  };
+
   return (
     <section className="flex justify-between gap-[26] py-[55px]">
       <Wrapper className="flex items-start gap-[26px]">
-        {/* Input with Label Component is detected here. We've generated code using HTML. See other options in "Component library" dropdown in Settings */}
-        <div className="flex-1">
+        <form className="flex-1">
           <label
             className={` mb-[7.5px] block text-base font-normal text-[black]`}
           >
             Check in
           </label>
-          <TextField hiddenLabel id="checkIn" fullWidth />
-        </div>
+          <TextField
+            hiddenLabel
+            id="checkIn"
+            fullWidth
+            placeholder="MM/DD/YYYY"
+          />
+        </form>
 
         <div className="flex-1">
           <label
@@ -33,7 +45,12 @@ const BookingForm = ({ handleChange, age }: Props) => {
           >
             Check out
           </label>
-          <TextField hiddenLabel id="checkOut" fullWidth />
+          <TextField
+            hiddenLabel
+            id="checkOut"
+            fullWidth
+            placeholder="MM/DD/YYYY"
+          />
         </div>
 
         <div className="flex-1">
@@ -43,14 +60,19 @@ const BookingForm = ({ handleChange, age }: Props) => {
             Room
           </label>
 
-          <FormControl fullWidth>
-            <Select value={age} onChange={handleChange} displayEmpty>
-              <MenuItem value="">
-                <em>None</em>
-              </MenuItem>
-              <MenuItem value={10}>Ten</MenuItem>
-              <MenuItem value={20}>Twenty</MenuItem>
-              <MenuItem value={30}>Thirty</MenuItem>
+          <FormControl fullWidth className="dropdown__select">
+            <Select
+              onChange={handleChange}
+              displayEmpty
+              value={age}
+              label="Age"
+              placeholder="Select Room"
+              renderValue={age !== "" ? undefined : () => <p>Answer</p>}
+            >
+              <MenuItem value="Executive">Executive</MenuItem>
+              <MenuItem value="Deluxe">Deluxe</MenuItem>
+              <MenuItem value="Plus">Plus</MenuItem>
+              <MenuItem value="Economy">Economy</MenuItem>
             </Select>
           </FormControl>
         </div>
@@ -61,10 +83,16 @@ const BookingForm = ({ handleChange, age }: Props) => {
           >
             Guests
           </label>
-          <TextField hiddenLabel id="numberOfGuests" fullWidth className="" />
+          <TextField
+            hiddenLabel
+            id="numberOfGuests"
+            fullWidth
+            placeholder="1"
+            type="number"
+          />
         </div>
 
-        <ButtonLink className="self-end px-[11px] py-[12px]">
+        <ButtonLink className="self-end px-[11px] py-[12px]" type="submit">
           Check Availability
         </ButtonLink>
       </Wrapper>

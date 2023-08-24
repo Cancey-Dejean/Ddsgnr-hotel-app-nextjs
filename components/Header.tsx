@@ -1,18 +1,21 @@
+"use client";
 import Image from "next/image";
 import NavigationMenu from "./NavigationMenu";
 import Wrapper from "./Wrapper";
 import ButtonLink from "./ButtonLink";
+import { usePathname } from "next/navigation";
 
 const menuList = [
-  { label: "Home", url: "#" },
-  { label: "About", url: "#" },
-  { label: "Services", url: "#" },
-  { label: "Gallery", url: "#" },
+  { label: "Home", url: "/" },
+  { label: "About", url: "/about" },
+  { label: "Services", url: "/services" },
+  { label: "Gallery", url: "/gallery" },
 ];
 
 type Props = {};
 
 const Header = ({}: Props) => {
+  const path = usePathname();
   return (
     <header className="flex items-center justify-center bg-[white] py-4">
       <Wrapper className="flex justify-between">
@@ -28,7 +31,7 @@ const Header = ({}: Props) => {
         </div>
 
         <div className="flex items-center gap-8">
-          <NavigationMenu menuList={menuList} />
+          <NavigationMenu menuList={menuList} path={path} />
 
           <div className="flex items-center gap-4">
             <ButtonLink

@@ -48,3 +48,18 @@ body {
 .btn-size-small {
   @apply px-5 py-2;
 }
+
+/* MUI select input prevent animated label box from showing */
+.dropdown__select .css-14lo706 > span {
+  @apply hidden;
+}
+
+.dropdown__select
+  .css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input,
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+  @apply !py-[12px];
+}
+
+.dropdown__select [aria-expanded="false"] p {
+  @apply text-black/40;
+}

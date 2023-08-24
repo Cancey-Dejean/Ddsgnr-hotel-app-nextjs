@@ -14,7 +14,7 @@ type ButtonProps = {
   className?: string;
   linkable?: boolean;
   onClick?: () => void;
-  btnType?: "button" | "submit" | "reset";
+  // btnType?: "button" | "submit";
 };
 
 const ButtonLink = ({
@@ -25,7 +25,7 @@ const ButtonLink = ({
   className = "",
   linkable,
   onClick,
-  btnType = "button",
+  // btnType = "button",
   ...props
 }: ButtonProps) => {
   return linkable ? (
@@ -38,7 +38,7 @@ const ButtonLink = ({
     </Link>
   ) : (
     <button
-      type={btnType}
+      // type={btnType}
       onClick={onClick}
       className={twMerge("btn", variant, size, className)}
       {...props}

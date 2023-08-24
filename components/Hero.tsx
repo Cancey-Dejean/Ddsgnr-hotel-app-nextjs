@@ -4,6 +4,7 @@ import Image from "next/image";
 import { twMerge } from "tailwind-merge";
 import ButtonLink from "./ButtonLink";
 import Paragraph from "./Paragraph";
+import SectionTitle from "./SectionTitle";
 
 type HeroProps = {};
 
@@ -17,9 +18,9 @@ const Hero = ({}: HeroProps) => {
     >
       <Wrapper className="relative z-[1]">
         <div className="flex flex-col gap-6">
-          <h1 className="w-full max-w-[467px] text-[56px] font-bold leading-[67px]">
+          <SectionTitle className="max-w-[467px]">
             Enjoy Luxury Hotel Experience
-          </h1>
+          </SectionTitle>
 
           <Paragraph className="max-w-[549px]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
