@@ -48,8 +48,12 @@ const StartVacation = ({}: Props) => {
           </Paragraph>
 
           <div className="flex gap-4">
-            <ButtonLink variant="btn-primary">Book Now</ButtonLink>
-            <ButtonLink variant="btn-border-dark">Learn More</ButtonLink>
+            <ButtonLink variant="btn-primary" linkable>
+              Book Now
+            </ButtonLink>
+            <ButtonLink variant="btn-border-dark" linkable>
+              Learn More
+            </ButtonLink>
           </div>
         </div>
       </Wrapper>

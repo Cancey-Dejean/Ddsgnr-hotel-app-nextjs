@@ -30,8 +30,12 @@ const Hero = ({}: HeroProps) => {
           </Paragraph>
 
           <div className="flex items-center gap-4">
-            <ButtonLink variant="btn-inverted">Book Now</ButtonLink>
-            <ButtonLink variant="btn-border-light">Learn More</ButtonLink>
+            <ButtonLink variant="btn-inverted" linkable>
+              Book Now
+            </ButtonLink>
+            <ButtonLink variant="btn-border-light" linkable>
+              Learn More
+            </ButtonLink>
           </div>
         </div>
       </Wrapper>

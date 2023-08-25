@@ -7,7 +7,7 @@ type Props = {
 
 const LinkList = ({ linkOptions = [] }: Props) => {
   return (
-    <div className={`mt-6 box-border pr-[23.5px]`}>
+    <div className={`mt-6 pr-[23.5px]`}>
       {linkOptions.map((data, index) => {
         return <LinkParagraph {...data} key={index} />;
       })}

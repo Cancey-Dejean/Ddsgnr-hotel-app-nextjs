@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       colors: {
         "color-accent": "#10F2C5",
+        "color-border": "#676767",
       },
       maxWidth: {
         wrapper: "1300px",

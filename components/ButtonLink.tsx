@@ -1,12 +1,15 @@
 import Link from "next/link";
 import { ReactNode } from "react";
 import { twMerge } from "tailwind-merge";
+// import { ChevronRight } from "@heroicons/react/24/solid";
+import { ChevronRightIcon } from "@heroicons/react/24/outline";
 
 type ButtonProps = {
   variant?:
     | "btn-primary"
     | "btn-inverted"
     | "btn-border-dark"
+    | "btn-border-none"
     | "btn-border-light";
   size?: "btn-size-base" | "btn-size-small" | "btn-size-large";
   children?: ReactNode;
@@ -14,7 +17,7 @@ type ButtonProps = {
   className?: string;
   linkable?: boolean;
   onClick?: () => void;
-  // btnType?: "button" | "submit";
+  icon?: boolean;
 };
 
 const ButtonLink = ({
@@ -25,7 +28,7 @@ const ButtonLink = ({
   className = "",
   linkable,
   onClick,
-  // btnType = "button",
+  icon = false,
   ...props
 }: ButtonProps) => {
   return linkable ? (
@@ -35,6 +38,7 @@ const ButtonLink = ({
       {...props}
     >
       {children || <span>Linkable Button</span>}
+      {icon && <ChevronRightIcon className="h-6 w-6" />}
     </Link>
   ) : (
     <button
@@ -44,6 +48,7 @@ const ButtonLink = ({
       {...props}
     >
       {children || <span>Button</span>}
+      {icon && <ChevronRightIcon className="h-6 w-6" />}
     </button>
   );
 };

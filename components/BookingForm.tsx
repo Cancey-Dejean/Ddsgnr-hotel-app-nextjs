@@ -24,7 +24,7 @@ const BookingForm = ({}: Props) => {
 
   return (
     <section className="flex justify-between gap-[26] py-[55px]">
-      <Wrapper className="flex items-start gap-[26px]">
+      <Wrapper className="flex max-w-[1209px] items-start gap-[26px]">
         <form className="flex-1">
           <label className="mb-[8px] block text-base">Check in</label>
           <TextField

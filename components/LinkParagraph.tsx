@@ -6,9 +6,7 @@ type Props = {
 
 const LinkParagraph = ({ linkText }: Props) => {
   return (
-    <p
-      className={`mt-[16.00px] box-border text-sm font-normal text-[black] first:mt-0`}
-    >
+    <p className={`mt-[16.00px] text-sm font-normal text-[black] first:mt-0`}>
       {linkText}
     </p>
   );
