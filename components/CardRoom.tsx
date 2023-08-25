@@ -5,11 +5,13 @@ import SectionTitle from "./SectionTitle";
 import { twMerge } from "tailwind-merge";
 
 const CardRoom = ({
+  imgSrc = "/images/card-image.jpg",
   title,
   smallCard,
   desc,
   className,
 }: {
+  imgSrc?: string;
   title?: string;
   smallCard?: boolean;
   desc?: string;
@@ -23,7 +25,7 @@ const CardRoom = ({
       )}
     >
       <Image
-        src="/images/card-image.jpg"
+        src={imgSrc}
         width={640}
         height={488}
         className={twMerge(
@@ -38,13 +40,18 @@ const CardRoom = ({
           <SectionTitle
             className={twMerge(
               "text-[40px] leading-[48px]",
-              smallCard ? "text-[24px] leading-[34px]" : "",
+              smallCard ? "text-[22px] leading-[32px]" : "",
             )}
           >
             {title}
           </SectionTitle>
 
-          <Paragraph className={twMerge("w-full", smallCard ? "mt-2" : "mt-6")}>
+          <Paragraph
+            className={twMerge(
+              "w-full",
+              smallCard ? "mt-2 text-[15px]" : "mt-6",
+            )}
+          >
             {desc}
           </Paragraph>
         </div>
