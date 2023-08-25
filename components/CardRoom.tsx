@@ -6,12 +6,14 @@ import { twMerge } from "tailwind-merge";
 
 const CardRoom = ({
   imgSrc = "/images/card-image.jpg",
+  imgAlt = "card image",
   title,
   smallCard,
   desc,
   className,
 }: {
   imgSrc?: string;
+  imgAlt?: string;
   title?: string;
   smallCard?: boolean;
   desc?: string;
@@ -20,7 +22,7 @@ const CardRoom = ({
   return (
     <div
       className={twMerge(
-        "border-color-border max-w-full flex flex-col items-center justify-start overflow-hidden rounded-[5px] border-[0.5px]",
+        "border-color-border max-w-full flex flex-col items-center justify-start overflow-hidden rounded-[10px] border-[0.5px]",
         className,
       )}
     >
@@ -32,7 +34,7 @@ const CardRoom = ({
           "w-full object-cover ",
           smallCard ? "h-[171px]" : "h-[488px]",
         )}
-        alt=""
+        alt={imgAlt}
       />
 
       <div className={twMerge(smallCard ? "px-6 py-6" : "px-12 py-8")}>
