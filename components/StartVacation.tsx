@@ -1,11 +1,9 @@
-import { Button } from "@mui/material";
-import Image from "next/image";
 import Wrapper from "./Wrapper";
-import Link from "next/link";
 import ButtonLink from "./ButtonLink";
 import Paragraph from "./Paragraph";
 import SectionTitle from "./SectionTitle";
 import VideoImage from "./VideoImage";
+import ButtonGroup from "./ButtonGroup";
 
 type Props = {};
 
@@ -20,7 +18,7 @@ const StartVacation = ({}: Props) => {
             Start Your Vacation In Dream Hostel
           </SectionTitle>
 
-          <Paragraph>
+          <Paragraph className="text-lg">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
             varius enim in eros elementum tristique. Duis cursus, mi quis
             viverra ornare, eros dolor interdum nulla, ut commodo diam libero
@@ -28,12 +26,22 @@ const StartVacation = ({}: Props) => {
           </Paragraph>
 
           <div className="flex gap-4">
-            <ButtonLink variant="btn-primary" linkable>
-              Book Now
-            </ButtonLink>
-            <ButtonLink variant="btn-border-dark" linkable>
-              Learn More
-            </ButtonLink>
+            <ButtonGroup
+              buttons={[
+                {
+                  url: "/",
+                  variant: "btn-primary",
+                  label: "Book Now",
+                  linkable: true,
+                },
+                {
+                  url: "/",
+                  variant: "btn-border-dark",
+                  label: "Learn More",
+                  linkable: true,
+                },
+              ]}
+            />
           </div>
         </div>
       </Wrapper>

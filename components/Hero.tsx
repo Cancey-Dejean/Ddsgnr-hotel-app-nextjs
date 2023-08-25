@@ -1,10 +1,9 @@
-import { Button } from "@mui/material";
 import Wrapper from "./Wrapper";
-import Image from "next/image";
 import { twMerge } from "tailwind-merge";
 import ButtonLink from "./ButtonLink";
 import Paragraph from "./Paragraph";
 import SectionTitle from "./SectionTitle";
+import ButtonGroup from "./ButtonGroup";
 
 type HeroProps = {};
 
@@ -18,11 +17,11 @@ const Hero = ({}: HeroProps) => {
     >
       <Wrapper className="relative z-[1]">
         <div className="flex flex-col gap-6">
-          <SectionTitle className="max-w-[467px]">
+          <SectionTitle className="w-full max-w-[467px]">
             Enjoy Luxury Hotel Experience
           </SectionTitle>
 
-          <Paragraph className="max-w-[549px]">
+          <Paragraph className="w-full max-w-[549px] text-lg">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
             varius enim in eros elementum tristique. Duis cursus, mi quis
             viverra ornare, eros dolor interdum nulla, ut commodo diam libero
@@ -30,12 +29,22 @@ const Hero = ({}: HeroProps) => {
           </Paragraph>
 
           <div className="flex items-center gap-4">
-            <ButtonLink variant="btn-inverted" linkable>
-              Book Now
-            </ButtonLink>
-            <ButtonLink variant="btn-border-light" linkable>
-              Learn More
-            </ButtonLink>
+            <ButtonGroup
+              buttons={[
+                {
+                  url: "/",
+                  variant: "btn-inverted",
+                  label: "Book Now",
+                  linkable: true,
+                },
+                {
+                  url: "/",
+                  variant: "btn-border-light",
+                  label: "Learn More",
+                  linkable: true,
+                },
+              ]}
+            />
           </div>
         </div>
       </Wrapper>

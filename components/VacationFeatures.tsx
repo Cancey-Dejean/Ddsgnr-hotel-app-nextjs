@@ -1,23 +1,22 @@
-import React from "react";
+import React, { ReactNode } from "react";
+import { BsFillBoxFill } from "react-icons/bs";
 
-type Props = {};
-
-const VacationFeatures = (props: Props) => {
+const VacationFeatures = ({
+  icon = <BsFillBoxFill />,
+  title = "Title",
+  desc,
+}: {
+  icon?: ReactNode;
+  title?: string;
+  desc?: ReactNode;
+}) => {
   return (
-    <div className="flex flex-col">
-      <div className="">
-        <img
-          className={` block h-[41px] w-[37px] max-w-[initial] content-[url('data:image/svg+xml;charset=utf8,%3Csvg%20viewBox%3D%271086.0000%20181.5000%2036.5000%2041.0002%27%20x%3D%270%27%20y%3D%270%27%20fill%3D%27none%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cpath%20id%3D%27Vector\_4%27%20fill-rule%3D%27evenodd%27%20clip-rule%3D%27evenodd%27%20d%3D%27M1121.46%20192.24L1121.18%20191.74C1120.82%20191.135%201120.31%20190.633%201119.7%20190.28L1106.28%20182.54C1105.67%20182.187%201104.98%20182.001%201104.28%20182H1103.7C1103%20182.001%201102.31%20182.187%201101.7%20182.54L1088.28%20190.3C1087.67%20190.651%201087.17%20191.154%201086.82%20191.76L1086.54%20192.26C1086.19%20192.868%201086%20193.557%201086%20194.26V209.76C1086%20210.463%201086.19%20211.152%201086.54%20211.76L1086.82%20212.26C1087.18%20212.859%201087.68%20213.36%201088.28%20213.72L1101.72%20221.46C1102.32%20221.82%201103.02%20222.007%201103.72%20222H1104.28C1104.98%20221.999%201105.67%20221.813%201106.28%20221.46L1119.7%20213.7C1120.31%20213.357%201120.82%20212.852%201121.16%20212.24L1121.46%20211.74C1121.81%20211.131%201121.99%20210.442%201122%20209.74V194.24C1122%20193.537%201121.81%20192.848%201121.46%20192.24ZM1103.7%20186H1104.28L1116%20192.76L1104%20199.68L1092%20192.76L1103.7%20186ZM1106%20217L1117.7%20210.24L1118%20209.74V196.22L1106%20203.16V217Z%27%20fill%3D%27black%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%2F%3E%3C%2Fsvg%3E')]`}
-        />
-      </div>
+    <div className="flex flex-col gap-4">
+      <div className="h-12 w-12 [&_svg]:h-full [&_svg]:w-full">{icon}</div>
 
-      <div className={``}>
-        <p className={` text-2xl font-bold text-[black]`}>Private pool</p>
-        <p className={` text-base font-normal leading-[128%] text-[black]`}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          varius enim in eros.
-        </p>
-      </div>
+      <h3 className={` text-2xl font-bold text-[black]`}>{title}</h3>
+
+      {desc}
     </div>
   );
 };

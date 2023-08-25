@@ -30,14 +30,16 @@ const CardRoom = ({
         src={imgSrc}
         width={640}
         height={488}
-        className={twMerge(
-          "w-full object-cover ",
-          smallCard ? "h-[171px]" : "h-[488px]",
-        )}
+        className={twMerge("h-full w-full object-cover ")}
         alt={imgAlt}
       />
 
-      <div className={twMerge(smallCard ? "px-6 py-6" : "px-12 py-8")}>
+      <div
+        className={twMerge(
+          "flex h-full flex-col justify-center",
+          smallCard ? "px-6 py-6" : "px-12 py-8",
+        )}
+      >
         <div className="flex flex-col">
           <SectionTitle
             className={twMerge(
@@ -68,18 +70,16 @@ const CardRoom = ({
             variant="btn-border-dark"
             linkable
             className={twMerge(smallCard ? "!px-5 !py-2" : "")}
-          >
-            $60/night
-          </ButtonLink>
+            label="$60/night"
+          />
 
           <ButtonLink
             variant="btn-border-none"
             linkable
             className={twMerge(smallCard ? "!px-5 !py-2" : "")}
             icon
-          >
-            View room
-          </ButtonLink>
+            label="View room"
+          />
         </div>
       </div>
     </div>

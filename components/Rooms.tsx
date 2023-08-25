@@ -1,23 +1,22 @@
 import Wrapper from "./Wrapper";
-import Paragraph from "./Paragraph";
-import SectionTitle from "./SectionTitle";
 import CardRoom from "./CardRoom";
+import SectionHeader from "./SectionHeader";
+import SectionTitle from "./SectionTitle";
+import Paragraph from "./Paragraph";
 
-type Props = {};
-
-const Rooms = (props: Props) => {
+const Rooms = () => {
   return (
     <section className="py-28">
-      <Wrapper>
-        <div className="mb-20 flex flex-col items-center text-center">
-          <Paragraph className="mb-4 font-semibold">Rooms</Paragraph>
-          <SectionTitle tag="h2" className="mb-6 text-[48px] leading-[58px]">
-            Our Rooms
-          </SectionTitle>
-          <Paragraph>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </Paragraph>
-        </div>
+      <Wrapper className="flex flex-col gap-20">
+        <SectionHeader
+          topTitle="Rooms"
+          title={<SectionTitle tag="h2">Our Rooms</SectionTitle>}
+          desc={
+            <Paragraph>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </Paragraph>
+          }
+        />
 
         <div className="flex gap-5">
           <CardRoom
@@ -26,7 +25,7 @@ const Rooms = (props: Props) => {
             desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
             className="w-full max-w-[50%]"
           />
-          <div className="grid grid-cols-2 gap-5">
+          <div className="grid grid-cols-2 items-stretch gap-5">
             <CardRoom
               imgSrc="/images/card-image-2.jpg"
               title="Double deluxe"

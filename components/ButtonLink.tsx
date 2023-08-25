@@ -12,7 +12,7 @@ type ButtonProps = {
     | "btn-border-none"
     | "btn-border-light";
   size?: "btn-size-base" | "btn-size-small" | "btn-size-large";
-  children?: ReactNode;
+  label?: string | ReactNode;
   url?: string;
   className?: string;
   linkable?: boolean;
@@ -23,7 +23,7 @@ type ButtonProps = {
 const ButtonLink = ({
   variant = "btn-primary",
   size = "btn-size-base",
-  children,
+  label = "Button Link",
   url = "#",
   className = "",
   linkable,
@@ -37,7 +37,7 @@ const ButtonLink = ({
       className={twMerge("btn", variant, size, className)}
       {...props}
     >
-      {children || <span>Linkable Button</span>}
+      {label || <span>Link</span>}
       {icon && <ChevronRightIcon className="h-6 w-6" />}
     </Link>
   ) : (
@@ -47,7 +47,7 @@ const ButtonLink = ({
       className={twMerge("btn", variant, size, className)}
       {...props}
     >
-      {children || <span>Button</span>}
+      {label || <span>Button</span>}
       {icon && <ChevronRightIcon className="h-6 w-6" />}
     </button>
   );

@@ -4,6 +4,7 @@ import NavigationMenu from "./NavigationMenu";
 import Wrapper from "./Wrapper";
 import ButtonLink from "./ButtonLink";
 import { usePathname } from "next/navigation";
+import ButtonGroup from "./ButtonGroup";
 
 const menuList = [
   { label: "Home", url: "/" },
@@ -34,16 +35,24 @@ const Header = ({}: Props) => {
           <NavigationMenu menuList={menuList} path={path} />
 
           <div className="flex items-center gap-4">
-            <ButtonLink
-              linkable
-              variant="btn-border-dark"
-              size="btn-size-small"
-            >
-              Sign In
-            </ButtonLink>
-            <ButtonLink linkable variant="btn-primary" size="btn-size-small">
-              Get Started
-            </ButtonLink>
+            <ButtonGroup
+              buttons={[
+                {
+                  url: "/",
+                  variant: "btn-border-dark",
+                  label: "Sign In",
+                  linkable: true,
+                  size: "btn-size-small",
+                },
+                {
+                  url: "/",
+                  variant: "btn-primary",
+                  label: "Get Started",
+                  linkable: true,
+                  size: "btn-size-small",
+                },
+              ]}
+            />
           </div>
         </div>
       </Wrapper>

@@ -8,7 +8,7 @@ type ParagraphProps = {
 
 const Paragraph = ({ children, className }: ParagraphProps) => {
   return (
-    <p className={twMerge(" text-lg", className)}>
+    <p className={twMerge(" text-base", className)}>
       {children || <span>Paragraph goes Hero</span>}
     </p>
   );

@@ -1,28 +1,62 @@
 import React from "react";
 import VacationFeatures from "./VacationFeatures";
-import { Button } from "@mui/material";
 import Wrapper from "./Wrapper";
-import Image from "next/image";
 import VideoImage from "./VideoImage";
 import ButtonLink from "./ButtonLink";
+import Paragraph from "./Paragraph";
+import { LiaSwimmerSolid } from "react-icons/lia";
+import { TbMassage } from "react-icons/tb";
+import { CgGym } from "react-icons/cg";
+import { MdOutlineFoodBank } from "react-icons/md";
 
-type Props = {};
-
-const VacationSection = (props: Props) => {
+const VacationSection = () => {
   return (
-    <section
-      className={` flex flex-row items-stretch justify-start bg-[white] px-16 py-28`}
-    >
-      <Wrapper className="flex items-center gap-20">
+    <section className="py-28">
+      <Wrapper className="flex max-w-[1300px] items-center gap-20">
         <VideoImage imgSrc="/images/videoImg2.jpg" />
 
-        <div className="flex-1">
-          {/* Vacation Details */}
+        <div className="flex flex-1 flex-col gap-6">
           <div className="grid grid-cols-2 gap-6">
-            <VacationFeatures />
-            <VacationFeatures />
-            <VacationFeatures />
-            <VacationFeatures />
+            <VacationFeatures
+              title="Private pool"
+              desc={
+                <Paragraph>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Suspendisse varius enim in eros.
+                </Paragraph>
+              }
+              icon={<LiaSwimmerSolid />}
+            />
+            <VacationFeatures
+              title="Spa & Massage"
+              desc={
+                <Paragraph>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Suspendisse varius enim in eros.
+                </Paragraph>
+              }
+              icon={<TbMassage />}
+            />
+            <VacationFeatures
+              title="Gym"
+              desc={
+                <Paragraph>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Suspendisse varius enim in eros.
+                </Paragraph>
+              }
+              icon={<CgGym />}
+            />
+            <VacationFeatures
+              title="Restaurant"
+              desc={
+                <Paragraph>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Suspendisse varius enim in eros.
+                </Paragraph>
+              }
+              icon={<MdOutlineFoodBank />}
+            />
           </div>
 
           <div className="flex items-center gap-4">

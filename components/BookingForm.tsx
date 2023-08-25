@@ -10,12 +10,12 @@ import Wrapper from "./Wrapper";
 import ButtonLink from "./ButtonLink";
 import { useState } from "react";
 
-type Props = {
-  handleRoomChange?: () => void;
-  room?: number | string;
-};
+// type Props = {
+//   handleRoomChange?: () => void;
+//   room?: number | string;
+// };
 
-const BookingForm = ({}: Props) => {
+const BookingForm = () => {
   const [room, setRoom] = useState("");
 
   const handleRoomChange = (event: SelectChangeEvent) => {
@@ -55,7 +55,11 @@ const BookingForm = ({}: Props) => {
               value={room}
               label="Room"
               placeholder="Select Room"
-              renderValue={room !== "" ? undefined : () => <p>Answer</p>}
+              renderValue={
+                room !== ""
+                  ? undefined
+                  : () => <span className="text-black/40">Executive</span>
+              }
             >
               <MenuItem value="Executive">Executive</MenuItem>
               <MenuItem value="Deluxe">Deluxe</MenuItem>
@@ -76,9 +80,11 @@ const BookingForm = ({}: Props) => {
           />
         </div>
 
-        <ButtonLink className="self-end px-[11px] py-[12px]" type="submit">
-          Check Availability
-        </ButtonLink>
+        <ButtonLink
+          className="self-end px-[11px] py-[12px]"
+          label="Check Availability"
+          type="submit"
+        />
       </Wrapper>
     </section>
   );
