@@ -11,7 +11,7 @@ import SectionTitle from "./SectionTitle";
 const GallerySection = () => {
   return (
     <section className="py-[111px]">
-      <Wrapper className="flex flex-col items-center gap-20">
+      <Wrapper className="flex flex-col items-center gap-12">
         <SectionHeader
           title={<SectionTitle tag="h2">Our Gallery</SectionTitle>}
           desc={
@@ -20,16 +20,6 @@ const GallerySection = () => {
             </Paragraph>
           }
         />
-        {/* <div
-          className={`flex  flex-col items-center justify-start self-stretch`}
-        >
-          <p className={`  text-[56px] font-bold text-[black]`}>Gallery</p>
-          <p
-            className={`mt-6 shrink-0 grow-0  basis-auto text-lg font-normal text-[black]`}
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
-          </p>
-        </div> */}
 
         <div className="flex items-stretch gap-8">
           <div className="flex flex-col gap-8">
@@ -69,9 +59,7 @@ const GallerySection = () => {
           </div>
         </div>
 
-        <ButtonLink variant="btn-border-dark" linkable>
-          View more
-        </ButtonLink>
+        <ButtonLink variant="btn-border-dark" label="View more" linkable />
       </Wrapper>
     </section>
   );

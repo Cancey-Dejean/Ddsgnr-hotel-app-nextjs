@@ -8,6 +8,7 @@ import { LiaSwimmerSolid } from "react-icons/lia";
 import { TbMassage } from "react-icons/tb";
 import { CgGym } from "react-icons/cg";
 import { MdOutlineFoodBank } from "react-icons/md";
+import ButtonGroup from "./ButtonGroup";
 
 const VacationSection = () => {
   return (
@@ -60,13 +61,23 @@ const VacationSection = () => {
           </div>
 
           <div className="flex items-center gap-4">
-            <ButtonLink variant="btn-border-dark" linkable>
-              Book Now
-            </ButtonLink>
-
-            <ButtonLink variant="btn-border-none" linkable icon>
-              Learn More
-            </ButtonLink>
+            <ButtonGroup
+              buttons={[
+                {
+                  url: "#",
+                  variant: "btn-border-dark",
+                  label: "Book Now",
+                  linkable: true,
+                },
+                {
+                  url: "#",
+                  variant: "btn-border-none",
+                  label: "Learn More",
+                  icon: true,
+                  linkable: true,
+                },
+              ]}
+            />
           </div>
         </div>
       </Wrapper>
