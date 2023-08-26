@@ -22,7 +22,7 @@ const CardRoom = ({
   return (
     <div
       className={twMerge(
-        "border-color-border max-w-full flex flex-col items-center justify-start overflow-hidden rounded-[10px] border-[0.5px]",
+        "flex max-w-full flex-col items-center justify-start overflow-hidden rounded-[10px] border-[0.5px] border-color-border",
         className,
       )}
     >
@@ -32,6 +32,7 @@ const CardRoom = ({
         height={488}
         className={twMerge("h-full w-full object-cover ")}
         alt={imgAlt}
+        tabIndex={0}
       />
 
       <div

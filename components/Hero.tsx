@@ -11,7 +11,7 @@ const Hero = ({}: HeroProps) => {
   return (
     <section
       className={twMerge(
-        "bg-hero relative flex min-h-[940px] items-center justify-center bg-cover bg-center bg-no-repeat text-[white]",
+        "relative flex min-h-[940px] items-center justify-center bg-hero bg-cover bg-center bg-no-repeat text-[white]",
         "after:absolute after:z-0 after:h-full after:w-full after:bg-black/40 after:content-['']",
       )}
     >

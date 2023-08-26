@@ -12,9 +12,13 @@ const VacationFeatures = ({
 }) => {
   return (
     <div className="flex flex-col gap-4">
-      <div className="h-12 w-12 [&_svg]:h-full [&_svg]:w-full">{icon}</div>
+      <div className="h-12 w-12 [&_svg]:h-full [&_svg]:w-full" tabIndex={0}>
+        {icon}
+      </div>
 
-      <h3 className={` text-2xl font-bold text-[black]`}>{title}</h3>
+      <h3 className="text-2xl font-bold text-black" tabIndex={0}>
+        {title}
+      </h3>
 
       {desc}
     </div>

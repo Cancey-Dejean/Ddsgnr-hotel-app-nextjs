@@ -1,15 +1,16 @@
 import { ReactNode } from "react";
 import { twMerge } from "tailwind-merge";
 
-type ParagraphProps = {
+const Paragraph = ({
+  children = <span>Paragraph goes here</span>,
+  className = "",
+}: {
   children: ReactNode;
   className?: string;
-};
-
-const Paragraph = ({ children, className }: ParagraphProps) => {
+}) => {
   return (
-    <p className={twMerge(" text-base", className)}>
-      {children || <span>Paragraph goes Hero</span>}
+    <p className={twMerge(" text-base", className)} tabIndex={0}>
+      {children}
     </p>
   );
 };

@@ -20,16 +20,18 @@ const ReviewBlock = ({
       </div>
       <div className="flex flex-1 flex-col gap-8">
         <div className="flex items-center gap-[4px]">
-          <BsStarFill />
-          <BsStarFill />
-          <BsStarFill />
-          <BsStarFill />
-          <BsStarFill />
+          <BsStarFill tabIndex={0} />
+          <BsStarFill tabIndex={0} />
+          <BsStarFill tabIndex={0} />
+          <BsStarFill tabIndex={0} />
+          <BsStarFill tabIndex={0} />
         </div>
 
         {desc}
 
-        <p className="font-medium">{reviewer}</p>
+        <p className="font-medium" tabIndex={0}>
+          {reviewer}
+        </p>
       </div>
     </div>
   );

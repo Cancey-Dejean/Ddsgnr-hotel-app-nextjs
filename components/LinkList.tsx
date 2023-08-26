@@ -1,16 +1,35 @@
-import React from "react";
-import LinkParagraph from "./LinkParagraph";
+import { ReactNode } from "react";
+import Link from "next/link";
+import Paragraph from "./Paragraph";
+import TextLink from "./TextLink";
 
-type Props = {
-  linkOptions?: {}[];
-};
-
-const LinkList = ({ linkOptions = [] }: Props) => {
+const LinkList = ({
+  links,
+  title = "Menu",
+}: {
+  title: string;
+  links: {
+    label: string;
+    url: string;
+    icon?: ReactNode;
+    className?: string;
+  }[];
+}) => {
   return (
-    <div className={`mt-6 pr-[23.5px]`}>
-      {linkOptions.map((data, index) => {
-        return <LinkParagraph {...data} key={index} />;
-      })}
+    <div className="flex flex-col gap-4">
+      <Paragraph className="font-semibold">{title}</Paragraph>
+      <ul className="flex flex-col">
+        {links.map((link, index) => (
+          <li key={index}>
+            <TextLink
+              label={link.label}
+              url={link.url}
+              icon={link.icon}
+              className="py-2"
+            />
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };

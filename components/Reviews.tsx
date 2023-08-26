@@ -33,7 +33,7 @@ const Reviews = () => {
           <SwiperSlide>
             <ReviewBlock
               desc={
-                <Paragraph className="font-bold">
+                <Paragraph className="text-2xl font-bold">
                   "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Suspendisse varius enim in eros elementum tristique. Duis
                   cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
@@ -47,7 +47,7 @@ const Reviews = () => {
           <SwiperSlide>
             <ReviewBlock
               desc={
-                <Paragraph className="font-bold">
+                <Paragraph className="text-2xl font-bold">
                   "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Suspendisse varius enim in eros elementum tristique. Duis
                   cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
@@ -61,7 +61,7 @@ const Reviews = () => {
           <SwiperSlide>
             <ReviewBlock
               desc={
-                <Paragraph className="font-bold">
+                <Paragraph className="text-2xl font-bold">
                   "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Suspendisse varius enim in eros elementum tristique. Duis
                   cursus, mi quis viverra ornare, eros dolor interdum nulla, ut

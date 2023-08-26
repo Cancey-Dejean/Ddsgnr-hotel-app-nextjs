@@ -16,6 +16,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   @apply flex h-screen flex-col;
 }
@@ -53,7 +57,7 @@ body {
   @apply px-5 py-2;
 }
 
-/* MUI select input prevent animated label box from showing */
+/* Custom MUI Styles */
 .dropdown__select .css-14lo706 > span {
   @apply hidden;
 }
@@ -66,6 +70,14 @@ body {
 
 .dropdown__select [aria-expanded="false"] p {
   @apply text-black/40;
+}
+
+.newsletter-btn .css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+  @apply rounded-[5px] border border-black;
+}
+
+.newsletter-btn .css-md26zr-MuiInputBase-root-MuiOutlinedInput-root {
+  @apply h-full;
 }
 
 /* Swiper */

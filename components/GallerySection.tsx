@@ -1,6 +1,3 @@
-import { Button } from "@mui/material";
-import React from "react";
-import VideoImage from "./VideoImage";
 import Image from "next/image";
 import ButtonLink from "./ButtonLink";
 import Wrapper from "./Wrapper";
@@ -29,6 +26,7 @@ const GallerySection = () => {
               height={640}
               alt=""
               className="rounded-[10px]"
+              tabIndex={0}
             />
 
             <Image
@@ -37,6 +35,7 @@ const GallerySection = () => {
               height={426}
               alt=""
               className="h-[426px] rounded-[10px] object-cover"
+              tabIndex={0}
             />
           </div>
 
@@ -47,6 +46,7 @@ const GallerySection = () => {
               height={640}
               alt=""
               className="order-2 rounded-[10px]"
+              tabIndex={0}
             />
 
             <Image
@@ -55,6 +55,7 @@ const GallerySection = () => {
               height={426}
               alt=""
               className="order-1 h-[426px] rounded-[10px] object-cover"
+              tabIndex={0}
             />
           </div>
         </div>
