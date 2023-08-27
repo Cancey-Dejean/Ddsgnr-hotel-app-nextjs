@@ -7,9 +7,9 @@ import {
 
 export const menuList = [
   { label: "Home", url: "/" },
-  { label: "About", url: "/#about" },
-  { label: "Services", url: "/#services" },
-  { label: "Gallery", url: "/#gallery" },
+  { label: "About", url: "/about" },
+  { label: "Services", url: "/services" },
+  { label: "Gallery", url: "/gallery" },
 ];
 
 export const socialList = [

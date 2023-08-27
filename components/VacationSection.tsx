@@ -19,7 +19,7 @@ const VacationSection = () => {
           imgStyles="mx-auto w-full max-w-[900px]"
         />
 
-        <div className="flex flex-1 flex-col gap-6">
+        <div className="flex-1">
           <div className="mx-auto flex max-w-[900px] flex-col items-start gap-6 sm:grid sm:grid-cols-2 xl:mx-0 xl:max-w-full">
             <VacationFeatures
               title="Private pool"
@@ -63,7 +63,7 @@ const VacationSection = () => {
             />
           </div>
 
-          <div className="mt-7 flex justify-center gap-5 xl:mt-0 xl:items-center">
+          <div className="mt-7 flex justify-start gap-5 sm:mt-12">
             <ButtonGroup
               buttons={[
                 {

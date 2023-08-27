@@ -3,19 +3,24 @@ import {
   MenuItem,
   FormControl,
   Select,
-  // SelectChangeEvent,
-  // InputLabel,
+  SelectChangeEvent,
+  InputLabel,
 } from "@mui/material";
 import Wrapper from "./Wrapper";
 import ButtonLink from "./ButtonLink";
-// import { useState } from "react";
+import { useState } from "react";
 
 const BookingForm = () => {
-  // const [room, setRoom] = useState("");
+  const [room, setRoom] = useState("Executive");
+  const [guest, setGuest] = useState(1);
 
-  // const handleRoomChange = (event: SelectChangeEvent) => {
-  //   setRoom(event.target.value);
-  // };
+  const handleRoomChange = (event: SelectChangeEvent) => {
+    setRoom(event.target.value);
+  };
+
+  const handleGuestChange = (event) => {
+    setGuest(event.target.value);
+  };
 
   return (
     <section className="flex justify-between gap-[26] py-6 sm:py-[55px]">
@@ -57,15 +62,13 @@ const BookingForm = () => {
             </label>
 
             <FormControl fullWidth className="dropdown__select">
+              {/* <InputLabel id="demo-customized-select-label">Age</InputLabel> */}
               <Select
-                // onChange={handleRoomChange}
+                labelId="demo-customized-select-label"
+                id="demo-customized-select"
+                value={room}
+                onChange={handleRoomChange}
                 displayEmpty
-                value=""
-                label="Room"
-                placeholder="Select Room"
-                renderValue={() => (
-                  <span className="text-black/40">Executive</span>
-                )}
               >
                 <MenuItem value="Executive">Executive</MenuItem>
                 <MenuItem value="Deluxe">Deluxe</MenuItem>
@@ -82,14 +85,17 @@ const BookingForm = () => {
               hiddenLabel
               id="numberOfGuests"
               fullWidth
+              value={guest}
               placeholder="1"
               type="number"
+              onChange={handleGuestChange}
+              inputProps={{ min: 1 }}
             />
           </div>
           <ButtonLink
             className="self-end px-[11px] py-[12px]"
             label="Check Availability"
-            // type="submit"
+            type="submit"
           />
         </form>
       </Wrapper>

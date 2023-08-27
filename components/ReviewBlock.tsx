@@ -18,6 +18,7 @@ const ReviewBlock = ({
       <div className="flex-1">
         <VideoImage imgSrc={imgSrc} imgAlt={imgAlt} />
       </div>
+
       <div className="flex flex-1 flex-col gap-6 text-center lg:gap-8 lg:text-left">
         <div className="flex items-center justify-center gap-[4px] lg:justify-start">
           <BsStarFill tabIndex={0} />

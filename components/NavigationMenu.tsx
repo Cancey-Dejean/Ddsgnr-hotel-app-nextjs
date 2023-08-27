@@ -18,7 +18,7 @@ const NavigationMenu = ({ menuList = [], path }: NavigationMenuProps) => {
       <ul className="flex items-center justify-start gap-8">
         {menuList.map((item, index) => (
           <li key={index} className="">
-            <Link href={item.url} className="relative">
+            <Link href={item.url} className="relative py-2">
               {item.url === path ? (
                 <motion.span
                   layoutId="underline"

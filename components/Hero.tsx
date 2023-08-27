@@ -1,13 +1,10 @@
 import Wrapper from "./Wrapper";
 import { twMerge } from "tailwind-merge";
-import ButtonLink from "./ButtonLink";
 import Paragraph from "./Paragraph";
 import SectionTitle from "./SectionTitle";
 import ButtonGroup from "./ButtonGroup";
 
-type HeroProps = {};
-
-const Hero = ({}: HeroProps) => {
+const Hero = () => {
   return (
     <section
       className={twMerge(
@@ -17,7 +14,7 @@ const Hero = ({}: HeroProps) => {
     >
       <Wrapper className="relative z-[1]">
         <div className="flex flex-col gap-6 max-md:text-center">
-          <SectionTitle className="w-full  max-w-[467px] max-md:mx-auto max-sm:text-[40px] max-sm:leading-[48px]">
+          <SectionTitle className="w-full max-w-[467px] max-md:mx-auto max-sm:text-[40px] max-sm:leading-[48px]">
             Enjoy Luxury Hotel Experience
           </SectionTitle>
 

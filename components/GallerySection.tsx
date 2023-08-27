@@ -10,7 +10,7 @@ const GallerySection = () => {
     <section className="py-6 sm:py-28">
       <Wrapper className="flex flex-col items-center gap-12">
         <SectionHeader
-          title={<SectionTitle tag="h2">Our Gallery</SectionTitle>}
+          title={<SectionTitle tag="h1">Our Gallery</SectionTitle>}
           desc={
             <Paragraph>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
