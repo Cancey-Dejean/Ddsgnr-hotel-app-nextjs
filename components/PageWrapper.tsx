@@ -14,7 +14,7 @@ const PageWrapper = ({
     <motion.main
       initial={{
         opacity: 0,
-        y: 20,
+        y: 10,
       }}
       animate={{
         opacity: 1,
@@ -22,9 +22,10 @@ const PageWrapper = ({
       }}
       exit={{
         opacity: 0,
-        y: 20,
+        y: 10,
       }}
       className={twMerge("flex-1", className)}
+      role="main"
     >
       {children}
     </motion.main>

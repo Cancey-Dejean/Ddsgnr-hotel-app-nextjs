@@ -10,9 +10,9 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <section className="py-16">
+    <footer className="py-16" role="contentinfo">
       <Wrapper>
-        <div className="flex border border-black p-12">
+        <div className="flex flex-col gap-12 border border-black p-8 lg:flex-row lg:items-start lg:p-12">
           <div className="flex flex-col gap-6">
             <Logo
               imgSrc="/images/logo.svg"
@@ -24,29 +24,29 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-1 items-start justify-end gap-10">
-            <div className="min-w-[170px]">
+            <div className="max-w-full flex-1 lg:max-w-[170px]">
               <LinkList title="Menu" links={menuList} />
             </div>
 
-            <div className="min-w-[170px]">
+            <div className="max-w-full flex-1 lg:max-w-[170px]">
               <LinkList title="Follow Us" links={socialList} />
             </div>
           </div>
         </div>
 
-        <div className="mt-8 flex items-center justify-between gap-6">
+        <div className="mt-8 flex flex-col items-center gap-6 md:flex-row md:justify-between">
           <Paragraph className="text-sm">
             {currentYear} Ddsgnr. All right reserved.
           </Paragraph>
 
-          <div className="flex items-center gap-6 [&_a]:text-sm">
+          <div className="flex flex-wrap items-center justify-center gap-4 lg:gap-6 [&_a]:text-sm">
             <TextLink url="#" label="Privacy Policy" className="py-0" />
             <TextLink url="#" label="Terms of Service" />
             <TextLink url="#" label="Cookies Settings" />
           </div>
         </div>
       </Wrapper>
-    </section>
+    </footer>
   );
 };
 

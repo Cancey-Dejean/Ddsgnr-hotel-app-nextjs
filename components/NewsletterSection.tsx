@@ -10,7 +10,7 @@ const NewsletterSection = () => {
         Join our newsletter to stay up to date on features and releases.
       </Paragraph>
 
-      <div className="flex items-stretch gap-4">
+      <div className="flex flex-col items-stretch gap-4 sm:flex-row">
         <TextField
           hiddenLabel
           id="subscribe"
@@ -28,7 +28,7 @@ const NewsletterSection = () => {
         />
       </div>
 
-      <Paragraph className="w-full max-w-[481px] text-xs">
+      <Paragraph className="w-full text-xs lg:max-w-[481px]">
         By subscribing you agree to with our {""}
         <Link href="#" className="underline">
           Privacy Policy

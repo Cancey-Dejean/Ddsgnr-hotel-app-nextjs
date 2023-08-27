@@ -16,9 +16,9 @@ const VacationFeatures = ({
         {icon}
       </div>
 
-      <h3 className="text-2xl font-bold text-black" tabIndex={0}>
+      <h2 className="text-2xl font-bold text-black" tabIndex={0}>
         {title}
-      </h3>
+      </h2>
 
       {desc}
     </div>

@@ -38,14 +38,15 @@ const CardRoom = ({
       <div
         className={twMerge(
           "flex h-full flex-col justify-center",
-          smallCard ? "sm:px-6 sm:py-6" : "px-12 py-8",
+          smallCard ? "px-6 py-6" : "px-12 py-8",
         )}
       >
         <div className="flex flex-col">
           <SectionTitle
             className={twMerge(
-              "text-[40px] leading-[48px]",
-              smallCard ? "text-[22px] leading-[32px]" : "",
+              smallCard
+                ? "text-[22px] leading-[32px]"
+                : "text-[40px] leading-[48px]",
             )}
           >
             {title}

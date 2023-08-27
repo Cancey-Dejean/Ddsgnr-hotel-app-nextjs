@@ -13,11 +13,14 @@ import ButtonGroup from "./ButtonGroup";
 const VacationSection = () => {
   return (
     <section className="py-6 sm:py-28">
-      <Wrapper className="flex max-w-[1300px] items-center gap-20">
-        <VideoImage imgSrc="/images/videoImg2.jpg" />
+      <Wrapper className="flex max-w-[1300px] flex-col items-center gap-6 xl:flex-row xl:gap-20">
+        <VideoImage
+          imgSrc="/images/videoImg2.jpg"
+          imgStyles="mx-auto w-full max-w-[900px]"
+        />
 
         <div className="flex flex-1 flex-col gap-6">
-          <div className="grid grid-cols-2 gap-6">
+          <div className="mx-auto flex max-w-[900px] flex-col items-start gap-6 sm:grid sm:grid-cols-2 xl:mx-0 xl:max-w-full">
             <VacationFeatures
               title="Private pool"
               desc={
@@ -60,7 +63,7 @@ const VacationSection = () => {
             />
           </div>
 
-          <div className="flex items-center gap-4">
+          <div className="mt-7 flex justify-center gap-5 xl:mt-0 xl:items-center">
             <ButtonGroup
               buttons={[
                 {

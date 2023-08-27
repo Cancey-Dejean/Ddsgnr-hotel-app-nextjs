@@ -18,7 +18,7 @@ const GallerySection = () => {
           }
         />
 
-        <div className="flex items-stretch gap-8">
+        <div className="flex flex-col gap-8 lg:flex-row">
           <div className="flex flex-col gap-8">
             <Image
               src="/images/gallery1.jpg"
@@ -26,7 +26,6 @@ const GallerySection = () => {
               height={640}
               alt=""
               className="rounded-[10px]"
-              tabIndex={0}
             />
 
             <Image
@@ -34,8 +33,7 @@ const GallerySection = () => {
               width={640}
               height={426}
               alt=""
-              className="h-[426px] rounded-[10px] object-cover"
-              tabIndex={0}
+              className="aspect-auto rounded-[10px] object-cover"
             />
           </div>
 
@@ -46,7 +44,6 @@ const GallerySection = () => {
               height={640}
               alt=""
               className="order-2 rounded-[10px]"
-              tabIndex={0}
             />
 
             <Image
@@ -54,8 +51,7 @@ const GallerySection = () => {
               width={640}
               height={426}
               alt=""
-              className="order-1 h-[426px] rounded-[10px] object-cover"
-              tabIndex={0}
+              className="order-1 aspect-auto rounded-[10px] object-cover"
             />
           </div>
         </div>

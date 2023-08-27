@@ -25,7 +25,7 @@ body {
 }
 
 .btn {
-  @apply flex items-center gap-2 rounded-[5px] border border-transparent capitalize transition-all duration-[.3s] ease-in-out;
+  @apply flex items-center justify-center gap-2 rounded-[5px] border border-transparent capitalize transition-all duration-[.3s] ease-in-out;
 }
 
 .btn-primary {
@@ -70,6 +70,10 @@ body {
 
 .dropdown__select [aria-expanded="false"] p {
   @apply text-black/40;
+}
+
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+  @apply uppercase text-color-border;
 }
 
 .newsletter-btn .css-1d3z3hw-MuiOutlinedInput-notchedOutline {

@@ -34,7 +34,6 @@ const VideoImage = ({
         className={imgStyles}
         width={616}
         height={640}
-        tabIndex={0}
       />
     </div>
   );

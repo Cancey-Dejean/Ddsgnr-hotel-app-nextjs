@@ -20,8 +20,11 @@ const BookingForm = () => {
   return (
     <section className="flex justify-between gap-[26] py-6 sm:py-[55px]">
       <Wrapper className=" max-w-[1209px]">
-        <form action="#" className="flex items-start gap-[26px]">
-          <div className="flex-1">
+        <form
+          action="#"
+          className="flex flex-wrap items-start gap-[26px] lg:flex-nowrap"
+        >
+          <div className="flex w-full flex-col md:w-[48%] lg:flex-1">
             <label className="mb-[8px] block text-base" tabIndex={0}>
               Check in
             </label>
@@ -35,7 +38,7 @@ const BookingForm = () => {
             />
           </div>
 
-          <div className="flex-1">
+          <div className="flex w-full flex-col md:w-[48%] lg:flex-1">
             <label className="mb-[8px] block text-base" tabIndex={0}>
               Check out
             </label>
@@ -48,7 +51,7 @@ const BookingForm = () => {
               className="uppercase"
             />
           </div>
-          <div className="flex-1">
+          <div className="flex w-full flex-col md:w-[48%] lg:flex-1">
             <label className="mb-[8px] block text-base" tabIndex={0}>
               Room
             </label>
@@ -71,7 +74,7 @@ const BookingForm = () => {
               </Select>
             </FormControl>
           </div>
-          <div className="flex-1">
+          <div className="flex w-full flex-col md:w-[48%] lg:flex-1">
             <label className="mb-[8px] block text-base" tabIndex={0}>
               Guests
             </label>
