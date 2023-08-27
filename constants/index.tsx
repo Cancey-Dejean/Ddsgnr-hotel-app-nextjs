@@ -1,4 +1,9 @@
-import { FaFacebookF } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
+} from "react-icons/fa";
 
 export const menuList = [
   { label: "Home", url: "/" },
@@ -8,8 +13,8 @@ export const menuList = [
 ];
 
 export const socialList = [
-  { label: "Facebook", url: "/", icon: <FaFacebookF /> },
-  { label: "Instagram", url: "/#instagram", icon: <FaFacebookF /> },
-  { label: "Twitter", url: "/#twitter", icon: <FaFacebookF /> },
-  { label: "LinkedIn", url: "/#linkedIn", icon: <FaFacebookF /> },
+  { label: "Facebook", url: "/", icon: <FaFacebookF size={20} /> },
+  { label: "Instagram", url: "/#instagram", icon: <FaInstagram size={20} /> },
+  { label: "Twitter", url: "/#twitter", icon: <FaTwitter size={20} /> },
+  { label: "LinkedIn", url: "/#linkedIn", icon: <FaLinkedin size={20} /> },
 ];

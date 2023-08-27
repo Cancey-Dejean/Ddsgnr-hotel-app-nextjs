@@ -4,7 +4,7 @@ import { twMerge } from "tailwind-merge";
 const SectionTitle = ({
   children,
   tag,
-  className,
+  className = "",
 }: {
   children: ReactNode;
   className?: string;
@@ -14,8 +14,8 @@ const SectionTitle = ({
   return (
     <TagName
       className={twMerge(
-        "w-full text-[56px] font-bold leading-[67px]",
-        className || "",
+        "w-full text-[56px] font-bold leading-[67px] max-sm:text-[32px] max-sm:leading-[42px]",
+        className,
       )}
       tabIndex={0}
     >

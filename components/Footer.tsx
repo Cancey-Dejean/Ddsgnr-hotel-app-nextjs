@@ -34,13 +34,13 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex items-center justify-between gap-6">
+        <div className="mt-8 flex items-center justify-between gap-6">
           <Paragraph className="text-sm">
             {currentYear} Ddsgnr. All right reserved.
           </Paragraph>
 
-          <div className="mt-8 flex items-center gap-6">
-            <TextLink url="#" label="Privacy Policy" />
+          <div className="flex items-center gap-6 [&_a]:text-sm">
+            <TextLink url="#" label="Privacy Policy" className="py-0" />
             <TextLink url="#" label="Terms of Service" />
             <TextLink url="#" label="Cookies Settings" />
           </div>

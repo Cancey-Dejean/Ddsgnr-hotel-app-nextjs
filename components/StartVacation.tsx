@@ -9,8 +9,8 @@ type Props = {};
 
 const StartVacation = ({}: Props) => {
   return (
-    <section className="py-28">
-      <Wrapper className="flex items-center gap-20">
+    <section className="py-6 sm:py-28">
+      <Wrapper className="flex flex-col items-center gap-6 xl:flex-row xl:gap-20">
         <VideoImage />
 
         <div className="flex w-full max-w-[616px] flex-col gap-6">

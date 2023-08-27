@@ -18,7 +18,7 @@ const BookingForm = () => {
   // };
 
   return (
-    <section className="flex justify-between gap-[26] py-[55px]">
+    <section className="flex justify-between gap-[26] py-6 sm:py-[55px]">
       <Wrapper className=" max-w-[1209px]">
         <form action="#" className="flex items-start gap-[26px]">
           <div className="flex-1">
@@ -86,7 +86,7 @@ const BookingForm = () => {
           <ButtonLink
             className="self-end px-[11px] py-[12px]"
             label="Check Availability"
-            type="submit"
+            // type="submit"
           />
         </form>
       </Wrapper>

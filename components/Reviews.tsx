@@ -14,7 +14,7 @@ import Paragraph from "./Paragraph";
 
 const Reviews = () => {
   return (
-    <section className="py-28">
+    <section className="py-6 sm:py-28">
       <Wrapper>
         <Swiper
           loop={true}

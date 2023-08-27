@@ -12,7 +12,7 @@ import ButtonGroup from "./ButtonGroup";
 
 const VacationSection = () => {
   return (
-    <section className="py-28">
+    <section className="py-6 sm:py-28">
       <Wrapper className="flex max-w-[1300px] items-center gap-20">
         <VideoImage imgSrc="/images/videoImg2.jpg" />
 

@@ -7,7 +7,7 @@ import SectionTitle from "./SectionTitle";
 
 const GallerySection = () => {
   return (
-    <section className="py-[111px]">
+    <section className="py-6 sm:py-28">
       <Wrapper className="flex flex-col items-center gap-12">
         <SectionHeader
           title={<SectionTitle tag="h2">Our Gallery</SectionTitle>}

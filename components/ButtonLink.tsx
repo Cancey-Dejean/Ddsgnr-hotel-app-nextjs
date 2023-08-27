@@ -14,6 +14,7 @@ type ButtonProps = {
   size?: "btn-size-base" | "btn-size-small" | "btn-size-large";
   label?: string | ReactNode;
   url?: string;
+  btnType?: "button" | "submit";
   className?: string;
   linkable?: boolean;
   onClick?: () => void;
@@ -25,6 +26,7 @@ const ButtonLink = ({
   size = "btn-size-base",
   label = "Button Link",
   url = "#",
+  btnType = "button",
   className = "",
   linkable,
   onClick,
@@ -32,20 +34,15 @@ const ButtonLink = ({
   ...props
 }: ButtonProps) => {
   return linkable ? (
-    <Link
-      href={url}
-      className={twMerge("btn", variant, size, className)}
-      {...props}
-    >
+    <Link href={url} className={twMerge("btn", variant, size, className)}>
       {label || <span>Link</span>}
       {icon && <ChevronRightIcon className="h-6 w-6" />}
     </Link>
   ) : (
     <button
-      // type={btnType}
+      type={btnType}
       onClick={onClick}
       className={twMerge("btn", variant, size, className)}
-      {...props}
     >
       {label || <span>Button</span>}
       {icon && <ChevronRightIcon className="h-6 w-6" />}

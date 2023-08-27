@@ -38,7 +38,7 @@ const CardRoom = ({
       <div
         className={twMerge(
           "flex h-full flex-col justify-center",
-          smallCard ? "px-6 py-6" : "px-12 py-8",
+          smallCard ? "sm:px-6 sm:py-6" : "px-12 py-8",
         )}
       >
         <div className="flex flex-col">
