@@ -13,7 +13,7 @@ export const menuList = [
 ];
 
 export const socialList = [
-  { label: "Facebook", url: "/", icon: <FaFacebookF size={20} /> },
+  { label: "Facebook", url: "/#facebook", icon: <FaFacebookF size={20} /> },
   { label: "Instagram", url: "/#instagram", icon: <FaInstagram size={20} /> },
   { label: "Twitter", url: "/#twitter", icon: <FaTwitter size={20} /> },
   { label: "LinkedIn", url: "/#linkedIn", icon: <FaLinkedin size={20} /> },
