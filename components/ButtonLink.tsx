@@ -1,10 +1,19 @@
 import Link from "next/link";
 import { ReactNode } from "react";
 import { twMerge } from "tailwind-merge";
-// import { ChevronRight } from "@heroicons/react/24/solid";
 import { ChevronRightIcon } from "@heroicons/react/24/outline";
 
-type ButtonProps = {
+const ButtonLink = ({
+  variant = "btn-primary",
+  size = "btn-size-base",
+  label = "Button Link",
+  url = "#",
+  btnType = "button",
+  className = "",
+  linkable,
+  onClick,
+  icon = false,
+}: {
   variant?:
     | "btn-primary"
     | "btn-inverted"
@@ -19,20 +28,7 @@ type ButtonProps = {
   linkable?: boolean;
   onClick?: () => void;
   icon?: boolean;
-};
-
-const ButtonLink = ({
-  variant = "btn-primary",
-  size = "btn-size-base",
-  label = "Button Link",
-  url = "#",
-  btnType = "button",
-  className = "",
-  linkable,
-  onClick,
-  icon = false,
-  ...props
-}: ButtonProps) => {
+}) => {
   return linkable ? (
     <Link href={url} className={twMerge("btn", variant, size, className)}>
       {label || <span>Link</span>}

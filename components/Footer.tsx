@@ -16,7 +16,7 @@ const Footer = () => {
           <div className="flex flex-col gap-6">
             <Logo
               imgSrc="/images/logo.svg"
-              url="/"
+              url="#"
               text="Ddsgnr"
               imgAlt="Ddsgnr Logo"
             />

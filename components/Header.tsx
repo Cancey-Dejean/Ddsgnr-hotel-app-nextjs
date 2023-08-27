@@ -27,14 +27,14 @@ const Header = () => {
           <ButtonGroup
             buttons={[
               {
-                url: "/",
+                url: "#",
                 variant: "btn-border-dark",
                 label: "Sign In",
                 linkable: true,
                 size: "btn-size-small",
               },
               {
-                url: "/",
+                url: "#",
                 variant: "btn-primary",
                 label: "Get Started",
                 linkable: true,

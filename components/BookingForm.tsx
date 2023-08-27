@@ -4,11 +4,10 @@ import {
   FormControl,
   Select,
   SelectChangeEvent,
-  InputLabel,
 } from "@mui/material";
 import Wrapper from "./Wrapper";
 import ButtonLink from "./ButtonLink";
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 
 const BookingForm = () => {
   const [room, setRoom] = useState("Executive");
@@ -18,8 +17,9 @@ const BookingForm = () => {
     setRoom(event.target.value);
   };
 
-  const handleGuestChange = (event) => {
-    setGuest(event.target.value);
+  const handleGuestChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const newGuestValue = parseInt(event.target.value);
+    setGuest(newGuestValue);
   };
 
   return (
@@ -95,7 +95,6 @@ const BookingForm = () => {
           <ButtonLink
             className="self-end px-[11px] py-[12px]"
             label="Check Availability"
-            type="submit"
           />
         </form>
       </Wrapper>
