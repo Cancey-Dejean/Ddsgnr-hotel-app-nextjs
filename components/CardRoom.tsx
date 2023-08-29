@@ -30,15 +30,18 @@ const CardRoom = ({
         src={imgSrc}
         width={640}
         height={488}
-        className={twMerge("h-full w-full object-cover ")}
+        className={twMerge(
+          " w-full object-cover",
+          smallCard ? "h-[171px]" : "h-[488px]",
+        )}
         alt={imgAlt}
         tabIndex={0}
       />
 
       <div
         className={twMerge(
-          "flex h-full flex-col justify-center",
-          smallCard ? "px-6 py-6" : "px-12 py-8",
+          "flex w-full flex-col justify-center",
+          smallCard ? "px-6 py-6" : "px-8 py-8 sm:px-12",
         )}
       >
         <div className="flex flex-col">
