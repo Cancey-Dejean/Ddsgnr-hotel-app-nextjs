@@ -21,7 +21,7 @@ html {
 }
 
 body {
-  @apply flex h-screen flex-col;
+  @apply relative flex h-screen flex-col;
 }
 
 .btn {
