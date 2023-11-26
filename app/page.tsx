@@ -11,7 +11,7 @@ import VacationSection from "@/components/VacationSection"
 export default function Home() {
   return (
     <PageWrapper>
-      <Hero title="Enjoy Luxury Hotel Experience" />
+      <Hero title="Enjoy Luxury Hotel Experience" bgImage="/images/hero.jpg" />
       <BookingForm />
       <StartVacation />
       <Rooms />
