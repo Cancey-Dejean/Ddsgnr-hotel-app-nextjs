@@ -4,7 +4,7 @@ import ButtonLink from "./"
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
   tags: ["autodocs"],
-  title: "Sections/ButtonLink",
+  title: "Components/ButtonLink",
   component: ButtonLink,
   args: {
     variant: "btn-primary",

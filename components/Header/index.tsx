@@ -1,10 +1,10 @@
 "use client";
-import NavigationMenu from "./NavigationMenu";
-import Wrapper from "./Wrapper";
+import NavigationMenu from "../NavigationMenu";
+import Wrapper from "../Wrapper";
 import { usePathname } from "next/navigation";
-import ButtonGroup from "./ButtonGroup";
-import Logo from "./Logo";
-import { menuList } from "@/constants";
+import ButtonGroup from "../ButtonGroup";
+import Logo from "../Logo";
+import { menuList } from "../../constants";
 import { Bars3Icon } from "@heroicons/react/24/outline";
 
 const Header = () => {

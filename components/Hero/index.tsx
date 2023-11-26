@@ -19,7 +19,7 @@ type HeroProps = {
   bgImage: string;
 };
 
-const Hero = ({ title = "Title", desc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", bgImage = "/images/hero.jpg" }: HeroProps) => {
+const Hero = ({ title = "Title", desc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", bgImage = "https://dummyimage.com/1440x960.png/dddddd/ffffff" }: HeroProps) => {
   return (
     <section
       className={twMerge(
