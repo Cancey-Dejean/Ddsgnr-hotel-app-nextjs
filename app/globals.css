@@ -124,3 +124,9 @@ body {
 ::-ms-input-placeholder {
   @apply text-color-border;
 }
+
+/* Storybook Styles */
+.sbdocs-content {
+  @apply mx-auto !max-w-[1920px] w-full;
+}
+

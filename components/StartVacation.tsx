@@ -1,5 +1,5 @@
 import Wrapper from "./Wrapper";
-import ButtonLink from "./ButtonLink";
+import ButtonLink from "./Button";
 import Paragraph from "./Paragraph";
 import SectionTitle from "./SectionTitle";
 import VideoImage from "./VideoImage";

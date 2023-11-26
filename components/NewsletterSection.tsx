@@ -1,5 +1,5 @@
 import { TextField } from "@mui/material";
-import ButtonLink from "./ButtonLink";
+import ButtonLink from "./Button";
 import Paragraph from "./Paragraph";
 import Link from "next/link";
 

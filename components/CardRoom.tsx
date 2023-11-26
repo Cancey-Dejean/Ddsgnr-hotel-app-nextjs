@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ButtonLink from "./ButtonLink";
+import ButtonLink from "./Button";
 import Paragraph from "./Paragraph";
 import SectionTitle from "./SectionTitle";
 import { twMerge } from "tailwind-merge";

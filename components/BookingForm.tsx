@@ -6,7 +6,7 @@ import {
   SelectChangeEvent,
 } from "@mui/material";
 import Wrapper from "./Wrapper";
-import ButtonLink from "./ButtonLink";
+import ButtonLink from "./Button";
 import { ChangeEvent, useState } from "react";
 
 const BookingForm = () => {

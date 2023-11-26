@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ButtonLink from "./ButtonLink";
+import ButtonLink from "./Button";
 import Wrapper from "./Wrapper";
 import SectionHeader from "./SectionHeader";
 import Paragraph from "./Paragraph";

@@ -2,7 +2,7 @@ import React from "react";
 import VacationFeatures from "./VacationFeatures";
 import Wrapper from "./Wrapper";
 import VideoImage from "./VideoImage";
-import ButtonLink from "./ButtonLink";
+import ButtonLink from "./Button";
 import Paragraph from "./Paragraph";
 import { LiaSwimmerSolid } from "react-icons/lia";
 import { TbMassage } from "react-icons/tb";
