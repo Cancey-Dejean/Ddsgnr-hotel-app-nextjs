@@ -24,7 +24,7 @@ const NewsletterSection = () => {
           className=""
           variant="btn-border-dark"
           label="Subscribe"
-          btnType="submit"
+          type="submit"
         />
       </div>
 
