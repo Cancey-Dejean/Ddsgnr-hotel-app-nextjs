@@ -8,7 +8,10 @@ const meta = {
   title: "Components/Input/SelectDropdown",
   component: SelectDropdown,
   args: {
-    // label: "Label",
+    label: "Label",
+    name: "select",
+    id: "select",
+    required: false,
   },
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/react/configure/story-layout
@@ -18,8 +21,9 @@ const meta = {
 
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
-    // label: { control: "text" },
-    // id: { control: "text" },
+    placeholder: { control: false },
+    selectOptions: { control: false },
+    required: { control: false },
   },
 } satisfies Meta<typeof SelectDropdown>
 

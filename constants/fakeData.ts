@@ -6,28 +6,10 @@ export const menuList = [
 ]
 
 export const selectOptions = [
-  {
-    name: "Aardvark",
-  },
-  {
-    name: "Cat",
-  },
-  {
-    name: "Dog",
-  },
-  {
-    name: "Kangaroo",
-  },
-  {
-    name: "Panda",
-  },
-  {
-    name: "Snake",
-  },
-  // "Aardvark",
-  // "Cat",
-  // "Dog",
-  // "Kangaroo",
-  // "Panda",
-  // "Snake",
+  "Aardvark",
+  "Cat",
+  "Dog",
+  "Kangaroo",
+  "Panda",
+  "Snake",
 ]
