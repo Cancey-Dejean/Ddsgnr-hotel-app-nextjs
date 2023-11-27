@@ -1,30 +1,34 @@
-import Wrapper from "../Wrapper";
-import { twMerge } from "tailwind-merge";
-import Paragraph from "../Paragraph";
-import SectionTitle from "../SectionTitle";
-import ButtonGroup from "../ButtonGroup";
+import Wrapper from "../Wrapper"
+import { twMerge } from "tailwind-merge"
+import Paragraph from "../Paragraph"
+import SectionTitle from "../SectionTitle"
+import ButtonGroup from "../ButtonGroup"
 
 type HeroProps = {
-   /**
+  /**
    * Description goes here
    */
-  title: string;
-   /**
+  title: string
+  /**
    * Description goes here
    */
-  desc?: string;
-   /**
+  desc?: string
+  /**
    * Description goes here
    */
-  bgImage: string;
-};
+  bgImage: string
+}
 
-const Hero = ({ title = "Title", desc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", bgImage = "https://dummyimage.com/1440x960.png/dddddd/ffffff" }: HeroProps) => {
+const Hero = ({
+  title = "Title",
+  desc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  bgImage = "https://dummyimage.com/1440x960.png/dddddd/ffffff",
+}: HeroProps) => {
   return (
     <section
       className={twMerge(
         "relative flex items-center justify-center bg-cover bg-center bg-no-repeat py-[80px] text-[white] lg:h-[940px] w-full",
-        "after:absolute after:z-0 after:h-full after:w-full after:bg-black/40 after:content-['']",
+        "after:absolute after:z-0 after:h-full after:w-full after:bg-black/40 after:content-['']"
       )}
       style={{
         backgroundImage: `url(${bgImage})`,
@@ -62,7 +66,7 @@ const Hero = ({ title = "Title", desc = "Lorem ipsum dolor sit amet, consectetur
         </div>
       </Wrapper>
     </section>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero

@@ -1,8 +1,8 @@
-import Image from "next/image";
-import ButtonLink from "./Button";
-import Paragraph from "./Paragraph";
-import SectionTitle from "./SectionTitle";
-import { twMerge } from "tailwind-merge";
+import Image from "next/image"
+import ButtonLink from "./Button"
+import Paragraph from "./Paragraph"
+import SectionTitle from "./SectionTitle"
+import { twMerge } from "tailwind-merge"
 
 const CardRoom = ({
   imgSrc = "/images/card-image.jpg",
@@ -12,18 +12,18 @@ const CardRoom = ({
   desc,
   className,
 }: {
-  imgSrc?: string;
-  imgAlt?: string;
-  title?: string;
-  smallCard?: boolean;
-  desc?: string;
-  className?: string;
+  imgSrc?: string
+  imgAlt?: string
+  title?: string
+  smallCard?: boolean
+  desc?: string
+  className?: string
 }) => {
   return (
     <div
       className={twMerge(
         "flex max-w-full flex-col items-center justify-start overflow-hidden rounded-[10px] border-[0.5px] border-color-border",
-        className,
+        className
       )}
     >
       <Image
@@ -32,7 +32,7 @@ const CardRoom = ({
         height={488}
         className={twMerge(
           " w-full object-cover",
-          smallCard ? "h-[171px]" : "h-[488px]",
+          smallCard ? "h-[171px]" : "h-[488px]"
         )}
         alt={imgAlt}
         tabIndex={0}
@@ -41,7 +41,7 @@ const CardRoom = ({
       <div
         className={twMerge(
           "flex w-full flex-col justify-center",
-          smallCard ? "px-6 py-6" : "px-8 py-8 sm:px-12",
+          smallCard ? "px-6 py-6" : "px-8 py-8 sm:px-12"
         )}
       >
         <div className="flex flex-col">
@@ -49,7 +49,7 @@ const CardRoom = ({
             className={twMerge(
               smallCard
                 ? "text-[22px] leading-[32px]"
-                : "text-[40px] leading-[48px]",
+                : "text-[40px] leading-[48px]"
             )}
           >
             {title}
@@ -58,7 +58,7 @@ const CardRoom = ({
           <Paragraph
             className={twMerge(
               "w-full",
-              smallCard ? "mt-2 text-[15px]" : "mt-6",
+              smallCard ? "mt-2 text-[15px]" : "mt-6"
             )}
           >
             {desc}
@@ -68,7 +68,7 @@ const CardRoom = ({
         <div
           className={twMerge(
             "flex items-center gap-4",
-            smallCard ? "mt-6" : "mt-8",
+            smallCard ? "mt-6" : "mt-8"
           )}
         >
           <ButtonLink
@@ -88,7 +88,7 @@ const CardRoom = ({
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default CardRoom;
+export default CardRoom

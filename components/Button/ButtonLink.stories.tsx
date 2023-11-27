@@ -9,7 +9,6 @@ const meta = {
   args: {
     variant: "btn-primary",
     size: "btn-size-base",
-    label: "Label",
     url: "#",
     className: "",
     linkable: true,
@@ -36,7 +35,7 @@ const meta = {
     size: {
       control: { type: "select" },
       options: ["btn-size-base", "btn-size-small"],
-    }
+    },
     // intent: {
     //   control: { type: "select" },
     //   // options: buttonIntents.map((intent) => intent),

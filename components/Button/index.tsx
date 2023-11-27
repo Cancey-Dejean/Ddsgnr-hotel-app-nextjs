@@ -1,7 +1,7 @@
-import Link from "next/link";
-import { AnchorHTMLAttributes, ButtonHTMLAttributes } from "react";
-import { twMerge } from "tailwind-merge";
-import { ChevronRightIcon } from "@heroicons/react/24/outline";
+"use client"
+import { twMerge } from "tailwind-merge"
+import { ChevronRightIcon } from "@heroicons/react/24/outline"
+import { Button, Link } from "react-aria-components"
 
 type ButtonLinkProps = {
   /**
@@ -12,66 +12,63 @@ type ButtonLinkProps = {
     | "btn-inverted"
     | "btn-border-dark"
     | "btn-border-none"
-    | "btn-border-light";
-    /**
-   * Description goes here
-   */
-  size?: "btn-size-base" | "btn-size-small";
+    | "btn-border-light"
   /**
    * Description goes here
    */
-  label?: string;
+  size?: "btn-size-base" | "btn-size-small"
   /**
    * Description goes here
    */
-  url?: string;
+  label?: string
   /**
    * Description goes here
    */
-  className?: string;
+  url?: string
   /**
    * Description goes here
    */
-  linkable?: boolean;
+  className?: string
   /**
    * Description goes here
    */
-  onClick?: () => void;
+  linkable?: boolean
   /**
    * Description goes here
    */
-  icon?: boolean;
-}  & AnchorHTMLAttributes<HTMLAnchorElement> &
-ButtonHTMLAttributes<HTMLButtonElement>;
+  onClick?: () => void
+  /**
+   * Description goes here
+   */
+  icon?: boolean
+}
 
 const ButtonLink = ({
   variant = "btn-primary",
   size = "btn-size-base",
-  label = "Label",
-  url = "#",
+  label,
+  url = "/",
   className = "",
   linkable = true,
   onClick,
   icon = false,
-  ...props
-}: ButtonLinkProps ) => {
-  const iconContent = icon && <ChevronRightIcon className="h-5 w-5" />;
+}: ButtonLinkProps) => {
+  const iconContent = icon && <ChevronRightIcon className="h-5 w-5" />
 
   return linkable ? (
-    <Link href={url} className={twMerge("btn", variant, size, className)} {...props}>
-      {label}
+    <Link href={url} className={twMerge("btn", variant, size, className)}>
+      {label || "Link"}
       {iconContent}
     </Link>
   ) : (
-    <button
-      {...props}
-      onClick={onClick}
+    <Button
+      onPress={onClick}
       className={twMerge("btn", variant, size, className)}
     >
-      {label}
+      {label || "Button"}
       {iconContent}
-    </button>
-  );
-};
+    </Button>
+  )
+}
 
-export default ButtonLink;
+export default ButtonLink

@@ -29,23 +29,23 @@ body {
 }
 
 .btn-primary {
-  @apply border-black bg-black text-white hover:bg-black/80;
+  @apply border-black bg-black text-white data-[hovered]:bg-black/80;
 }
 
 .btn-inverted {
-  @apply border-white bg-white text-black hover:border-black hover:bg-black hover:text-white;
+  @apply border-white bg-white text-black data-[hovered]:border-black data-[hovered]:bg-black data-[hovered]:text-white;
 }
 
 .btn-border-dark {
-  @apply border-black bg-transparent text-black hover:bg-black hover:text-white;
+  @apply border-black bg-transparent text-black data-[hovered]:bg-black data-[hovered]:text-white;
 }
 
 .btn-border-none {
-  @apply border-transparent bg-transparent !px-0 text-black hover:text-black/60;
+  @apply border-transparent bg-transparent !px-0 text-black data-[hovered]:text-black/60;
 }
 
 .btn-border-light {
-  @apply border-white text-white hover:bg-white hover:text-black;
+  @apply border-white text-white data-[hovered]:bg-white data-[hovered]:text-black;
 }
 
 /* Button Sizes */
@@ -70,10 +70,6 @@ body {
 
 .dropdown__select [aria-expanded="false"] p {
   @apply text-black/40;
-}
-
-.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
-  @apply uppercase text-color-border;
 }
 
 .newsletter-btn .css-1d3z3hw-MuiOutlinedInput-notchedOutline {
@@ -129,4 +125,3 @@ body {
 .sbdocs-content {
   @apply mx-auto !max-w-[1920px] w-full;
 }
-
