@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react"
-import Input from "./"
+import { Input } from "react-aria-components"
+// import Input from "./"
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
@@ -7,7 +8,7 @@ const meta = {
   title: "Components/Input/InputField",
   component: Input,
   args: {
-    label: "Label",
+    // label: "Label",
     id: "inputID",
     type: "text",
     defaultValue: "Default Value",
@@ -22,7 +23,7 @@ const meta = {
 
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
-    label: { control: "text" },
+    // label: { control: "text" },
     id: { control: "text" },
     type: {
       control: { type: "select" },

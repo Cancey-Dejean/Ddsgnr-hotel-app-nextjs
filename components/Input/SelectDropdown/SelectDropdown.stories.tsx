@@ -8,7 +8,7 @@ const meta = {
   title: "Components/Input/SelectDropdown",
   component: SelectDropdown,
   args: {
-    label: "Label",
+    // label: "Label",
   },
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/react/configure/story-layout

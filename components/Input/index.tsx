@@ -12,6 +12,7 @@ type Props = {
 
 const InputField = ({
   label = "Label",
+  name = "name",
   id = "inputID",
   type = "text",
   defaultValue = "Default Value",
@@ -21,34 +22,33 @@ const InputField = ({
 }: Props) => {
   return (
     <>
-      <TextField
+      {/* <TextField
+        name={name}
         className="flex flex-col rounded-[4px]"
         isRequired={isRequired}
         isDisabled={isDisabled}
       >
-        {/* Label */}
-        {label !== "" && (
-          <Label htmlFor={id} className="mb-2 text-base">
-            {label}
-          </Label>
-        )}
+       
+      </TextField> */}
 
-        {/* Input */}
-        <div>
-          <Input
-            className="border rounded-[4px] border-black/20 h-[47px] w-full data-[hovered]:border-black py-4 px-[14px]"
-            type={type}
-            id={id}
-            defaultValue={defaultValue}
-            placeholder={placeholder}
-          />
-        </div>
+      {/* Label */}
+      {label !== "" && (
+        <Label htmlFor={id} className="mb-2 text-base">
+          {label}
+        </Label>
+      )}
 
-        {/* Error Text */}
-        <div>
-          <FieldError />
-        </div>
-      </TextField>
+      {/* Input */}
+      <Input
+        className="border rounded-[4px] border-black/20 h-[47px] w-full data-[hovered]:border-black py-4 px-[14px]"
+        type={type}
+        id={id}
+        defaultValue={defaultValue}
+        placeholder={placeholder}
+      />
+
+      {/* Error Text */}
+      <FieldError />
     </>
   )
 }

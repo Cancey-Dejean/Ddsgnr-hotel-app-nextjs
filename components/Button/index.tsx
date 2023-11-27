@@ -36,6 +36,10 @@ type ButtonLinkProps = {
   /**
    * Description goes here
    */
+  type: "button" | "reset" | "submit" | undefined
+  /**
+   * Description goes here
+   */
   onClick?: () => void
   /**
    * Description goes here
@@ -50,6 +54,7 @@ const ButtonLink = ({
   url = "/",
   className = "",
   linkable = true,
+  type = "button",
   onClick,
   icon = false,
 }: ButtonLinkProps) => {
@@ -64,6 +69,7 @@ const ButtonLink = ({
     <Button
       onPress={onClick}
       className={twMerge("btn", variant, size, className)}
+      type={type}
     >
       {label || "Button"}
       {iconContent}
