@@ -1,18 +1,19 @@
-import React from "react"
-import Wrapper from "../Wrapper"
-import VideoImage from "../VideoImage"
+import React, { useState } from "react"
+import Image from "next/image"
 
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules"
-
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
+
 import ReviewBlock from "./ReviewBlock"
-import Image from "next/image"
 import Paragraph from "../Paragraph"
+import Wrapper from "../Wrapper"
+import { reviewsData } from "../../constants"
 
 const Reviews = () => {
+  const [totalSlides, setTotalSlides] = useState(0)
   return (
     <section className="py-6 sm:py-28">
       <Wrapper>
@@ -20,6 +21,7 @@ const Reviews = () => {
           loop={true}
           spaceBetween={50}
           slidesPerView={1}
+          onInit={(swiper) => setTotalSlides(swiper.slides.length)}
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           pagination={{
             el: ".custom-pagination",
@@ -30,50 +32,25 @@ const Reviews = () => {
             prevEl: ".prev-btn",
           }}
         >
-          <SwiperSlide>
-            <ReviewBlock
-              desc={
-                <Paragraph className="text-2xl font-bold">
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Suspendisse varius enim in eros elementum tristique. Duis
-                  cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
-                  commodo diam libero vitae erat."
-                </Paragraph>
-              }
-              reviewer="Gordan Kelly"
-            />
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <ReviewBlock
-              desc={
-                <Paragraph className="text-2xl font-bold">
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Suspendisse varius enim in eros elementum tristique. Duis
-                  cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
-                  commodo diam libero vitae erat."
-                </Paragraph>
-              }
-              reviewer="Gordan Kelly"
-            />
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <ReviewBlock
-              desc={
-                <Paragraph className="text-2xl font-bold">
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Suspendisse varius enim in eros elementum tristique. Duis
-                  cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
-                  commodo diam libero vitae erat."
-                </Paragraph>
-              }
-              reviewer="Gordan Kelly"
-            />
-          </SwiperSlide>
+          {reviewsData.map((review, index) => (
+            <SwiperSlide key={index}>
+              <ReviewBlock
+                desc={
+                  <Paragraph className="text-2xl font-bold">
+                    {review.desc}
+                  </Paragraph>
+                }
+                reviewer={review.reviewer}
+              />
+            </SwiperSlide>
+          ))}
         </Swiper>
 
-        <div className="mt-6 flex items-center justify-between">
+        <div
+          className={`mt-6 flex items-center justify-between ${
+            totalSlides < 2 ? "hidden" : ""
+          }`}
+        >
           <div className="custom-pagination"></div>
 
           <div className="flex items-center gap-[15px]">

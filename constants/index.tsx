@@ -1,10 +1,10 @@
 import { FaFacebookF, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa"
 
 export const menuList = [
-  { label: "Home", url: "/" },
-  { label: "About", url: "/about" },
-  { label: "Services", url: "/services" },
-  { label: "Gallery", url: "/gallery" },
+  { label: "Home", url: "/", icon: null },
+  { label: "About", url: "/about", icon: null },
+  { label: "Services", url: "/services", icon: null },
+  { label: "Gallery", url: "/gallery", icon: null },
 ]
 
 export const socialList = [
@@ -14,4 +14,25 @@ export const socialList = [
   { label: "LinkedIn", url: "/#linkedIn", icon: <FaLinkedin size={20} /> },
 ]
 
+export const legalLinks = [
+  { url: "#", label: "Privacy Policy" },
+  { url: "#", label: "Terms of Service" },
+  { url: "#", label: "Cookies Settings" },
+]
+
 export const roomsData = ["Standard", "Deluxe", "Executive", "Suite"]
+
+export const reviewsData = [
+  {
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
+    reviewer: "Gordan Kelly",
+  },
+  {
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
+    reviewer: "Gordan Kelly",
+  },
+  {
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
+    reviewer: "Gordan Kelly",
+  },
+]

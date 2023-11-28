@@ -1,19 +1,20 @@
-import { ReactNode } from "react";
-import Link from "next/link";
-import Paragraph from "./Paragraph";
-import TextLink from "./TextLink";
+import Paragraph from "../Paragraph"
+import TextLink from "../TextLink"
+import { socialList } from "../../constants"
+import { ReactNode } from "react"
 
 const LinkList = ({
-  links,
+  links = [],
   title = "Menu",
 }: {
-  title: string;
-  links: {
-    label: string;
-    url: string;
-    icon?: ReactNode;
-    className?: string;
-  }[];
+  /**
+   * Description goes here
+   */
+  title: string
+  /**
+   * Description goes here
+   */
+  links: { label: string; url: string; icon?: ReactNode }[]
 }) => {
   return (
     <div className="flex flex-col gap-4">
@@ -31,7 +32,7 @@ const LinkList = ({
         ))}
       </ul>
     </div>
-  );
-};
+  )
+}
 
-export default LinkList;
+export default LinkList
