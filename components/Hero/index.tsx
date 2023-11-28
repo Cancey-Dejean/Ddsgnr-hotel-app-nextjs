@@ -2,7 +2,7 @@ import Wrapper from "../Wrapper"
 import { twMerge } from "tailwind-merge"
 import Paragraph from "../Paragraph"
 import SectionTitle from "../SectionTitle"
-import ButtonGroup from "../ButtonGroup"
+import ButtonGroup from "../ButtonLink/ButtonGroup"
 
 type HeroProps = {
   /**
@@ -17,12 +17,36 @@ type HeroProps = {
    * Description goes here
    */
   bgImage: string
+  /**
+   * Description goes here
+   */
+  buttonGroup?: {
+    url: string
+    variant: string
+    label: string
+    icon?: boolean
+    linkable?: boolean
+  }[]
 }
 
 const Hero = ({
   title = "Title",
   desc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   bgImage = "https://dummyimage.com/1440x960.png/dddddd/ffffff",
+  buttonGroup = [
+    {
+      url: "/",
+      variant: "btn-inverted",
+      label: "Link",
+      linkable: true,
+    },
+    {
+      url: "/",
+      variant: "btn-border-light",
+      label: "Link",
+      linkable: true,
+    },
+  ],
 }: HeroProps) => {
   return (
     <section
@@ -46,22 +70,7 @@ const Hero = ({
           </Paragraph>
 
           <div className="flex items-center gap-4 max-md:justify-center">
-            <ButtonGroup
-              buttons={[
-                {
-                  url: "/",
-                  variant: "btn-inverted",
-                  label: "Book Now",
-                  linkable: true,
-                },
-                {
-                  url: "/",
-                  variant: "btn-border-light",
-                  label: "Learn More",
-                  linkable: true,
-                },
-              ]}
-            />
+            <ButtonGroup buttons={buttonGroup} />
           </div>
         </div>
       </Wrapper>

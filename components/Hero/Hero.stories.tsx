@@ -9,16 +9,19 @@ const meta = {
   args: {
     title: "Title",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    bgImage: "/images/hero.jpg",
+    bgImage: "https://dummyimage.com/1440x960.png/dddddd/ffffff",
+  },
+  // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
+  argTypes: {
+    buttonGroup: {
+      control: false,
+    },
   },
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/react/configure/story-layout
     layout: "fullscreen",
   },
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
-
-  // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
-  argTypes: {},
 } satisfies Meta<typeof Hero>
 
 export default meta

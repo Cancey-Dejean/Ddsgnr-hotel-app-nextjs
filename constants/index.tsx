@@ -26,13 +26,43 @@ export const reviewsData = [
   {
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
     reviewer: "Gordan Kelly",
+    stars: 5,
   },
   {
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
     reviewer: "Gordan Kelly",
+    stars: 4,
   },
   {
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
     reviewer: "Gordan Kelly",
+    stars: 3,
+  },
+]
+
+export const roomOptions = [
+  {
+    imgSrc: "/images/card-image-2.jpg",
+    title: "Double deluxe",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    smallCard: true,
+  },
+  {
+    imgSrc: "/images/card-image-3.jpg",
+    title: "Superior king bed",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    smallCard: true,
+  },
+  {
+    imgSrc: "/images/card-image-4.jpg",
+    title: "Double deluxe king bed",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    smallCard: true,
+  },
+  {
+    imgSrc: "/images/card-image-5.jpg",
+    title: "Double queen beds",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    smallCard: true,
   },
 ]

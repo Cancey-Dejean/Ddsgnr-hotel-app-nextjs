@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react"
-import ButtonLink from "./"
+import ButtonLink from "."
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
@@ -45,16 +45,5 @@ type Story = StoryObj<typeof meta>
 export const Single: Story = {
   render: (args) => {
     return <ButtonLink {...args} />
-  },
-}
-
-export const Group: Story = {
-  render: (args) => {
-    return (
-      <div className="flex gap-4">
-        <ButtonLink variant="btn-primary" {...args} />
-        <ButtonLink variant="btn-border-dark" {...args} />
-      </div>
-    )
   },
 }

@@ -35,6 +35,8 @@ const Reviews = () => {
           {reviewsData.map((review, index) => (
             <SwiperSlide key={index}>
               <ReviewBlock
+                imgSrc="/images/lobby.jpg"
+                stars={review.stars}
                 desc={
                   <Paragraph className="text-2xl font-bold">
                     {review.desc}

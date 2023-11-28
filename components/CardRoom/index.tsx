@@ -1,16 +1,17 @@
 import Image from "next/image"
-import ButtonLink from "./Button"
-import Paragraph from "./Paragraph"
-import SectionTitle from "./SectionTitle"
+import Button from "../ButtonLink"
+import Paragraph from "../Paragraph"
+import SectionTitle from "../SectionTitle"
 import { twMerge } from "tailwind-merge"
+import ButtonLink from "../ButtonLink"
 
 const CardRoom = ({
   imgSrc = "/images/card-image.jpg",
   imgAlt = "card image",
-  title,
-  smallCard,
-  desc,
-  className,
+  title = "Title",
+  smallCard = false,
+  desc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+  className = "",
 }: {
   imgSrc?: string
   imgAlt?: string
@@ -22,21 +23,24 @@ const CardRoom = ({
   return (
     <div
       className={twMerge(
-        "flex max-w-full flex-col items-center justify-start overflow-hidden rounded-[10px] border-[0.5px] border-color-border",
+        "group flex mx-auto  flex-col items-center justify-between overflow-hidden rounded-[10px] border-[0.5px] border-color-border",
+        smallCard ? "lg:max-w-[400px]" : "lg:max-w-[900px]",
         className
       )}
     >
-      <Image
-        src={imgSrc}
-        width={640}
-        height={488}
-        className={twMerge(
-          " w-full object-cover",
-          smallCard ? "h-[171px]" : "h-[488px]"
-        )}
-        alt={imgAlt}
-        tabIndex={0}
-      />
+      <div className="overflow-hidden w-full">
+        <Image
+          src={imgSrc}
+          width={640}
+          height={488}
+          className={twMerge(
+            "w-full object-cover lg:group-hover:scale-110 transition-all duration-[.3s] ease-in-out",
+            smallCard ? "min-h-[190px]" : "h-[488px]"
+          )}
+          alt={imgAlt}
+          tabIndex={0}
+        />
+      </div>
 
       <div
         className={twMerge(

@@ -3,6 +3,7 @@ import CardRoom from "../CardRoom"
 import SectionHeader from "../SectionHeader"
 import SectionTitle from "../SectionTitle"
 import Paragraph from "../Paragraph"
+import { roomOptions } from "../../constants"
 
 const Rooms = () => {
   return (
@@ -25,31 +26,17 @@ const Rooms = () => {
             desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
             className="w-full xl:max-w-[50%]"
           />
+
           <div className="flex flex-col items-stretch gap-6 sm:grid sm:grid-cols-2 sm:gap-5">
-            <CardRoom
-              imgSrc="/images/card-image-2.jpg"
-              title="Double deluxe"
-              desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-              smallCard
-            />
-            <CardRoom
-              imgSrc="/images/card-image-3.jpg"
-              title="Superior king bed"
-              desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-              smallCard
-            />
-            <CardRoom
-              imgSrc="/images/card-image-4.jpg"
-              title="Double deluxe king bed"
-              desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-              smallCard
-            />
-            <CardRoom
-              imgSrc="/images/card-image-5.jpg"
-              title="Double queen beds"
-              desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-              smallCard
-            />
+            {roomOptions.map((room, index) => (
+              <CardRoom
+                key={index}
+                imgSrc={room.imgSrc}
+                title={room.title}
+                desc={room.desc}
+                smallCard={room.smallCard}
+              />
+            ))}
           </div>
         </div>
       </Wrapper>

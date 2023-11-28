@@ -3,18 +3,38 @@ import StartVacation from "./"
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
-  tags: ["autodocs"],
   title: "Sections/StartVacation",
   component: StartVacation,
-  args: {},
+  args: {
+    title: "Section Title",
+    videoImg: "https://dummyimage.com/572x594.png/dddddd/ffffff",
+    buttonGroup: [
+      {
+        url: "/",
+        variant: "btn-primary",
+        label: "Link",
+        linkable: true,
+      },
+      {
+        url: "/",
+        variant: "btn-border-dark",
+        label: "Link",
+        linkable: true,
+      },
+    ],
+  },
+  argTypes: {
+    buttonGroup: {
+      control: false,
+    },
+  },
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/react/configure/story-layout
     layout: "fullscreen",
   },
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
-
+  tags: ["autodocs"],
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
-  argTypes: {},
 } satisfies Meta<typeof StartVacation>
 
 export default meta

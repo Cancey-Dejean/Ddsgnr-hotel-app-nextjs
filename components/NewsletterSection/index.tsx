@@ -1,6 +1,7 @@
 "use client"
 import { useFormReset } from "../../utils"
-import ButtonLink from "../Button"
+import ButtonLink from "../ButtonLink"
+import Button from "../ButtonLink"
 import Paragraph from "../Paragraph"
 import Link from "next/link"
 import {
@@ -15,7 +16,10 @@ const NewsletterSection = () => {
   const onSubmit = useFormReset()
   return (
     <div className="flex flex-col justify-stretch gap-4">
-      <Form className="flex flex-col gap-4" onSubmit={onSubmit}>
+      <Form
+        className="flex flex-col gap-4 w-full lg:max-w-[481px]"
+        onSubmit={onSubmit}
+      >
         <Paragraph>
           Join our newsletter to stay up to date on features and releases.
         </Paragraph>
@@ -43,7 +47,7 @@ const NewsletterSection = () => {
         </div>
 
         <div className="block">
-          <Paragraph className="w-full text-xs lg:max-w-[481px]">
+          <Paragraph className="text-xs ">
             By subscribing you agree to with our {""}
             <Link href="#" className="underline">
               Privacy Policy

@@ -2,7 +2,7 @@
 import NavigationMenu from "../NavigationMenu"
 import Wrapper from "../Wrapper"
 import { usePathname } from "next/navigation"
-import ButtonGroup from "../ButtonGroup"
+import ButtonGroup from "../ButtonLink/ButtonGroup"
 import Logo from "../Logo"
 import { menuList } from "../../constants"
 import { Bars3Icon } from "@heroicons/react/24/outline"
@@ -10,7 +10,7 @@ import { Bars3Icon } from "@heroicons/react/24/outline"
 const Header = () => {
   const path = usePathname()
   return (
-    <header className="sticky top-0 z-50 bg-white py-4">
+    <header className="sticky top-0 left-0 w-full z-50 bg-white py-4">
       <Wrapper className="flex items-center justify-between gap-8">
         <Logo
           imgSrc="/images/logo.svg"

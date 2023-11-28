@@ -7,7 +7,7 @@ import { LiaSwimmerSolid } from "react-icons/lia"
 import { TbMassage } from "react-icons/tb"
 import { CgGym } from "react-icons/cg"
 import { MdOutlineFoodBank } from "react-icons/md"
-import ButtonGroup from "../ButtonGroup"
+import ButtonGroup from "../ButtonLink/ButtonGroup"
 
 const VacationSection = () => {
   return (
@@ -16,6 +16,7 @@ const VacationSection = () => {
         <VideoImage
           imgSrc="/images/videoImg2.jpg"
           imgStyles="mx-auto w-full max-w-[900px]"
+          imgAlt="Queen size bed in a room"
         />
 
         <div className="flex-1">

@@ -1,10 +1,10 @@
-import ButtonLink from "../Button"
+import ButtonLink from ".."
 
 const ButtonGroup = ({
   buttons = [
     {
       label: "Button",
-      variant: "btn-inverted",
+      variant: "btn-primary",
       url: "/",
       linkable: true,
       icon: false,
@@ -12,7 +12,7 @@ const ButtonGroup = ({
     },
     {
       label: "Button",
-      variant: "btn-primary",
+      variant: "btn-border-dark",
       url: "/",
       linkable: true,
       icon: false,
@@ -31,7 +31,7 @@ const ButtonGroup = ({
   }[]
 }) => {
   return (
-    <>
+    <div className="flex gap-4">
       {buttons.map((button, index) => (
         <ButtonLink
           type={button.linkable ? "button" : "submit"}
@@ -45,7 +45,7 @@ const ButtonGroup = ({
           linkable={button.linkable}
         />
       ))}
-    </>
+    </div>
   )
 }
 

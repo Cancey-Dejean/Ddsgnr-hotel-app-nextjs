@@ -3,7 +3,7 @@ import { twMerge } from "tailwind-merge"
 import { ChevronRightIcon } from "@heroicons/react/24/outline"
 import { Button, Link } from "react-aria-components"
 
-type ButtonLinkProps = {
+type ButtonProps = {
   /**
    * Description goes here
    */
@@ -57,7 +57,7 @@ const ButtonLink = ({
   type = "button",
   onClick,
   icon = false,
-}: ButtonLinkProps) => {
+}: ButtonProps) => {
   const iconContent = icon && <ChevronRightIcon className="h-5 w-5" />
 
   return linkable ? (
