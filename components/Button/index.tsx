@@ -36,7 +36,7 @@ type ButtonLinkProps = {
   /**
    * Description goes here
    */
-  type: "button" | "reset" | "submit" | undefined
+  type?: "button" | "reset" | "submit" | undefined
   /**
    * Description goes here
    */
