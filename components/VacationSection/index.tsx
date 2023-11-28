@@ -1,14 +1,13 @@
-import React from "react";
-import VacationFeatures from "./VacationFeatures";
-import Wrapper from "./Wrapper";
-import VideoImage from "./VideoImage";
-import ButtonLink from "./Button";
-import Paragraph from "./Paragraph";
-import { LiaSwimmerSolid } from "react-icons/lia";
-import { TbMassage } from "react-icons/tb";
-import { CgGym } from "react-icons/cg";
-import { MdOutlineFoodBank } from "react-icons/md";
-import ButtonGroup from "./ButtonGroup";
+import React from "react"
+import VacationFeatures from "./VacationFeatures"
+import Wrapper from "../Wrapper"
+import VideoImage from "../VideoImage"
+import Paragraph from "../Paragraph"
+import { LiaSwimmerSolid } from "react-icons/lia"
+import { TbMassage } from "react-icons/tb"
+import { CgGym } from "react-icons/cg"
+import { MdOutlineFoodBank } from "react-icons/md"
+import ButtonGroup from "../ButtonGroup"
 
 const VacationSection = () => {
   return (
@@ -85,7 +84,7 @@ const VacationSection = () => {
         </div>
       </Wrapper>
     </section>
-  );
-};
+  )
+}
 
-export default VacationSection;
+export default VacationSection

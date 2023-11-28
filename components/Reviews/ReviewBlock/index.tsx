@@ -1,6 +1,6 @@
-import { BsStarFill } from "react-icons/bs";
-import VideoImage from "./VideoImage";
-import { ReactNode } from "react";
+import { BsStarFill } from "react-icons/bs"
+import VideoImage from "../../VideoImage"
+import { ReactNode } from "react"
 
 const ReviewBlock = ({
   desc,
@@ -8,10 +8,10 @@ const ReviewBlock = ({
   imgSrc,
   imgAlt,
 }: {
-  imgSrc?: string;
-  imgAlt?: string;
-  desc?: ReactNode;
-  reviewer?: string;
+  imgSrc?: string
+  imgAlt?: string
+  desc?: ReactNode
+  reviewer?: string
 }) => {
   return (
     <div className="flex flex-1 flex-col items-center gap-10 lg:flex-row lg:gap-20">
@@ -35,7 +35,7 @@ const ReviewBlock = ({
         </p>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ReviewBlock;
+export default ReviewBlock

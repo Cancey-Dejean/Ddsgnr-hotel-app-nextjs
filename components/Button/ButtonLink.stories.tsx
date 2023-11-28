@@ -3,15 +3,14 @@ import ButtonLink from "./"
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
-  tags: ["autodocs"],
   title: "Components/ButtonLink",
   component: ButtonLink,
   args: {
-    variant: "btn-primary",
     size: "btn-size-base",
-    url: "#",
+    url: "/",
     className: "",
     linkable: true,
+    type: "button",
     icon: false,
   },
   parameters: {
@@ -19,7 +18,7 @@ const meta = {
     layout: "centered",
   },
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
-
+  tags: ["autodocs"],
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
     variant: {
@@ -36,25 +35,6 @@ const meta = {
       control: { type: "select" },
       options: ["btn-size-base", "btn-size-small"],
     },
-    // intent: {
-    //   control: { type: "select" },
-    //   // options: buttonIntents.map((intent) => intent),
-    //   options: [
-    //     "primary",
-    //     "secondary",
-    //     "tertiary",
-    //     "border-primary",
-    //     "text",
-    //     "navText",
-    //   ],
-    // },
-    // size: {
-    //   control: { type: "select" },
-    //   options: ["base", "small", "large"],
-    // },
-    // icon: {
-    //   control: false,
-    // },
   },
 } satisfies Meta<typeof ButtonLink>
 
@@ -62,8 +42,19 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
-export const Primary: Story = {
+export const Single: Story = {
   render: (args) => {
     return <ButtonLink {...args} />
+  },
+}
+
+export const Group: Story = {
+  render: (args) => {
+    return (
+      <div className="flex gap-4">
+        <ButtonLink variant="btn-primary" {...args} />
+        <ButtonLink variant="btn-border-dark" {...args} />
+      </div>
+    )
   },
 }

@@ -1,14 +1,14 @@
-"use client";
-import NavigationMenu from "../NavigationMenu";
-import Wrapper from "../Wrapper";
-import { usePathname } from "next/navigation";
-import ButtonGroup from "../ButtonGroup";
-import Logo from "../Logo";
-import { menuList } from "../../constants";
-import { Bars3Icon } from "@heroicons/react/24/outline";
+"use client"
+import NavigationMenu from "../NavigationMenu"
+import Wrapper from "../Wrapper"
+import { usePathname } from "next/navigation"
+import ButtonGroup from "../ButtonGroup"
+import Logo from "../Logo"
+import { menuList } from "../../constants"
+import { Bars3Icon } from "@heroicons/react/24/outline"
 
 const Header = () => {
-  const path = usePathname();
+  const path = usePathname()
   return (
     <header className="sticky top-0 z-50 bg-white py-4">
       <Wrapper className="flex items-center justify-between gap-8">
@@ -49,7 +49,7 @@ const Header = () => {
         </button>
       </Wrapper>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

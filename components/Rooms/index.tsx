@@ -1,8 +1,8 @@
-import Wrapper from "./Wrapper";
-import CardRoom from "./CardRoom";
-import SectionHeader from "./SectionHeader";
-import SectionTitle from "./SectionTitle";
-import Paragraph from "./Paragraph";
+import Wrapper from "../Wrapper"
+import CardRoom from "../CardRoom"
+import SectionHeader from "../SectionHeader"
+import SectionTitle from "../SectionTitle"
+import Paragraph from "../Paragraph"
 
 const Rooms = () => {
   return (
@@ -54,7 +54,7 @@ const Rooms = () => {
         </div>
       </Wrapper>
     </section>
-  );
-};
+  )
+}
 
-export default Rooms;
+export default Rooms

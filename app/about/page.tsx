@@ -1,7 +1,7 @@
-"use client";
-import PageWrapper from "@/components/PageWrapper";
-import Rooms from "@/components/Rooms";
-import StartVacation from "@/components/StartVacation";
+"use client"
+import PageWrapper from "@/components/PageWrapper"
+import Rooms from "@/components/Rooms"
+import StartVacation from "@/components/StartVacation"
 
 export default function Home() {
   return (
@@ -9,5 +9,5 @@ export default function Home() {
       <StartVacation />
       <Rooms />
     </PageWrapper>
-  );
+  )
 }

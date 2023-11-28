@@ -1,10 +1,18 @@
-import ButtonLink from "./Button";
+import ButtonLink from "../Button"
 
 const ButtonGroup = ({
   buttons = [
     {
-      label: "Book Now",
+      label: "Button",
       variant: "btn-inverted",
+      url: "/",
+      linkable: true,
+      icon: false,
+      className: "",
+    },
+    {
+      label: "Button",
+      variant: "btn-primary",
       url: "/",
       linkable: true,
       icon: false,
@@ -13,19 +21,20 @@ const ButtonGroup = ({
   ],
 }: {
   buttons?: {
-    url: string;
-    className?: string;
-    label: string;
-    variant?: string;
-    linkable?: boolean;
-    size?: string;
-    icon?: boolean;
-  }[];
+    url: string
+    className?: string
+    label: string
+    variant?: string
+    linkable?: boolean
+    size?: string
+    icon?: boolean
+  }[]
 }) => {
   return (
     <>
       {buttons.map((button, index) => (
         <ButtonLink
+          type={button.linkable ? "button" : "submit"}
           key={index}
           label={button.label}
           url={button.url}
@@ -37,7 +46,7 @@ const ButtonGroup = ({
         />
       ))}
     </>
-  );
-};
+  )
+}
 
-export default ButtonGroup;
+export default ButtonGroup

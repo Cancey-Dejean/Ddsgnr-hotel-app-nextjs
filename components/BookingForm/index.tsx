@@ -12,16 +12,10 @@ import Wrapper from "../Wrapper"
 import ButtonLink from "../Button"
 import SelectDropdown from "../Input/SelectDropdown"
 import { roomsData } from "../../constants"
+import { useFormReset } from "../../utils"
 
 const BookingForm = () => {
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    // Prevent default browser page refresh.
-    e.preventDefault()
-
-    // Reset the form
-    e.currentTarget.reset()
-  }
-
+  const onSubmit = useFormReset()
   return (
     <section className="flex justify-between gap-[26] py-6 sm:py-[55px]">
       <Wrapper className=" max-w-[1209px]">

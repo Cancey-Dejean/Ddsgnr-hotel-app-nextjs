@@ -1,9 +1,9 @@
-import Image from "next/image";
-import ButtonLink from "./Button";
-import Wrapper from "./Wrapper";
-import SectionHeader from "./SectionHeader";
-import Paragraph from "./Paragraph";
-import SectionTitle from "./SectionTitle";
+import Image from "next/image"
+import ButtonLink from "../Button"
+import Wrapper from "../Wrapper"
+import SectionHeader from "../SectionHeader"
+import Paragraph from "../Paragraph"
+import SectionTitle from "../SectionTitle"
 
 const GallerySection = () => {
   return (
@@ -59,7 +59,7 @@ const GallerySection = () => {
         <ButtonLink variant="btn-border-dark" label="View more" linkable />
       </Wrapper>
     </section>
-  );
-};
+  )
+}
 
-export default GallerySection;
+export default GallerySection

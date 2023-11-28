@@ -1,11 +1,10 @@
-import Wrapper from "./Wrapper";
-import ButtonLink from "./Button";
-import Paragraph from "./Paragraph";
-import SectionTitle from "./SectionTitle";
-import VideoImage from "./VideoImage";
-import ButtonGroup from "./ButtonGroup";
+import Wrapper from "../Wrapper"
+import Paragraph from "../Paragraph"
+import SectionTitle from "../SectionTitle"
+import VideoImage from "../VideoImage"
+import ButtonGroup from "../ButtonGroup"
 
-type Props = {};
+type Props = {}
 
 const StartVacation = ({}: Props) => {
   return (
@@ -46,7 +45,7 @@ const StartVacation = ({}: Props) => {
         </div>
       </Wrapper>
     </section>
-  );
-};
+  )
+}
 
-export default StartVacation;
+export default StartVacation

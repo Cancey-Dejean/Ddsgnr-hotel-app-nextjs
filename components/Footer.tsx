@@ -1,13 +1,13 @@
-import { menuList, socialList } from "@/constants";
-import LinkList from "./LinkList";
-import Logo from "./Logo";
-import NewsletterSection from "./NewsletterSection";
-import Wrapper from "./Wrapper";
-import Paragraph from "./Paragraph";
-import TextLink from "./TextLink";
+import { menuList, socialList } from "@/constants"
+import LinkList from "./LinkList"
+import Logo from "./Logo"
+import NewsletterSection from "./NewsletterSection"
+import Wrapper from "./Wrapper"
+import Paragraph from "./Paragraph"
+import TextLink from "./TextLink"
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear()
 
   return (
     <footer className="py-16" role="contentinfo">
@@ -47,7 +47,7 @@ const Footer = () => {
         </div>
       </Wrapper>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
