@@ -8,6 +8,7 @@ import { TbMassage } from "react-icons/tb"
 import { CgGym } from "react-icons/cg"
 import { MdOutlineFoodBank } from "react-icons/md"
 import ButtonGroup from "../ButtonLink/ButtonGroup"
+import { perksButtons } from "@/constants"
 
 const VacationSection = () => {
   return (
@@ -64,23 +65,7 @@ const VacationSection = () => {
           </div>
 
           <div className="mt-7 flex justify-start gap-5 sm:mt-12">
-            <ButtonGroup
-              buttons={[
-                {
-                  url: "#",
-                  variant: "btn-border-dark",
-                  label: "Book Now",
-                  linkable: true,
-                },
-                {
-                  url: "#",
-                  variant: "btn-border-none",
-                  label: "Learn More",
-                  icon: true,
-                  linkable: true,
-                },
-              ]}
-            />
+            <ButtonGroup buttons={perksButtons} />
           </div>
         </div>
       </Wrapper>

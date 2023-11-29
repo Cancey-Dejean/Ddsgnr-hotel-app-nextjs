@@ -4,7 +4,7 @@ import Wrapper from "../Wrapper"
 import { usePathname } from "next/navigation"
 import ButtonGroup from "../ButtonLink/ButtonGroup"
 import Logo from "../Logo"
-import { menuList } from "../../constants"
+import { headerButtons, menuList } from "../../constants"
 import { Bars3Icon } from "@heroicons/react/24/outline"
 
 const Header = () => {
@@ -24,24 +24,7 @@ const Header = () => {
         </div>
 
         <div className="hidden gap-4 md:flex md:items-center">
-          <ButtonGroup
-            buttons={[
-              {
-                url: "#",
-                variant: "btn-border-dark",
-                label: "Sign In",
-                linkable: true,
-                size: "btn-size-small",
-              },
-              {
-                url: "#",
-                variant: "btn-primary",
-                label: "Get Started",
-                linkable: true,
-                size: "btn-size-small",
-              },
-            ]}
-          />
+          <ButtonGroup buttons={headerButtons} />
         </div>
 
         <button type="button" className="md:hidden">

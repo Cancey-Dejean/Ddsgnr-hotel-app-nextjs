@@ -6,7 +6,17 @@ import Paragraph from "../Paragraph"
 import SectionTitle from "../SectionTitle"
 import ButtonLink from "../ButtonLink"
 
-const GallerySection = () => {
+const GallerySection = ({
+  imageOne = "https://dummyimage.com/618x618.png/dddddd/ffffff",
+  imageTwo = "https://dummyimage.com/618x411.png/dddddd/ffffff",
+  imageThree = "https://dummyimage.com/618x411.png/dddddd/ffffff",
+  imageFour = "https://dummyimage.com/618x618.png/dddddd/ffffff",
+}: {
+  imageOne?: string
+  imageTwo?: string
+  imageThree?: string
+  imageFour?: string
+}) => {
   return (
     <section className="py-6 sm:py-28">
       <Wrapper className="flex flex-col items-center gap-12">
@@ -22,7 +32,7 @@ const GallerySection = () => {
         <div className="flex flex-col gap-8 lg:flex-row">
           <div className="flex flex-col gap-8">
             <Image
-              src="/images/gallery1.jpg"
+              src={imageOne}
               width={640}
               height={640}
               alt=""
@@ -30,7 +40,7 @@ const GallerySection = () => {
             />
 
             <Image
-              src="/images/gallery2.jpg"
+              src={imageTwo}
               width={640}
               height={426}
               alt=""
@@ -40,7 +50,7 @@ const GallerySection = () => {
 
           <div className="flex flex-col gap-8">
             <Image
-              src="/images/gallery4.jpg"
+              src={imageFour}
               width={640}
               height={640}
               alt=""
@@ -48,7 +58,7 @@ const GallerySection = () => {
             />
 
             <Image
-              src="/images/gallery3.jpg"
+              src={imageThree}
               width={640}
               height={426}
               alt=""

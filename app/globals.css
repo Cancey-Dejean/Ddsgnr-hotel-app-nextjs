@@ -57,11 +57,6 @@ body {
   @apply px-5 py-2;
 }
 
-/* Custom MUI Styles */
-.dropdown__select .css-14lo706 > span {
-  @apply hidden;
-}
-
 /* Input */
 .input-label {
   @apply block mb-2 text-base;
@@ -79,24 +74,6 @@ body {
   @apply border-red-500 border-2 focus-visible:outline-0;
 }
 
-.dropdown__select
-  .css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input,
-.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
-  @apply !py-[12px];
-}
-
-.dropdown__select [aria-expanded="false"] p {
-  @apply text-black/40;
-}
-
-.newsletter-btn .css-1d3z3hw-MuiOutlinedInput-notchedOutline {
-  @apply rounded-[5px] border border-black;
-}
-
-.newsletter-btn .css-md26zr-MuiInputBase-root-MuiOutlinedInput-root {
-  @apply h-full;
-}
-
 /* Swiper */
 .swiper-pagination-fraction,
 .swiper-pagination-custom,
@@ -109,8 +86,6 @@ body {
 .swiper-button-next {
   position: relative !important;
   inset: inherit !important;
-  /* top: inherit !important;
-  right: inherit !important; */
   width: auto !important;
   height: auto !important;
   margin-top: 0 !important;

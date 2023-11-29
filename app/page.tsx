@@ -7,6 +7,7 @@ import Reviews from "@/components/Reviews"
 import Rooms from "@/components/Rooms"
 import StartVacation from "@/components/StartVacation"
 import VacationSection from "@/components/VacationSection"
+import { vacationButtons } from "@/constants"
 
 export default function Home() {
   return (
@@ -20,12 +21,18 @@ export default function Home() {
         varius enim in eros elementum tristique. Duis cursus, mi quis
         viverra ornare, eros dolor interdum nulla, ut commodo diam libero
         vitae erat."
+        buttonGroup={vacationButtons}
       />
 
       <Rooms />
 
       <VacationSection />
-      <GallerySection />
+      <GallerySection
+        imageOne="/images/gallery1.jpg"
+        imageTwo="/images/gallery2.jpg"
+        imageThree="/images/gallery3.jpg"
+        imageFour="/images/gallery4.jpg"
+      />
       <Reviews />
     </PageWrapper>
   )
