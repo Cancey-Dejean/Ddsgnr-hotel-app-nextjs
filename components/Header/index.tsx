@@ -4,10 +4,22 @@ import Wrapper from "../Wrapper"
 import { usePathname } from "next/navigation"
 import ButtonGroup from "../ButtonLink/ButtonGroup"
 import Logo from "../Logo"
-import { headerButtons, menuList } from "../../constants"
+import { headerButtonsData, menuListData } from "../../constants"
 import { Bars3Icon } from "@heroicons/react/24/outline"
 
-const Header = () => {
+const Header = ({
+  menuListHeader = [],
+  headerButtons = [],
+}: {
+  /**
+   * Description goes here
+   */
+  menuListHeader: (typeof menuListData)[number][]
+  /**
+   * Description goes here
+   */
+  headerButtons?: (typeof headerButtonsData)[number][]
+}) => {
   const path = usePathname()
   return (
     <header className="sticky top-0 left-0 w-full z-50 bg-white py-4">
@@ -20,7 +32,7 @@ const Header = () => {
         />
 
         <div className="hidden md:flex md:flex-1 md:justify-end">
-          <NavigationMenu menuList={menuList} path={path} />
+          <NavigationMenu menuList={menuListHeader} path={path} />
         </div>
 
         <div className="hidden gap-4 md:flex md:items-center">

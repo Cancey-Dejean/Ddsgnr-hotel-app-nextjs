@@ -5,15 +5,29 @@ import ReviewBlock from "./"
 const meta = {
   title: "Components/ReviewBlock",
   component: ReviewBlock,
-  args: {},
+  args: {
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+    reviewer: "First Last",
+    imgSrc: "https://dummyimage.com/572x594.png/dddddd/ffffff",
+    imgAlt: "Image",
+    stars: 5,
+  },
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/react/configure/story-layout
-    layout: "fullscreen",
+    layout: "centered",
   },
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
   tags: ["autodocs"],
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
-  argTypes: {},
+  argTypes: {
+    stars: {
+      control: {
+        type: "range",
+        min: 1,
+        max: 5,
+      },
+    },
+  },
 } satisfies Meta<typeof ReviewBlock>
 
 export default meta

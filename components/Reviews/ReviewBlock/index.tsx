@@ -6,13 +6,28 @@ const ReviewBlock = ({
   desc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
   reviewer = "First Last",
   imgSrc = "https://dummyimage.com/572x594.png/dddddd/ffffff",
-  imgAlt = "",
+  imgAlt = "Image",
   stars = 5,
 }: {
+  /**
+   * Description goes here
+   */
   imgSrc?: string
+  /**
+   * Description goes here
+   */
   imgAlt?: string
-  desc?: ReactNode
+  /**
+   * Description goes here
+   */
+  desc?: string
+  /**
+   * Description goes here
+   */
   reviewer?: string
+  /**
+   * Description goes here
+   */
   stars?: number
 }) => {
   return (
@@ -23,7 +38,7 @@ const ReviewBlock = ({
 
       <div className="flex flex-1 flex-col gap-6 text-center lg:gap-8 lg:text-left">
         <div className="flex items-center justify-center gap-[4px] lg:justify-start">
-          {Array(stars)
+          {Array(Math.min(Math.max(stars, 1), 5))
             .fill(0)
             .map((_, index) => (
               <BsStarFill key={index} />

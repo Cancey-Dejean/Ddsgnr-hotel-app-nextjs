@@ -1,11 +1,14 @@
-import exp from "constants"
+import { CgGym } from "react-icons/cg"
 import { FaFacebookF, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa"
+import { LiaSwimmerSolid } from "react-icons/lia"
+import { MdOutlineFoodBank } from "react-icons/md"
+import { TbMassage } from "react-icons/tb"
 
-export const menuList = [
-  { label: "Home", url: "/", icon: null },
-  { label: "About", url: "/about", icon: null },
-  { label: "Services", url: "/services", icon: null },
-  { label: "Gallery", url: "/gallery", icon: null },
+export const menuListData = [
+  { label: "Home", url: "/" },
+  { label: "About", url: "/about" },
+  { label: "Services", url: "/services" },
+  { label: "Gallery", url: "/gallery" },
 ]
 
 export const socialList = [
@@ -25,16 +28,22 @@ export const roomsData = ["Standard", "Deluxe", "Executive", "Suite"]
 
 export const reviewsData = [
   {
+    imgSrc: "/images/lobby.jpg",
+    imgAlt: "Lobby",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
     reviewer: "Gordan Kelly",
     stars: 5,
   },
   {
+    imgSrc: "/images/lobby.jpg",
+    imgAlt: "Lobby",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
     reviewer: "Gordan Kelly",
     stars: 4,
   },
   {
+    imgSrc: "/images/lobby.jpg",
+    imgAlt: "Lobby",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
     reviewer: "Gordan Kelly",
     stars: 3,
@@ -42,6 +51,12 @@ export const reviewsData = [
 ]
 
 export const roomOptions = [
+  {
+    imgSrc: "/images/card-image.jpg",
+    title: "Double exclusive 2 queen beds",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+    smallCard: false,
+  },
   {
     imgSrc: "/images/card-image-2.jpg",
     title: "Double deluxe",
@@ -68,13 +83,14 @@ export const roomOptions = [
   },
 ]
 
-export const headerButtons = [
+export const headerButtonsData = [
   {
     url: "#",
     variant: "btn-border-dark",
     label: "Sign In",
     linkable: true,
     size: "btn-size-small",
+    icon: null,
   },
   {
     url: "#",
@@ -82,6 +98,7 @@ export const headerButtons = [
     label: "Get Started",
     linkable: true,
     size: "btn-size-small",
+    icon: null,
   },
 ]
 
@@ -113,5 +130,28 @@ export const vacationButtons = [
     variant: "btn-border-dark",
     label: "Learn More",
     linkable: true,
+  },
+]
+
+export const featuresData = [
+  {
+    title: "Private pool",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+    icon: <LiaSwimmerSolid />,
+  },
+  {
+    title: "Spa & Massage",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+    icon: <TbMassage />,
+  },
+  {
+    title: "Gym",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+    icon: <CgGym />,
+  },
+  {
+    title: "Restaurant",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+    icon: <MdOutlineFoodBank />,
   },
 ]

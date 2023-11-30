@@ -1,4 +1,4 @@
-import { legalLinks, menuList, socialList } from "../../constants"
+import { legalLinks, menuListData, socialList } from "../../constants"
 import LinkList from "../LinkList"
 import Logo from "../Logo"
 import NewsletterSection from "../NewsletterSection"
@@ -25,7 +25,7 @@ const Footer = () => {
 
           <div className="flex flex-1 items-start justify-end gap-10">
             <div className="max-w-full flex-1 lg:max-w-[170px]">
-              <LinkList title="Menu" links={menuList} />
+              <LinkList title="Menu" links={menuListData} />
             </div>
 
             <div className="max-w-full flex-1 lg:max-w-[170px]">

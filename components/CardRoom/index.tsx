@@ -6,7 +6,8 @@ import { twMerge } from "tailwind-merge"
 import ButtonLink from "../ButtonLink"
 
 const CardRoom = ({
-  imgSrc = "/images/card-image.jpg",
+  imgSrc = "https://dummyimage.com/640x488.png/dddddd/ffffff",
+  // imgSrc = "/images/card-image.jpg",
   imgAlt = "card image",
   title = "Title",
   smallCard = false,
@@ -28,14 +29,13 @@ const CardRoom = ({
         className
       )}
     >
-      <div className="overflow-hidden w-full">
+      <div className={twMerge("overflow-hidden w-full flex-1")}>
         <Image
           src={imgSrc}
           width={640}
           height={488}
           className={twMerge(
-            "w-full object-cover lg:group-hover:scale-110 transition-all duration-[.3s] ease-in-out",
-            smallCard ? "min-h-[190px]" : "h-[488px]"
+            "w-full h-full object-cover lg:group-hover:scale-110 transition-all duration-[.3s] ease-in-out"
           )}
           alt={imgAlt}
           tabIndex={0}

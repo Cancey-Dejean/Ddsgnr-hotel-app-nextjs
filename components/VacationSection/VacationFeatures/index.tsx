@@ -1,28 +1,33 @@
-import React, { ReactNode } from "react";
-import { BsFillBoxFill } from "react-icons/bs";
+import React, { ReactNode } from "react"
+import { BsFillBoxFill } from "react-icons/bs"
 
 const VacationFeatures = ({
   icon = <BsFillBoxFill />,
   title = "Title",
-  desc,
+  desc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
 }: {
-  icon?: ReactNode;
-  title?: string;
-  desc?: ReactNode;
+  /**
+   * Description goes here
+   */
+  icon?: ReactNode
+  /**
+   * Description goes here
+   */
+  title?: string
+  /**
+   * Description goes here
+   */
+  desc?: string
 }) => {
   return (
     <div className="flex flex-col gap-4">
-      <div className="h-12 w-12 [&_svg]:h-full [&_svg]:w-full" tabIndex={0}>
-        {icon}
-      </div>
+      <div className="h-12 w-12 [&_svg]:h-full [&_svg]:w-full">{icon}</div>
 
-      <h2 className="text-2xl font-bold text-black" tabIndex={0}>
-        {title}
-      </h2>
+      <h2 className="text-2xl font-bold text-black">{title}</h2>
 
-      {desc}
+      <p>{desc}</p>
     </div>
-  );
-};
+  )
+}
 
-export default VacationFeatures;
+export default VacationFeatures

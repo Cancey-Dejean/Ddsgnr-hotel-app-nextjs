@@ -3,6 +3,7 @@ import "./globals.css"
 import type { Metadata } from "next"
 import { Roboto } from "next/font/google"
 import Footer from "@/components/Footer"
+import { menuListData } from "@/constants"
 
 const roboto = Roboto({
   weight: ["400", "500", "700", "900"],
@@ -23,7 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={roboto.className}>
         <div>
-          <Header />
+          <Header menuListHeader={menuListData} />
           {children}
           <Footer />
         </div>

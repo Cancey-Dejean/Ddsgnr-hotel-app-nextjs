@@ -6,13 +6,19 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
-
 import ReviewBlock from "./ReviewBlock"
-import Paragraph from "../Paragraph"
 import Wrapper from "../Wrapper"
+import { reviewsFakeData } from "../../constants/fakeData"
 import { reviewsData } from "../../constants"
 
-const Reviews = () => {
+const Reviews = ({
+  data = reviewsFakeData,
+}: {
+  /**
+   * Description goes here
+   */
+  data?: typeof reviewsData
+}) => {
   const [totalSlides, setTotalSlides] = useState(0)
   return (
     <section className="py-6 sm:py-28">
@@ -32,17 +38,14 @@ const Reviews = () => {
             prevEl: ".prev-btn",
           }}
         >
-          {reviewsData.map((review, index) => (
-            <SwiperSlide key={index}>
+          {data.map(({ stars, reviewer, desc, imgSrc, imgAlt }) => (
+            <SwiperSlide key={reviewer}>
               <ReviewBlock
-                imgSrc="/images/lobby.jpg"
-                stars={review.stars}
-                desc={
-                  <Paragraph className="text-2xl font-bold">
-                    {review.desc}
-                  </Paragraph>
-                }
-                reviewer={review.reviewer}
+                imgSrc={imgSrc}
+                imgAlt={imgAlt}
+                stars={stars}
+                desc={desc}
+                reviewer={reviewer}
               />
             </SwiperSlide>
           ))}
