@@ -13,12 +13,8 @@ const Rooms = ({ data = roomOptionsFake }: { data?: typeof roomOptions }) => {
         <SectionHeader
           topTitle="Rooms"
           title={<SectionTitle tag="h2">Our Rooms</SectionTitle>}
-          desc={
-            <Paragraph>
-              Experience luxury with our plush bedding, modern amenities, and
-              stunning views, ensuring an extraordinary stay for every guest.
-            </Paragraph>
-          }
+          desc="Experience luxury with our plush bedding, modern amenities, and
+          stunning views, ensuring an extraordinary stay for every guest."
         />
 
         <div className="mx-auto flex max-w-[900px] flex-col gap-6 xl:max-w-full xl:flex-row">
