@@ -2,7 +2,6 @@ import Wrapper from "../Wrapper"
 import CardRoom from "../CardRoom"
 import SectionHeader from "../SectionHeader"
 import SectionTitle from "../SectionTitle"
-import Paragraph from "../Paragraph"
 import { roomOptions } from "../../constants"
 import { roomOptionsFake } from "../../constants/fakeData"
 

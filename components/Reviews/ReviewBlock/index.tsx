@@ -1,6 +1,5 @@
 import { BsStarFill } from "react-icons/bs"
 import VideoImage from "../../VideoImage"
-import { ReactNode } from "react"
 
 const ReviewBlock = ({
   desc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",

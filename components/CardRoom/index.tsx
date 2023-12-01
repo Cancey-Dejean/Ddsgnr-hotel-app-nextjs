@@ -1,5 +1,4 @@
 import Image from "next/image"
-import Button from "../ButtonLink"
 import Paragraph from "../Paragraph"
 import SectionTitle from "../SectionTitle"
 import { twMerge } from "tailwind-merge"
@@ -7,7 +6,6 @@ import ButtonLink from "../ButtonLink"
 
 const CardRoom = ({
   imgSrc = "https://dummyimage.com/640x488.png/dddddd/ffffff",
-  // imgSrc = "/images/card-image.jpg",
   imgAlt = "card image",
   title = "Title",
   smallCard = false,

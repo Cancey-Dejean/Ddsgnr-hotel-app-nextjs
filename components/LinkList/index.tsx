@@ -1,6 +1,5 @@
 import Paragraph from "../Paragraph"
 import TextLink from "../TextLink"
-import { socialList } from "../../constants"
 import { ReactNode } from "react"
 
 const LinkList = ({

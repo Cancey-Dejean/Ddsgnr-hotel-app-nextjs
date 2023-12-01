@@ -1,7 +1,6 @@
 import { selectOptions } from "../../../constants/fakeData"
 import {
   Button,
-  FieldError,
   Label,
   ListBox,
   ListBoxItem,

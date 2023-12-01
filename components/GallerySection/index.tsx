@@ -1,7 +1,6 @@
 import Image from "next/image"
 import Wrapper from "../Wrapper"
 import SectionHeader from "../SectionHeader"
-import Paragraph from "../Paragraph"
 import SectionTitle from "../SectionTitle"
 import ButtonLink from "../ButtonLink"
 
