@@ -38,14 +38,14 @@ export const reviewsData = [
     imgSrc: "/images/lobby.jpg",
     imgAlt: "Lobby",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
-    reviewer: "Gordan Kelly",
+    reviewer: "Kelly Gordan",
     stars: 4,
   },
   {
     imgSrc: "/images/lobby.jpg",
     imgAlt: "Lobby",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
-    reviewer: "Gordan Kelly",
+    reviewer: "Sr. Gordan Kelly",
     stars: 3,
   },
 ]
