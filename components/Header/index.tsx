@@ -34,10 +34,7 @@ const Header = ({
               key={i}
               label={button.label}
               url={button.url}
-              size={button.size}
               variant={button.variant}
-              className={button.className}
-              icon={button.icon}
             />
           ))}
         </div>

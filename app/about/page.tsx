@@ -2,6 +2,7 @@
 import PageWrapper from "@/components/PageWrapper"
 import Rooms from "@/components/Rooms"
 import StartVacation from "@/components/StartVacation"
+import { roomOptions, vacationButtons } from "@/constants"
 
 export default function Home() {
   return (
@@ -13,8 +14,9 @@ export default function Home() {
         varius enim in eros elementum tristique. Duis cursus, mi quis
         viverra ornare, eros dolor interdum nulla, ut commodo diam libero
         vitae erat."
+        btnData={vacationButtons}
       />
-      <Rooms />
+      <Rooms data={roomOptions} />
     </PageWrapper>
   )
 }

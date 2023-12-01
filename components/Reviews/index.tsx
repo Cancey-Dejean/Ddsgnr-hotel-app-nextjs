@@ -38,7 +38,7 @@ const Reviews = ({
             prevEl: ".prev-btn",
           }}
         >
-          {data.map(({ stars, reviewer, desc, imgSrc, imgAlt }) => (
+          {data.slice(0, 3).map(({ stars, reviewer, desc, imgSrc, imgAlt }) => (
             <SwiperSlide key={reviewer}>
               <ReviewBlock
                 imgSrc={imgSrc}

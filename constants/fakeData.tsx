@@ -76,16 +76,42 @@ export const featuresDataFake = [
   },
 ]
 
+export const heroButtonsFake = [
+  {
+    url: "/",
+    variant: "btn-inverted",
+    label: "Link",
+  },
+  {
+    url: "/",
+    variant: "btn-border-light",
+    label: "Link",
+  },
+]
+
+export const vacationButtonsFake = [
+  {
+    url: "/",
+    variant: "btn-primary",
+    label: "Link",
+  },
+  {
+    url: "/",
+    variant: "btn-border-dark",
+    label: "Link",
+  },
+]
+
 export const perksButtonsFake = [
   {
     url: "#",
     variant: "btn-border-dark",
-    label: "Book Now",
+    label: "Link",
   },
   {
     url: "#",
     variant: "btn-border-none",
-    label: "Learn More",
+    label: "Link",
     icon: true,
   },
 ]

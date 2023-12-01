@@ -2,13 +2,14 @@ import React from "react"
 import VacationFeatures from "./VacationFeatures"
 import Wrapper from "../Wrapper"
 import VideoImage from "../VideoImage"
-import ButtonGroup from "../ButtonLink/ButtonGroup"
 import { featuresData, perksButtons } from "./../../constants"
-import { featuresDataFake } from "../../constants/fakeData"
+import { featuresDataFake, perksButtonsFake } from "../../constants/fakeData"
+import ButtonLink from "../ButtonLink"
 
 const VacationSection = ({
   featuresDataVacation = featuresDataFake,
   mainImg = "https://dummyimage.com/572x594.png/dddddd/ffffff",
+  btnData = perksButtonsFake,
 }: {
   /**
    * Description goes here
@@ -18,6 +19,7 @@ const VacationSection = ({
    * Description goes here
    */
   mainImg: string
+  btnData: typeof perksButtons
 }) => {
   return (
     <section className="py-6 sm:py-28">
@@ -41,7 +43,15 @@ const VacationSection = ({
           </div>
 
           <div className="mt-7 flex justify-start gap-5 sm:mt-12">
-            <ButtonGroup buttons={perksButtons} />
+            {btnData.map((button, i) => (
+              <ButtonLink
+                key={i}
+                label={button.label}
+                url={button.url}
+                variant={button.variant}
+                icon={button.icon}
+              />
+            ))}
           </div>
         </div>
       </Wrapper>

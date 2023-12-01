@@ -7,7 +7,7 @@ const ButtonLink = ({
   variant = "btn-primary",
   size = "btn-size-base",
   label,
-  url = "/",
+  url = "",
   className = "",
   type = "button",
   onClick,

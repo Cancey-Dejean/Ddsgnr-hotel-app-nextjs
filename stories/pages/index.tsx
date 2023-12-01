@@ -14,22 +14,54 @@ import {
   reviewsFakeData,
   roomOptionsFake,
 } from "../../constants/fakeData"
-import { headerButtons, headerButtonsData, menuListData } from "../../constants"
+import {
+  featuresData,
+  headerButtons,
+  heroButtons,
+  menuListData,
+  perksButtons,
+  reviewsData,
+  roomOptions,
+  vacationButtons,
+} from "../../constants"
 
 const HomePage = () => {
   return (
     <>
       <Header menuListHeader={menuListData} btnData={headerButtons} />
       <PageWrapper>
-        <Hero />
+        <Hero
+          title="Enjoy Luxury Hotel Experience"
+          bgImage="/images/hero.jpg"
+          btnData={heroButtons}
+        />
         <BookingForm />
-        <StartVacation />
 
-        <Rooms data={roomOptionsFake} />
+        <StartVacation
+          title="Start Your Vacation In Dream Hostel"
+          videoImg="/images/lobby.jpg"
+          desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+        varius enim in eros elementum tristique. Duis cursus, mi quis
+        viverra ornare, eros dolor interdum nulla, ut commodo diam libero
+        vitae erat."
+          btnData={vacationButtons}
+        />
 
-        <VacationSection featuresDataVacation={featuresDataFake} />
-        <GallerySection />
-        <Reviews data={reviewsFakeData} />
+        <Rooms data={roomOptions} />
+
+        <VacationSection
+          mainImg="/images/videoImg2.jpg"
+          featuresDataVacation={featuresData}
+          btnData={perksButtons}
+        />
+        <GallerySection
+          imageOne="/images/gallery1.jpg"
+          imageTwo="/images/gallery2.jpg"
+          imageThree="/images/gallery3.jpg"
+          imageFour="/images/gallery4.jpg"
+          btnLabel="View More"
+        />
+        <Reviews data={reviewsData} />
       </PageWrapper>
       <Footer />
     </>

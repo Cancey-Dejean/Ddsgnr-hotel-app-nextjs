@@ -9,6 +9,8 @@ import StartVacation from "@/components/StartVacation"
 import VacationSection from "@/components/VacationSection"
 import {
   featuresData,
+  heroButtons,
+  perksButtons,
   reviewsData,
   roomOptions,
   vacationButtons,
@@ -17,7 +19,11 @@ import {
 export default function Home() {
   return (
     <PageWrapper>
-      <Hero title="Enjoy Luxury Hotel Experience" bgImage="/images/hero.jpg" />
+      <Hero
+        title="Enjoy Luxury Hotel Experience"
+        bgImage="/images/hero.jpg"
+        btnData={heroButtons}
+      />
       <BookingForm />
       <StartVacation
         title="Start Your Vacation In Dream Hostel"
@@ -26,7 +32,7 @@ export default function Home() {
         varius enim in eros elementum tristique. Duis cursus, mi quis
         viverra ornare, eros dolor interdum nulla, ut commodo diam libero
         vitae erat."
-        buttonGroup={vacationButtons}
+        btnData={vacationButtons}
       />
 
       <Rooms data={roomOptions} />
@@ -34,7 +40,9 @@ export default function Home() {
       <VacationSection
         mainImg="/images/videoImg2.jpg"
         featuresDataVacation={featuresData}
+        btnData={perksButtons}
       />
+
       <GallerySection
         imageOne="/images/gallery1.jpg"
         imageTwo="/images/gallery2.jpg"

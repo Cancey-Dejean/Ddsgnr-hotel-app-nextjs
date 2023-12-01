@@ -3,8 +3,16 @@ import { twMerge } from "tailwind-merge"
 import Paragraph from "../Paragraph"
 import SectionTitle from "../SectionTitle"
 import ButtonGroup from "../ButtonLink/ButtonGroup"
+import ButtonLink from "../ButtonLink"
+import { heroButtonsFake } from "../../constants/fakeData"
+import { heroButtons } from "../../constants"
 
-type HeroProps = {
+const Hero = ({
+  title = "Title",
+  desc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  bgImage = "https://dummyimage.com/1440x960.png/dddddd/ffffff",
+  btnData = heroButtonsFake,
+}: {
   /**
    * Description goes here
    */
@@ -20,31 +28,8 @@ type HeroProps = {
   /**
    * Description goes here
    */
-  buttonGroup?: {
-    url: string
-    variant: string
-    label: string
-    icon?: boolean
-  }[]
-}
-
-const Hero = ({
-  title = "Title",
-  desc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  bgImage = "https://dummyimage.com/1440x960.png/dddddd/ffffff",
-  buttonGroup = [
-    {
-      url: "/",
-      variant: "btn-inverted",
-      label: "Link",
-    },
-    {
-      url: "/",
-      variant: "btn-border-light",
-      label: "Link",
-    },
-  ],
-}: HeroProps) => {
+  btnData: typeof heroButtons
+}) => {
   return (
     <section
       className={twMerge(
@@ -67,7 +52,14 @@ const Hero = ({
           </Paragraph>
 
           <div className="flex items-center gap-4 max-md:justify-center">
-            <ButtonGroup buttons={buttonGroup} />
+            {btnData.map((button, i) => (
+              <ButtonLink
+                key={i}
+                label={button.label}
+                url={button.url}
+                variant={button.variant}
+              />
+            ))}
           </div>
         </div>
       </Wrapper>

@@ -2,24 +2,15 @@ import Wrapper from "../Wrapper"
 import Paragraph from "../Paragraph"
 import SectionTitle from "../SectionTitle"
 import VideoImage from "../VideoImage"
-import ButtonGroup from "../ButtonLink/ButtonGroup"
+import { vacationButtons } from "../../constants"
+import { vacationButtonsFake } from "../../constants/fakeData"
+import ButtonLink from "../ButtonLink"
 
 const StartVacation = ({
   title = "Section Title",
   videoImg = "https://dummyimage.com/572x594.png/dddddd/ffffff",
   desc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  buttonGroup = [
-    {
-      url: "/",
-      variant: "btn-primary",
-      label: "Link",
-    },
-    {
-      url: "/",
-      variant: "btn-border-dark",
-      label: "Link",
-    },
-  ],
+  btnData = vacationButtonsFake,
 }: {
   /**
    * Description goes here
@@ -36,12 +27,7 @@ const StartVacation = ({
   /**
    * Description goes here
    */
-  buttonGroup?: {
-    url: string
-    variant: string
-    label: string
-    icon?: boolean
-  }[]
+  btnData: typeof vacationButtons
 }) => {
   return (
     <section className="py-6 sm:py-28">
@@ -56,7 +42,14 @@ const StartVacation = ({
           <Paragraph className="text-lg">{desc}</Paragraph>
 
           <div className="flex gap-4">
-            <ButtonGroup buttons={buttonGroup} />
+            {btnData.map((button, i) => (
+              <ButtonLink
+                key={i}
+                label={button.label}
+                url={button.url}
+                variant={button.variant}
+              />
+            ))}
           </div>
         </div>
       </Wrapper>

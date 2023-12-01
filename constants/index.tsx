@@ -50,6 +50,19 @@ export const reviewsData = [
   },
 ]
 
+export const heroButtons = [
+  {
+    url: "/",
+    variant: "btn-inverted",
+    label: "Book Now",
+  },
+  {
+    url: "/",
+    variant: "btn-border-light",
+    label: "Learn more",
+  },
+]
+
 export const roomOptions = [
   {
     imgSrc: "/images/card-image.jpg",
