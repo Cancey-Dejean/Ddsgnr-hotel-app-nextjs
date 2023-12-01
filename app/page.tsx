@@ -40,6 +40,7 @@ export default function Home() {
         imageTwo="/images/gallery2.jpg"
         imageThree="/images/gallery3.jpg"
         imageFour="/images/gallery4.jpg"
+        btnLabel="View More"
       />
       <Reviews data={reviewsData} />
     </PageWrapper>

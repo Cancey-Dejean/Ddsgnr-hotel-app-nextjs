@@ -40,7 +40,6 @@ const NewsletterSection = () => {
           <ButtonLink
             className="px-[11px] py-[12px] h-[47px]"
             label="Subscribe"
-            linkable={false}
             type="submit"
             variant="btn-border-dark"
           />

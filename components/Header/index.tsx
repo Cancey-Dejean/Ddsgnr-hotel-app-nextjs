@@ -2,23 +2,14 @@
 import NavigationMenu from "../NavigationMenu"
 import Wrapper from "../Wrapper"
 import { usePathname } from "next/navigation"
-import ButtonGroup from "../ButtonLink/ButtonGroup"
 import Logo from "../Logo"
-import { headerButtonsData, menuListData } from "../../constants"
 import { Bars3Icon } from "@heroicons/react/24/outline"
+import ButtonLink from "../ButtonLink"
+import { headerButtonsFake, menuListFake } from "../../constants/fakeData"
 
 const Header = ({
-  menuListHeader = [],
-  headerButtons = [],
-}: {
-  /**
-   * Description goes here
-   */
-  menuListHeader: (typeof menuListData)[number][]
-  /**
-   * Description goes here
-   */
-  headerButtons?: (typeof headerButtonsData)[number][]
+  menuListHeader = menuListFake,
+  btnData = headerButtonsFake,
 }) => {
   const path = usePathname()
   return (
@@ -36,7 +27,19 @@ const Header = ({
         </div>
 
         <div className="hidden gap-4 md:flex md:items-center">
-          <ButtonGroup buttons={headerButtons} />
+          {/* <ButtonGroup buttons={headerButtons} /> */}
+
+          {btnData.map((button, i) => (
+            <ButtonLink
+              key={i}
+              label={button.label}
+              url={button.url}
+              size={button.size}
+              variant={button.variant}
+              className={button.className}
+              icon={button.icon}
+            />
+          ))}
         </div>
 
         <button type="button" className="md:hidden">

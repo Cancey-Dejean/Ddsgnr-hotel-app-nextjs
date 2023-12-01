@@ -83,12 +83,11 @@ export const roomOptions = [
   },
 ]
 
-export const headerButtonsData = [
+export const headerButtons = [
   {
     url: "#",
     variant: "btn-border-dark",
     label: "Sign In",
-    linkable: true,
     size: "btn-size-small",
     icon: null,
   },
@@ -96,7 +95,6 @@ export const headerButtonsData = [
     url: "#",
     variant: "btn-primary",
     label: "Get Started",
-    linkable: true,
     size: "btn-size-small",
     icon: null,
   },
@@ -107,14 +105,12 @@ export const perksButtons = [
     url: "#",
     variant: "btn-border-dark",
     label: "Book Now",
-    linkable: true,
   },
   {
     url: "#",
     variant: "btn-border-none",
     label: "Learn More",
     icon: true,
-    linkable: true,
   },
 ]
 
@@ -123,13 +119,28 @@ export const vacationButtons = [
     url: "/",
     variant: "btn-primary",
     label: "Book Now",
-    linkable: true,
   },
   {
     url: "/",
     variant: "btn-border-dark",
     label: "Learn More",
-    linkable: true,
+  },
+]
+
+export const buttonGroupDataFake = [
+  {
+    label: "Button",
+    variant: "btn-primary",
+    url: "/",
+    icon: false,
+    className: "",
+  },
+  {
+    label: "Button",
+    variant: "btn-border-dark",
+    url: "/",
+    icon: false,
+    className: "",
   },
 ]
 

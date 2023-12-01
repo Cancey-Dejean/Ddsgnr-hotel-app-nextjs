@@ -1,5 +1,4 @@
 import Image from "next/image"
-import Button from "../ButtonLink"
 import Wrapper from "../Wrapper"
 import SectionHeader from "../SectionHeader"
 import Paragraph from "../Paragraph"
@@ -11,11 +10,15 @@ const GallerySection = ({
   imageTwo = "https://dummyimage.com/618x411.png/dddddd/ffffff",
   imageThree = "https://dummyimage.com/618x411.png/dddddd/ffffff",
   imageFour = "https://dummyimage.com/618x618.png/dddddd/ffffff",
+  btnLabel = "Button",
+  btnUrl = "/",
 }: {
   imageOne?: string
   imageTwo?: string
   imageThree?: string
   imageFour?: string
+  btnLabel?: string
+  btnUrl?: string
 }) => {
   return (
     <section className="py-6 sm:py-28">
@@ -67,7 +70,9 @@ const GallerySection = ({
           </div>
         </div>
 
-        <ButtonLink variant="btn-border-dark" label="View more" linkable />
+        {btnLabel !== "" && (
+          <ButtonLink variant="btn-border-dark" label={btnLabel} url={btnUrl} />
+        )}
       </Wrapper>
     </section>
   )

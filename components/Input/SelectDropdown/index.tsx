@@ -12,8 +12,6 @@ import {
 
 import { TfiAngleDown } from "react-icons/tfi"
 
-// type Option = (typeof selectOptions)[number]
-
 type SelectDropdownProps = {
   label?: string
   name: string

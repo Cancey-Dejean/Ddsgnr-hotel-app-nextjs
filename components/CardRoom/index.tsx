@@ -77,14 +77,12 @@ const CardRoom = ({
         >
           <ButtonLink
             variant="btn-border-dark"
-            linkable
             className={twMerge(smallCard ? "!px-5 !py-2" : "")}
             label="$60/night"
           />
 
           <ButtonLink
             variant="btn-border-none"
-            linkable
             className={twMerge(smallCard ? "!px-5 !py-2" : "")}
             icon
             label="View room"

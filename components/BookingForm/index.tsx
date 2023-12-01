@@ -78,7 +78,6 @@ const BookingForm = () => {
           <ButtonLink
             className="self-end px-[11px] py-[12px] h-[47px]"
             label="Check Availability"
-            linkable={false}
             type="submit"
           />
         </Form>

@@ -6,7 +6,7 @@ import Wrapper from "../Wrapper"
 import Paragraph from "../Paragraph"
 import TextLink from "../TextLink"
 
-const Footer = () => {
+const Footer = ({}) => {
   const currentYear = new Date().getFullYear()
 
   return (

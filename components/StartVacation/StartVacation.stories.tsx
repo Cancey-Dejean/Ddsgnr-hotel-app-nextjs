@@ -13,13 +13,11 @@ const meta = {
         url: "/",
         variant: "btn-primary",
         label: "Link",
-        linkable: true,
       },
       {
         url: "/",
         variant: "btn-border-dark",
         label: "Link",
-        linkable: true,
       },
     ],
   },

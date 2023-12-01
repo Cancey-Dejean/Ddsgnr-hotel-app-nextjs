@@ -9,7 +9,6 @@ const meta = {
     size: "btn-size-base",
     url: "/",
     className: "",
-    linkable: true,
     type: "button",
     icon: false,
   },

@@ -3,7 +3,16 @@ import { twMerge } from "tailwind-merge"
 import { ChevronRightIcon } from "@heroicons/react/24/outline"
 import { Button, Link } from "react-aria-components"
 
-type ButtonProps = {
+const ButtonLink = ({
+  variant = "btn-primary",
+  size = "btn-size-base",
+  label,
+  url = "/",
+  className = "",
+  type = "button",
+  onClick,
+  icon = false,
+}: {
   /**
    * Description goes here
    */
@@ -13,6 +22,7 @@ type ButtonProps = {
     | "btn-border-dark"
     | "btn-border-none"
     | "btn-border-light"
+    | string
   /**
    * Description goes here
    */
@@ -32,10 +42,6 @@ type ButtonProps = {
   /**
    * Description goes here
    */
-  linkable?: boolean
-  /**
-   * Description goes here
-   */
   type?: "button" | "reset" | "submit" | undefined
   /**
    * Description goes here
@@ -45,22 +51,10 @@ type ButtonProps = {
    * Description goes here
    */
   icon?: boolean
-}
-
-const ButtonLink = ({
-  variant = "btn-primary",
-  size = "btn-size-base",
-  label,
-  url = "/",
-  className = "",
-  linkable = true,
-  type = "button",
-  onClick,
-  icon = false,
-}: ButtonProps) => {
+}) => {
   const iconContent = icon && <ChevronRightIcon className="h-5 w-5" />
 
-  return linkable ? (
+  return url !== "" ? (
     <Link href={url} className={twMerge("btn", variant, size, className)}>
       {label || "Link"}
       {iconContent}

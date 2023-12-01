@@ -13,18 +13,19 @@ import {
   headerButtonsFake,
   menuListFake,
   reviewsFakeData,
+  roomOptionsFake,
 } from "../../../constants/fakeData"
 
 const HomePage = () => {
   return (
     <>
-      <Header menuListHeader={menuListFake} headerButtons={headerButtonsFake} />
+      <Header menuListHeader={menuListFake} btnData={headerButtonsFake} />
       <PageWrapper>
         <Hero />
         <BookingForm />
         <StartVacation />
 
-        <Rooms data={featuresDataFake} />
+        <Rooms data={roomOptionsFake} />
 
         <VacationSection featuresDataVacation={featuresDataFake} />
         <GallerySection />

@@ -45,15 +45,11 @@ export const headerButtonsFake = [
     url: "#",
     variant: "btn-border-dark",
     label: "Link",
-    linkable: true,
-    size: "btn-size-small",
   },
   {
     url: "#",
     variant: "btn-primary",
     label: "Link",
-    linkable: true,
-    size: "btn-size-small",
   },
 ]
 
@@ -85,14 +81,12 @@ export const perksButtonsFake = [
     url: "#",
     variant: "btn-border-dark",
     label: "Book Now",
-    linkable: true,
   },
   {
     url: "#",
     variant: "btn-border-none",
     label: "Learn More",
     icon: true,
-    linkable: true,
   },
 ]
 

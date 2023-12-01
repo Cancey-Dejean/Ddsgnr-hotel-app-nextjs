@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import HomePage from "./";
+import type { Meta, StoryObj } from "@storybook/react"
+import HomePage from "./"
 
 const meta = {
   title: "Pages/HomePage",
@@ -8,9 +8,9 @@ const meta = {
     // More on how to position stories at: https://storybook.js.org/docs/react/configure/story-layout
     layout: "fullscreen",
   },
-} satisfies Meta<typeof HomePage>;
+} satisfies Meta<typeof HomePage>
 
-export default meta;
-type Story = StoryObj<typeof meta>;
+export default meta
+type Story = StoryObj<typeof meta>
 
-export const Home: Story = {};
+export const Home: Story = {}

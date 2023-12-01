@@ -13,13 +13,11 @@ const StartVacation = ({
       url: "/",
       variant: "btn-primary",
       label: "Link",
-      linkable: true,
     },
     {
       url: "/",
       variant: "btn-border-dark",
       label: "Link",
-      linkable: true,
     },
   ],
 }: {
@@ -43,7 +41,6 @@ const StartVacation = ({
     variant: string
     label: string
     icon?: boolean
-    linkable?: boolean
   }[]
 }) => {
   return (

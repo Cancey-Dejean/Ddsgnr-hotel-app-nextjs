@@ -25,7 +25,6 @@ type HeroProps = {
     variant: string
     label: string
     icon?: boolean
-    linkable?: boolean
   }[]
 }
 
@@ -38,13 +37,11 @@ const Hero = ({
       url: "/",
       variant: "btn-inverted",
       label: "Link",
-      linkable: true,
     },
     {
       url: "/",
       variant: "btn-border-light",
       label: "Link",
-      linkable: true,
     },
   ],
 }: HeroProps) => {
