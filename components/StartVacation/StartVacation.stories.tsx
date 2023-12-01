@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react"
 import StartVacation from "./"
+import { vacationButtonsFake } from "../../constants/fakeData"
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
@@ -8,21 +9,10 @@ const meta = {
   args: {
     title: "Section Title",
     videoImg: "https://dummyimage.com/572x594.png/dddddd/ffffff",
-    buttonGroup: [
-      {
-        url: "/",
-        variant: "btn-primary",
-        label: "Link",
-      },
-      {
-        url: "/",
-        variant: "btn-border-dark",
-        label: "Link",
-      },
-    ],
+    btnData: vacationButtonsFake,
   },
   argTypes: {
-    buttonGroup: {
+    btnData: {
       control: false,
     },
   },

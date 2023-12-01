@@ -27,8 +27,6 @@ const Header = ({
         </div>
 
         <div className="hidden gap-4 md:flex md:items-center">
-          {/* <ButtonGroup buttons={headerButtons} /> */}
-
           {btnData.map((button, i) => (
             <ButtonLink
               key={i}

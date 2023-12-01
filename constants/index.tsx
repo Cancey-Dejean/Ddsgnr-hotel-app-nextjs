@@ -140,23 +140,6 @@ export const vacationButtons = [
   },
 ]
 
-export const buttonGroupDataFake = [
-  {
-    label: "Button",
-    variant: "btn-primary",
-    url: "/",
-    icon: false,
-    className: "",
-  },
-  {
-    label: "Button",
-    variant: "btn-border-dark",
-    url: "/",
-    icon: false,
-    className: "",
-  },
-]
-
 export const featuresData = [
   {
     title: "Private pool",

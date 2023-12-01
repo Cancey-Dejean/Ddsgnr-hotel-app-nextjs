@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react"
 import Hero from "./"
+import { heroButtonsFake } from "@/constants/fakeData"
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
@@ -10,13 +11,10 @@ const meta = {
     title: "Title",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     bgImage: "https://dummyimage.com/1440x960.png/dddddd/ffffff",
+    btnData: heroButtonsFake,
   },
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
-  argTypes: {
-    buttonGroup: {
-      control: false,
-    },
-  },
+  argTypes: {},
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/react/configure/story-layout
     layout: "fullscreen",
