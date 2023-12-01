@@ -1,33 +1,29 @@
-import React, { ReactNode } from "react";
-import Paragraph from "./Paragraph";
-import SectionTitle from "./SectionTitle";
+import React, { ReactNode } from "react"
+import Paragraph from "./Paragraph"
+import SectionTitle from "./SectionTitle"
 
 const SectionHeader = ({
-  topTitle = "Rooms",
-  title = <SectionTitle tag="h1">Our Rooms</SectionTitle>,
-  desc = (
-    <Paragraph>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    </Paragraph>
-  ),
+  topTitle,
+  title = <SectionTitle tag="h1">Section Title</SectionTitle>,
+  desc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
 }: {
-  topTitle?: string;
-  title?: ReactNode;
-  desc?: ReactNode;
+  topTitle?: string
+  title?: ReactNode
+  desc?: string
 }) => {
   return (
     <div className="flex flex-col items-center text-center">
-      {topTitle === "Gallery" ? (
+      {topTitle === "" ? (
         <Paragraph className="mb-4 font-semibold">{topTitle}</Paragraph>
       ) : null}
 
       <div className="flex flex-col gap-6">
         {title}
 
-        {desc}
+        {desc === "" ? null : desc}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default SectionHeader;
+export default SectionHeader

@@ -7,7 +7,7 @@ const meta = {
   title: "Components/VideoImage",
   component: VideoImage,
   args: {
-    imgSrc: "/images/lobby.jpg",
+    imgSrc: "https://dummyimage.com/572x594.png/dddddd/ffffff",
     imgAlt: "Video image",
     imgStyles: "",
   },

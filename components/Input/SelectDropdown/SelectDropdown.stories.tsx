@@ -9,8 +9,8 @@ const meta = {
   component: SelectDropdown,
   args: {
     label: "Label",
-    name: "select",
-    id: "select",
+    name: "",
+    id: "",
     required: false,
   },
   parameters: {

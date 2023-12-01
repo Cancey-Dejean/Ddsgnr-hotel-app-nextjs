@@ -8,12 +8,9 @@ export default function Home() {
   return (
     <PageWrapper>
       <StartVacation
-        title="Start Your Vacation In Dream Hostel"
+        title="Embark on an unforgettable journey with extraordinary experiences."
         videoImg="/images/lobby.jpg"
-        desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        varius enim in eros elementum tristique. Duis cursus, mi quis
-        viverra ornare, eros dolor interdum nulla, ut commodo diam libero
-        vitae erat."
+        desc="Imagine a place where relaxation meets adventure, and every corner holds a new story. At Ddsgnr, we don't just offer a stay; we offer an experience. From the comfort of our uniquely designed rooms to the vibrant communal spaces, every aspect of your stay is curated to inspire and rejuvenate."
         btnData={vacationButtons}
       />
       <Rooms data={roomOptions} />

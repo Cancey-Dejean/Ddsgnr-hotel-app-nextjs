@@ -41,9 +41,9 @@ const Hero = ({
     >
       <Wrapper className="relative z-[1]">
         <div className="flex flex-col gap-6 max-md:text-center">
-          <SectionTitle className="w-full max-w-[467px] max-md:mx-auto max-sm:text-[40px] max-sm:leading-[48px]">
+          <SectionTitle className="max-w-[467px] max-sm:text-[40px] max-sm:leading-[48px] max-md:mx-auto text-[56px] leading-[67px]">
+            {/* <SectionTitle className="w-full max-w-[467px] max-md:mx-auto max-sm:text-[40px] max-sm:leading-[48px]"> */}
             {title}
-            {/* Enjoy Luxury Hotel Experience */}
           </SectionTitle>
 
           <Paragraph className="w-full max-w-[549px] text-lg max-md:mx-auto">

@@ -9,7 +9,7 @@ const meta = {
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
     reviewer: "First Last",
     imgSrc: "https://dummyimage.com/572x594.png/dddddd/ffffff",
-    imgAlt: "Image",
+    imgAlt: "",
     stars: 5,
   },
   parameters: {

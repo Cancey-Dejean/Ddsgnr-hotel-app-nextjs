@@ -25,11 +25,7 @@ const GallerySection = ({
       <Wrapper className="flex flex-col items-center gap-12">
         <SectionHeader
           title={<SectionTitle tag="h1">Our Gallery</SectionTitle>}
-          desc={
-            <Paragraph>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </Paragraph>
-          }
+          desc=""
         />
 
         <div className="flex flex-col gap-8 lg:flex-row">

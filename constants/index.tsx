@@ -67,31 +67,31 @@ export const roomOptions = [
   {
     imgSrc: "/images/card-image.jpg",
     title: "Double exclusive 2 queen beds",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+    desc: "Relish the comfort of two queen beds in our exclusive room, designed for unparalleled relaxation and elegance.",
     smallCard: false,
   },
   {
     imgSrc: "/images/card-image-2.jpg",
     title: "Double deluxe",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    desc: "Our double deluxe room offers cozy luxury, perfect for a restful stay.",
     smallCard: true,
   },
   {
     imgSrc: "/images/card-image-3.jpg",
     title: "Superior king bed",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    desc: "Superior comfort with spaciousness and modern luxury.",
     smallCard: true,
   },
   {
     imgSrc: "/images/card-image-4.jpg",
     title: "Double deluxe king bed",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    desc: "Refined comfort featuring a lavish king bed.",
     smallCard: true,
   },
   {
     imgSrc: "/images/card-image-5.jpg",
     title: "Double queen beds",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    desc: "Spacious elegance, ideal for comfort and convenience.",
     smallCard: true,
   },
 ]
@@ -143,22 +143,22 @@ export const vacationButtons = [
 export const featuresData = [
   {
     title: "Private pool",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+    desc: "Dive into serenity in our private pool, an oasis of calm designed for your ultimate relaxation and enjoyment",
     icon: <LiaSwimmerSolid />,
   },
   {
     title: "Spa & Massage",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+    desc: "Indulge in our spa and massage services, a sanctuary of rejuvenation for your body and mind",
     icon: <TbMassage />,
   },
   {
     title: "Gym",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+    desc: "Energize your stay with our state-of-the-art gym, equipped for all your fitness and wellness needs",
     icon: <CgGym />,
   },
   {
     title: "Restaurant",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+    desc: "Savor exquisite dining experiences in our restaurant, where culinary art meets atmospheric elegance",
     icon: <MdOutlineFoodBank />,
   },
 ]

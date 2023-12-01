@@ -15,7 +15,8 @@ const Rooms = ({ data = roomOptionsFake }: { data?: typeof roomOptions }) => {
           title={<SectionTitle tag="h2">Our Rooms</SectionTitle>}
           desc={
             <Paragraph>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Experience luxury with our plush bedding, modern amenities, and
+              stunning views, ensuring an extraordinary stay for every guest.
             </Paragraph>
           }
         />
@@ -24,7 +25,7 @@ const Rooms = ({ data = roomOptionsFake }: { data?: typeof roomOptions }) => {
           <CardRoom
             imgSrc={data.map((room) => room.imgSrc)[0]}
             title={data.map((room) => room.title)[0]}
-            desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+            desc={data.map((room) => room.desc)[0]}
             className="w-full xl:max-w-[50%]"
           />
 
