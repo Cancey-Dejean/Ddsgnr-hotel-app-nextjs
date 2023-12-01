@@ -1,19 +1,13 @@
-import Rooms from "../../components/Rooms"
-import BookingForm from "../../components/BookingForm"
-import Hero from "../../components/Hero"
-import PageWrapper from "../../components/PageWrapper"
-import StartVacation from "../../components/StartVacation"
-import VacationSection from "../../components/VacationSection"
-import GallerySection from "../../components/GallerySection"
-import Reviews from "../../components/Reviews"
-import Footer from "../../components/Footer"
-import Header from "../../components/Header"
-import {
-  featuresDataFake,
-  menuListFake,
-  reviewsFakeData,
-  roomOptionsFake,
-} from "../../constants/fakeData"
+import Rooms from "../../../components/Rooms"
+import BookingForm from "../../../components/BookingForm"
+import Hero from "../../../components/Hero"
+import PageWrapper from "../../../components/PageWrapper"
+import StartVacation from "../../../components/StartVacation"
+import VacationSection from "../../../components/VacationSection"
+import GallerySection from "../../../components/GallerySection"
+import Reviews from "../../../components/Reviews"
+import Footer from "../../../components/Footer"
+import Header from "../../../components/Header"
 import {
   featuresData,
   headerButtons,
@@ -23,7 +17,7 @@ import {
   reviewsData,
   roomOptions,
   vacationButtons,
-} from "../../constants"
+} from "../../../constants"
 
 const HomePage = () => {
   return (
