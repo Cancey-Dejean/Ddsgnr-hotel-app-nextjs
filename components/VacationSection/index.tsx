@@ -34,12 +34,13 @@ const VacationSection = ({
   return (
     <section className="py-6 sm:py-28">
       <Wrapper className="flex max-w-[1300px] flex-col gap-12">
-        {showHeader && (
+        {showHeader ? (
           <SectionHeader
             title={<SectionTitle tag="h1">Services</SectionTitle>}
             desc=""
           />
-        )}
+        ) : null}
+
         <div className="flex  flex-col items-center gap-6 xl:flex-row xl:gap-20">
           <VideoImage
             imgSrc={mainImg}

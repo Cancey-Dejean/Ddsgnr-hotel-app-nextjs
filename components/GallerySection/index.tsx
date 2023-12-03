@@ -65,9 +65,9 @@ const GallerySection = ({
           </div>
         </div>
 
-        {btnLabel !== "" && (
+        {btnLabel !== "" ? (
           <ButtonLink variant="btn-border-dark" label={btnLabel} url={btnUrl} />
-        )}
+        ) : null}
       </Wrapper>
     </section>
   )

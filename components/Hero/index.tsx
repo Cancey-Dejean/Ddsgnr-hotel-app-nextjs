@@ -33,7 +33,7 @@ const Hero = ({
     <section
       className={twMerge(
         "relative flex items-center justify-center bg-cover bg-center bg-no-repeat py-[80px] text-[white] lg:h-[940px] w-full",
-        "after:absolute after:z-0 after:h-full after:w-full after:bg-black/40 after:content-['']"
+        "after:absolute after:z-0 after:h-full after:w-full after:bg-black/60 after:content-['']"
       )}
       style={{
         backgroundImage: `url(${bgImage})`,
