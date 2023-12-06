@@ -7,7 +7,7 @@ const meta = {
   title: "Components/CardRoom",
   component: CardRoom,
   args: {
-    imgSrc: "/images/card-image.jpg",
+    imgSrc: "https://dummyimage.com/640x488.png/dddddd/ffffff",
     imgAlt: "card image",
     title: "Title",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
