@@ -1,14 +1,8 @@
-import Header from "@/components/Header"
-import "./globals.css"
 import type { Metadata } from "next"
-import { Roboto } from "next/font/google"
-import Footer from "@/components/Footer"
-import { headerButtons, menuListData } from "@/constants"
+import { Inter } from "next/font/google"
+import "./globals.css"
 
-const roboto = Roboto({
-  weight: ["400", "500", "700", "900"],
-  subsets: ["latin"],
-})
+const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Home",
@@ -22,13 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={roboto.className}>
-        <div>
-          <Header menuListHeader={menuListData} btnData={headerButtons} />
-          {children}
-          <Footer />
-        </div>
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   )
 }
