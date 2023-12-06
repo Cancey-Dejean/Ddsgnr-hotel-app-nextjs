@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply relative flex h-screen flex-col;
+}
+
+.btn {
+  @apply flex items-center justify-center gap-2 rounded-[5px] border border-transparent capitalize transition-all duration-[.3s] ease-in-out;
+}
+
+.btn-primary {
+  @apply border-black bg-black text-white data-[hovered]:bg-black/80;
+}
+
+.btn-inverted {
+  @apply border-white bg-white text-black data-[hovered]:border-black data-[hovered]:bg-black data-[hovered]:text-white;
+}
+
+.btn-border-dark {
+  @apply border-black bg-transparent text-black data-[hovered]:bg-black data-[hovered]:text-white;
+}
+
+.btn-border-none {
+  @apply border-transparent bg-transparent !px-0 text-black data-[hovered]:text-black/60;
+}
+
+.btn-border-light {
+  @apply border-white text-white data-[hovered]:bg-white data-[hovered]:text-black;
+}
+
+/* Button Sizes */
+.btn-size-base {
+  @apply px-6 py-3;
+}
+
+.btn-size-small {
+  @apply px-5 py-2;
+}
+
+/* Input */
+.input-label {
+  @apply block mb-2 text-base;
+}
+.input-base {
+  @apply border rounded-[4px] border-black/20 h-[47px] w-full data-[hovered]:border-black py-4 px-[14px];
+}
+
+.input-error {
+  @apply text-red-500 mt-2 block;
+}
+
+[data-invalid="true"] .input-base,
+[data-invalid="true"] button {
+  @apply border-red-500 border-2 focus-visible:outline-0;
+}
+
+/* Swiper */
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  width: auto !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: relative !important;
+  inset: inherit !important;
+  width: auto !important;
+  height: auto !important;
+  margin-top: 0 !important;
+  z-index: 10 !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: inherit !important;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  @apply !content-none;
+}
+
+.swiper-pagination-bullet-active {
+  @apply !bg-black;
+}
+
+::placeholder,
+::-webkit-input-placeholder,
+::-moz-placeholder,
+::-ms-input-placeholder {
+  @apply text-color-border;
+}
+
+/* Storybook Styles */
+.sbdocs-content {
+  @apply mx-auto !max-w-[1920px] w-full;
+}
