@@ -1,6 +1,6 @@
-import Image from "next/image";
-import Link from "next/link";
-import { twMerge } from "tailwind-merge";
+import Image from "next/image"
+import Link from "next/link"
+import { twMerge } from "tailwind-merge"
 
 const Logo = ({
   className = "",
@@ -9,14 +9,14 @@ const Logo = ({
   imgSrc = "",
   imgAlt = "Logo",
 }: {
-  className?: string;
-  url?: string;
-  text?: string;
-  imgSrc?: string;
-  imgAlt?: string;
+  className?: string
+  url?: string
+  text?: string
+  imgSrc?: string
+  imgAlt?: string
 }) => {
   return (
-    <Link href={url} className="flex items-center gap-[7px]" tabIndex={0}>
+    <Link href={url} className="flex items-center gap-[7px]">
       {imgSrc !== "" ? (
         <Image
           src={imgSrc}
@@ -27,13 +27,9 @@ const Logo = ({
         />
       ) : null}
 
-      {text !== "" ? (
-        <p className="text-[25px] font-bold" tabIndex={0}>
-          {text}
-        </p>
-      ) : null}
+      {text !== "" ? <p className="text-[25px] font-bold">{text}</p> : null}
     </Link>
-  );
-};
+  )
+}
 
-export default Logo;
+export default Logo

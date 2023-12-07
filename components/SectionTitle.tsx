@@ -17,7 +17,6 @@ const SectionTitle = ({
         "text-[48px] font-bold leading-[58px] max-sm:text-[32px] max-sm:leading-[42px]",
         className
       )}
-      tabIndex={0}
     >
       {children}
     </TagName>

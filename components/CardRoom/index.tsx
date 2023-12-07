@@ -36,7 +36,6 @@ const CardRoom = ({
             "w-full h-full object-cover lg:group-hover:scale-110 transition-all duration-[.3s] ease-in-out"
           )}
           alt={imgAlt}
-          tabIndex={0}
         />
       </div>
 

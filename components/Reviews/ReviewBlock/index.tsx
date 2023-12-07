@@ -46,9 +46,7 @@ const ReviewBlock = ({
 
         <div className="text-2xl font-bold">{desc}</div>
 
-        <p className="font-medium" tabIndex={0}>
-          {reviewer}
-        </p>
+        <p className="font-medium">{reviewer}</p>
       </div>
     </div>
   )
