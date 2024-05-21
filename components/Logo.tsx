@@ -8,12 +8,14 @@ const Logo = ({
   text = "",
   imgSrc = "",
   imgAlt = "Logo",
+  showMenu,
 }: {
   className?: string
   url?: string
   text?: string
   imgSrc?: string
   imgAlt?: string
+  showMenu?: boolean
 }) => {
   return (
     <Link href={url} className="flex items-center gap-[7px]">

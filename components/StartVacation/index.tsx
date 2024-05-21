@@ -32,7 +32,7 @@ const StartVacation = ({
   return (
     <section className="py-6 sm:py-28">
       <Wrapper className="flex flex-col items-center gap-6 xl:flex-row xl:gap-20">
-        <VideoImage imgSrc={videoImg} imgAlt="Lobby with green plants" />
+        <VideoImage imgSrc={videoImg} youtubeVideoId="KLuTLF3x9sA" imgAlt="Lobby with green plants" />
 
         <div className="flex w-full max-w-[616px] flex-col gap-6">
           <SectionTitle tag="h2" className="w-full">

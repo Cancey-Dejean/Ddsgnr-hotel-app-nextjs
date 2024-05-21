@@ -40,7 +40,13 @@ export const reviewsFakeData = [
   },
 ]
 
-export const headerButtonsFake = [
+export type CTAButtonTypes = {
+  url: string
+  variant: string
+  label: string
+}[]
+
+export const headerButtonsFake: CTAButtonTypes = [
   {
     url: "#",
     variant: "btn-border-dark",

@@ -5,7 +5,6 @@ import { MdOutlineFoodBank } from "react-icons/md"
 import { TbMassage } from "react-icons/tb"
 
 export const menuListData = [
-  { label: "Home", url: "/" },
   { label: "About", url: "/about" },
   { label: "Services", url: "/services" },
   { label: "Gallery", url: "/gallery" },

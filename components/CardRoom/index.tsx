@@ -33,7 +33,7 @@ const CardRoom = ({
           width={640}
           height={488}
           className={twMerge(
-            "w-full h-full object-cover lg:group-hover:scale-110 transition-all duration-[.3s] ease-in-out"
+            "w-full h-full object-cover lg:group-hover:scale-110 transition-all duration-300 ease-in-out"
           )}
           alt={imgAlt}
         />

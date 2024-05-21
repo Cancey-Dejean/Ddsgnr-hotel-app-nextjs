@@ -1,16 +1,16 @@
-"use client";
-import Link from "next/link";
-import { motion } from "framer-motion";
+"use client"
+import Link from "next/link"
+import { motion } from "framer-motion"
 
-type ListItem = {
-  label: string;
-  url: string;
-};
+export type MenuListItem = {
+  label: string
+  url: string
+}
 
 type NavigationMenuProps = {
-  path: string;
-  menuList: ListItem[];
-};
+  path: string
+  menuList: MenuListItem[]
+}
 
 const NavigationMenu = ({ menuList = [], path }: NavigationMenuProps) => {
   return (
@@ -31,7 +31,7 @@ const NavigationMenu = ({ menuList = [], path }: NavigationMenuProps) => {
         ))}
       </ul>
     </nav>
-  );
-};
+  )
+}
 
-export default NavigationMenu;
+export default NavigationMenu

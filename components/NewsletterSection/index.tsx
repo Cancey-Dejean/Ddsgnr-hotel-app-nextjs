@@ -40,7 +40,7 @@ const NewsletterSection = () => {
             className="px-[11px] py-[12px] h-[47px]"
             label="Subscribe"
             type="submit"
-            variant="btn-border-dark"
+            variant="btn-border-dark max-sm:w-full"
           />
         </div>
 

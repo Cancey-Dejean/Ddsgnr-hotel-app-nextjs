@@ -43,6 +43,7 @@ const VacationSection = ({
 
         <div className="flex  flex-col items-center gap-6 xl:flex-row xl:gap-20">
           <VideoImage
+            youtubeVideoId="IV072FJtZzU"
             imgSrc={mainImg}
             imgStyles="mx-auto w-full max-w-[900px]"
             imgAlt="Queen size bed in a room"
