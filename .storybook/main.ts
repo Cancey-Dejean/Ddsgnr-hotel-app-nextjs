@@ -6,6 +6,7 @@ const config: StorybookConfig = {
     "../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)",
     "../components/**/*.stories.@(js|jsx|mjs|ts|tsx)",
   ],
+
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
@@ -13,14 +14,21 @@ const config: StorybookConfig = {
     "@storybook/addon-interactions",
     "@storybook/addon-a11y",
     "@whitespace/storybook-addon-html",
+    "@chromatic-com/storybook"
   ],
+
   framework: {
     name: "@storybook/nextjs",
     options: {},
   },
-  docs: {
-    autodocs: "tag",
-  },
-  staticDirs: ["../public", "../public/images"], //👈 Configures the static asset folder in Storybook
+
+  docs: {},
+
+  //👈 Configures the static asset folder in Storybook
+  staticDirs: ["../public", "../public/images"],
+
+  typescript: {
+    reactDocgen: "react-docgen-typescript"
+  }
 }
 export default config
