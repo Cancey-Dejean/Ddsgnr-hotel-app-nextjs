@@ -4,6 +4,7 @@ import type { Metadata } from "next"
 import { Roboto } from "next/font/google"
 import Footer from "@/components/Footer"
 import { headerButtons, menuListData } from "@/constants"
+import { Toaster } from "@/components/ui/toaster"
 
 const roboto = Roboto({
   weight: ["400", "500", "700", "900"],
@@ -28,6 +29,7 @@ export default function RootLayout({
           {children}
           <Footer />
         </div>
+        <Toaster />
       </body>
     </html>
   )
