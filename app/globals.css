@@ -117,19 +117,14 @@
 }
 
 /* Input */
-.input-label {
+/* .input-label {
   @apply block mb-2 text-base;
 }
 .input-base {
   @apply border rounded-[4px] border-black/20 h-[47px] w-full data-[hovered]:border-black py-4 px-[14px];
-}
+} */
 
-.input-error {
-  @apply text-red-500 mt-2 block;
-}
-
-[data-invalid="true"] .input-base,
-[data-invalid="true"] button {
+[aria-invalid="true"] {
   @apply border-red-500 border-2 focus-visible:outline-0;
 }
 

@@ -1,14 +1,21 @@
+import type { Metadata } from "next"
 import Header from "@/components/Header"
 import "./globals.css"
-import type { Metadata } from "next"
 import { Roboto } from "next/font/google"
 import Footer from "@/components/Footer"
 import { headerButtons, menuListData } from "@/constants"
 import { Toaster } from "@/components/ui/toaster"
 
+// const roboto = Roboto({
+//   // weight: ["400", "500", "700", "900"],
+//   // subsets: ["latin"],
+// })
+
 const roboto = Roboto({
   weight: ["400", "500", "700", "900"],
+  style: ["normal", "italic"],
   subsets: ["latin"],
+  display: "swap",
 })
 
 export const metadata: Metadata = {
@@ -22,8 +29,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={roboto.className}>
+    <html lang="en" className={roboto.className}>
+      <body>
         <div>
           <Header menuListHeader={menuListData} btnData={headerButtons} />
           {children}

@@ -7,7 +7,7 @@ import { roomOptionsFake } from "../../constants/fakeData"
 
 const Rooms = ({ data = roomOptionsFake }: { data?: typeof roomOptions }) => {
   return (
-    <section className="py-6 sm:py-28">
+    <section className="py-10 sm:py-28">
       <Wrapper className="flex flex-col gap-6 xl:gap-20">
         <SectionHeader
           topTitle="Rooms"

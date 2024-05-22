@@ -13,6 +13,27 @@ import {
 import MobileMenu from "./MobileMenu"
 import { useState } from "react"
 import { cn } from "@/lib/utils"
+import { Button, ButtonProps } from "../ui/button"
+import Link from "next/link"
+
+// export type CTAButtonTypes = {
+//   url: string
+//   variant?: string
+//   label: string
+// }[]
+
+export const btnData = [
+  {
+    url: "/",
+    variant: "outline",
+    label: "Link",
+  },
+  {
+    url: "/",
+    variant: "default",
+    label: "Link",
+  },
+]
 
 const Header = ({
   menuListHeader = menuListFake,
@@ -44,14 +65,23 @@ const Header = ({
           </div>
 
           <div className="hidden gap-4 md:flex md:items-center">
-            {btnData.map((button, i) => (
-              <ButtonLink
-                key={i}
-                label={button.label}
-                url={button.url}
-                variant={button.variant}
-              />
-            ))}
+            <Button asChild variant="outline">
+              <Link href="/">Sign In</Link>
+            </Button>
+            <Button asChild>
+              <Link href="/">Get Started</Link>
+            </Button>
+            {/* {btnData.map(({ variant }: ButtonProps, i) => (
+              <Button asChild key={i} variant={variant}>
+                <Link href={url}>{label}</Link>
+              </Button>
+              // <ButtonLink
+              //   key={i}
+              //   label={button.label}
+              //   url={button.url}
+              //   variant={button.variant}
+              // />
+            ))} */}
           </div>
 
           <button
@@ -69,6 +99,7 @@ const Header = ({
         <MobileMenu
           btnData={btnData}
           menuListData={menuListHeader}
+          toggleMenu={toggleMenu}
           showMenu={showMenu}
         />
       </header>

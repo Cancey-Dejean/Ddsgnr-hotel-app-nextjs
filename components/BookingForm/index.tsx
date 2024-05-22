@@ -50,7 +50,8 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 import { Input } from "../ui/input"
-
+import { useState } from "react"
+import { useRouter } from "next/navigation"
 const roomsOptions = ["Standard", "Deluxe", "Executive", "Suite"]
 
 const FormSchema = z.object({
@@ -64,21 +65,26 @@ const FormSchema = z.object({
     required_error: "A room is required.",
   }),
   guests: z
-    .number({
+    .string({
       required_error: "Guests must be a number.",
     })
+    // .min(1)
+    // .max(2),
     .min(1, "At least 1 guest is required.")
-    .max(4, "Maximum of 4 guests is allowed."),
+    .max(8, "Maximum of 4 guests is allowed."),
 })
 
 const BookingForm = () => {
+  const [isSubmitted, setIsSubmitted] = useState<boolean>(false)
+  const { push } = useRouter()
+
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
       checkIn: new Date(),
       checkOut: new Date(),
       // room: "Executive",
-      guests: 1,
+      guests: "1",
     },
   })
 
@@ -91,81 +97,18 @@ const BookingForm = () => {
         </pre>
       ),
     })
+
+    setIsSubmitted(true)
+    push("/")
   }
 
-  // const onSubmit = useFormReset()
   return (
     <section className="flex flex-col justify-between gap-[26] py-6 sm:py-[55px]">
-      {/* <Wrapper className=" max-w-[1209px]">
-        <Form
-          onSubmit={onSubmit}
-          className="flex flex-wrap items-start gap-[26px] lg:flex-nowrap"
-        >
-          <div className="flex w-full  justify-between flex-col md:w-[48%] lg:flex-1">
-            <TextField name="checkIn" isRequired>
-              <Label className="input-label">Check in</Label>
-              <Input
-                id="checkIn"
-                type="date"
-                className="input-base"
-                placeholder="MM/DD/YYYY"
-                required
-              />
-            </TextField>
-          </div>
-
-          <div className="flex w-full  justify-between flex-col md:w-[48%] lg:flex-1">
-            <TextField name="checkOut" isRequired>
-              <Label className="input-label">Check out</Label>
-              <Input
-                id="checkOut"
-                type="date"
-                className="input-base"
-                placeholder="MM/DD/YYYY"
-              />
-            </TextField>
-          </div>
-
-          <div className="flex w-full flex-col  justify-between md:w-[48%] lg:flex-1">
-            <SelectDropdown
-              id="select"
-              name="select"
-              label="Room"
-              selectOptions={roomsData}
-              placeholder="Select Room"
-              required
-            />
-          </div>
-
-          <div className="flex w-full flex-col md:w-[48%] lg:flex-1">
-            <NumberField name="guests" isRequired minValue={1} defaultValue={1}>
-              <Label className="input-label">Guests</Label>
-              <Group>
-                <Input
-                  type="number"
-                  className="input-base"
-                  min={1}
-                  id="guests"
-                />
-                <Button slot="increment" />
-                <Button slot="decrement" />
-              </Group>
-            </NumberField>
-          </div>
-
-          <ButtonLink
-            className="self-end px-[11px] py-[12px] h-[47px]"
-            label="Check Availability"
-            type="submit"
-          />
-        </Form>
-      </Wrapper> */}
-
       <Wrapper className="mt-6">
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
-            className="flex gap-[26px] items-end"
+            className="flex  flex-col md:flex-row gap-[26px] md:items-end"
           >
             {/* CHECK IN */}
             <FormField
@@ -291,16 +234,23 @@ const BookingForm = () => {
                 <FormItem className="grow">
                   <FormLabel>Guests</FormLabel>
                   <FormControl>
-                    <Input type="number" min={1} {...field} />
+                    <Input type="number" min={1} max={8} {...field} />
                   </FormControl>
 
                   <FormMessage />
                 </FormItem>
               )}
             />
+
             <Button type="submit">Check Availability</Button>
           </form>
         </Form>
+
+        {/* {isSubmitted && (
+          <div className="text-green-800 mt-4">
+            Redirecting to booking page...
+          </div>
+        )} */}
       </Wrapper>
     </section>
   )

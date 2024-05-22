@@ -21,7 +21,7 @@ const Reviews = ({
 }) => {
   const [totalSlides, setTotalSlides] = useState(0)
   return (
-    <section className="py-6 sm:py-28">
+    <section className="py-10 sm:py-28">
       <Wrapper>
         <Swiper
           loop={true}

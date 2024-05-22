@@ -4,6 +4,25 @@ import SectionHeader from "../SectionHeader"
 import SectionTitle from "../SectionTitle"
 import ButtonLink from "../ButtonLink"
 
+const galleryImages = [
+  {
+    image: "/images/gallery1.jpg",
+    alt: "Gallery Image 1",
+  },
+  {
+    image: "/images/gallery2.jpg",
+    alt: "Gallery Image 2",
+  },
+  {
+    image: "/images/gallery3.jpg",
+    alt: "Gallery Image 3",
+  },
+  {
+    image: "/images/gallery4.jpg",
+    alt: "Gallery Image 4",
+  },
+]
+
 const GallerySection = ({
   imageOne = "https://dummyimage.com/618x618.png/dddddd/ffffff",
   imageTwo = "https://dummyimage.com/618x411.png/dddddd/ffffff",
@@ -20,7 +39,7 @@ const GallerySection = ({
   btnUrl?: string
 }) => {
   return (
-    <section className="py-6 sm:py-28">
+    <section className="py-10 sm:py-28">
       <Wrapper className="flex flex-col items-center gap-12">
         <SectionHeader
           title={<SectionTitle tag="h1">Our Gallery</SectionTitle>}
@@ -28,6 +47,7 @@ const GallerySection = ({
         />
 
         <div className="flex flex-col gap-8 lg:flex-row">
+          {/* Column 1 */}
           <div className="flex flex-col gap-8">
             <Image
               src={imageOne}
@@ -46,6 +66,7 @@ const GallerySection = ({
             />
           </div>
 
+          {/* Column 2 */}
           <div className="flex flex-col gap-8">
             <Image
               src={imageFour}

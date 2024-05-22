@@ -32,7 +32,7 @@ const VacationSection = ({
   showHeader?: boolean
 }) => {
   return (
-    <section className="py-6 sm:py-28">
+    <section className="py-10 sm:py-28">
       <Wrapper className="flex max-w-[1300px] flex-col gap-12">
         {showHeader ? (
           <SectionHeader
@@ -43,7 +43,7 @@ const VacationSection = ({
 
         <div className="flex  flex-col items-center gap-6 xl:flex-row xl:gap-20">
           <VideoImage
-            youtubeVideoId="IV072FJtZzU"
+            youtubeVideoId="ScMzIvxBSi4"
             imgSrc={mainImg}
             imgStyles="mx-auto w-full max-w-[900px]"
             imgAlt="Queen size bed in a room"

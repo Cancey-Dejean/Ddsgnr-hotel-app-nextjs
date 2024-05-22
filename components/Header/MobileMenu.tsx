@@ -1,18 +1,18 @@
-import { menuListData } from "@/constants"
 import { cn } from "@/lib/utils"
 import Link from "next/link"
-import { useState } from "react"
-import ButtonLink from "../ButtonLink"
 import { CTAButtonTypes } from "@/constants/fakeData"
 import { MenuListItem } from "./NavigationMenu"
+import { Button } from "../ui/button"
 
 export default function MobileMenu({
   showMenu,
-  btnData,
+  toggleMenu,
+  // btnData,
   menuListData,
 }: {
   showMenu: boolean
-  btnData: CTAButtonTypes
+  toggleMenu: () => void
+  // btnData: CTAButtonTypes
   menuListData: MenuListItem[]
 }) {
   return (
@@ -24,7 +24,11 @@ export default function MobileMenu({
     >
       {menuListData.map(({ label, url }, index) => (
         <li key={index} className={`${showMenu ? "opacity-100" : "opacity-0"}`}>
-          <Link href={url} className="relative p-5 block text-center">
+          <Link
+            href={url}
+            className="relative p-5 block text-center"
+            onClick={toggleMenu}
+          >
             {label}
           </Link>
         </li>
@@ -33,9 +37,12 @@ export default function MobileMenu({
       <div
         className={`mt-5 flex flex-col gap-5 ${showMenu ? "opacity-100" : "opacity-0"}`}
       >
-        {btnData.map(({ label, url, variant }, i) => (
-          <ButtonLink label={label} url={url} variant={variant} />
-        ))}
+        <Button asChild variant="outline" onClick={toggleMenu}>
+          <Link href="/">Sign In</Link>
+        </Button>
+        <Button asChild onClick={toggleMenu}>
+          <Link href="/">Get Started</Link>
+        </Button>
       </div>
     </ul>
   )
