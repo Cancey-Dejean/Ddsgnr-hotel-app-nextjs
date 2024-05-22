@@ -5,7 +5,7 @@ const VideoImage = ({
   imgSrc = "https://dummyimage.com/572x594.png/dddddd/ffffff",
   imgAlt = "Video image",
   imgStyles = "",
-  youtubeVideoId
+  youtubeVideoId,
 }: {
   imgSrc: string
   imgStyles?: string
@@ -16,9 +16,7 @@ const VideoImage = ({
     <div
       className={`max-w-[600px] mx-auto relative flex-1 overflow-hidden ${imgStyles}`}
     >
-      <div
-        className="absolute z-0 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-full w-full flex items-center justify-center"
-      >
+      <div className="absolute z-0 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-full w-full flex items-center justify-center">
         <Image
           src="/images/play-button.png"
           alt="Play Button"
@@ -36,7 +34,7 @@ const VideoImage = ({
         height={640}
       />
 
-      <ModalVideo youtubeVideoId={youtubeVideoId}></ModalVideo>
+      <ModalVideo youtubeVideoId={youtubeVideoId} />
     </div>
   )
 }

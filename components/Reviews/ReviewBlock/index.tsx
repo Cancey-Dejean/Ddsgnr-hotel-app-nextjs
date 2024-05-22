@@ -32,7 +32,11 @@ const ReviewBlock = ({
   return (
     <div className="flex flex-1 flex-col items-center gap-10 lg:flex-row lg:gap-20">
       <div className="flex-1">
-        <VideoImage imgSrc={imgSrc} imgAlt={imgAlt} />
+        <VideoImage
+          youtubeVideoId="NpEaa2P7qZI"
+          imgSrc={imgSrc}
+          imgAlt={imgAlt}
+        />
       </div>
 
       <div className="flex flex-1 flex-col gap-6 text-center lg:gap-8 lg:text-left">

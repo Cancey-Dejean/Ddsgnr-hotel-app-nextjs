@@ -27,7 +27,7 @@ import {
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { toast } from "@/components/ui/use-toast"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Paragraph from "../Paragraph"
 import Link from "next/link"
 
@@ -45,8 +45,9 @@ const NewsletterSchema = z.object({
 })
 const NewsletterSection = () => {
   const [isSubmitted, setIsSubmitted] = useState<boolean>(false)
+  const [showMessage, setShowMessage] = useState(false)
 
-  const form = useForm<z.infer<typeof NewsletterSchema>>({
+  const newsletterForm = useForm<z.infer<typeof NewsletterSchema>>({
     resolver: zodResolver(NewsletterSchema),
     defaultValues: {
       email: "",
@@ -54,6 +55,9 @@ const NewsletterSection = () => {
   })
 
   function onSubmit(data: z.infer<typeof NewsletterSchema>) {
+    newsletterForm.reset()
+    setIsSubmitted(true)
+    setShowMessage(true)
     toast({
       title: "You submitted the following values:",
       description: (
@@ -62,15 +66,25 @@ const NewsletterSection = () => {
         </pre>
       ),
     })
-
-    setIsSubmitted(true)
   }
-  // const onSubmit = useFormReset()
+
+  useEffect(() => {
+    if (showMessage) {
+      const timer = setTimeout(() => {
+        setShowMessage(false)
+      }, 3000)
+
+      return () => {
+        clearTimeout(timer)
+      }
+    }
+  }, [showMessage])
+
   return (
     <div className="flex flex-col justify-stretch gap-4">
-      <Form {...form}>
+      <Form {...newsletterForm}>
         <form
-          onSubmit={form.handleSubmit(onSubmit)}
+          onSubmit={newsletterForm.handleSubmit(onSubmit)}
           className="flex flex-col gap-4 w-full lg:max-w-[481px]"
         >
           <p>
@@ -78,7 +92,7 @@ const NewsletterSection = () => {
           </p>
           <div className="flex flex-col md:flex-row gap-4">
             <FormField
-              control={form.control}
+              control={newsletterForm.control}
               name="email"
               render={({ field }) => (
                 <FormItem className="grow">
@@ -95,6 +109,7 @@ const NewsletterSection = () => {
                 </FormItem>
               )}
             />
+
             <Button type="submit" variant="outline" className="border-black">
               Subscribe
             </Button>
@@ -112,51 +127,11 @@ const NewsletterSection = () => {
         </form>
       </Form>
 
-      {isSubmitted && (
-        <div className="text-green-800 mt-4">
-          Redirecting to booking page...
+      {showMessage && (
+        <div className="bg-green-100 text-green-800 py-2 px-5 rounded-md mt-4">
+          Thank you for subscribing!
         </div>
       )}
-
-      {/* <Form
-        className="flex flex-col gap-4 w-full lg:max-w-[481px]"
-        onSubmit={onSubmit}
-      >
-        <Paragraph>
-          Join our newsletter to stay up to date on features and releases.
-        </Paragraph>
-
-        <div className="flex flex-col items-start gap-4 sm:flex-row">
-          <TextField name="checkIn" className="w-full" isRequired>
-            <Label className="input-label sr-only">Enter your email</Label>
-            <Input
-              id="email"
-              type="email"
-              className="input-base "
-              placeholder="Enter your email"
-              required
-            />
-            <FieldError className="input-error" />
-          </TextField>
-
-          <ButtonLink
-            className="px-[11px] py-[12px] h-[47px]"
-            label="Subscribe"
-            type="submit"
-            variant="btn-border-dark max-sm:w-full"
-          />
-        </div>
-
-        <div className="block">
-          <Paragraph className="text-xs ">
-            By subscribing you agree to with our {""}
-            <Link href="#" className="underline">
-              Privacy Policy
-            </Link>{" "}
-            and provide consent to receive updates from our company.
-          </Paragraph>
-        </div>
-      </Form> */}
     </div>
   )
 }

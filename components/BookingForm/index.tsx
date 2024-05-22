@@ -27,7 +27,6 @@ import { Calendar } from "@/components/ui/calendar"
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -38,14 +37,11 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover"
-import { toast } from "@/components/ui/use-toast"
 
 import {
   Select,
   SelectContent,
-  SelectGroup,
   SelectItem,
-  SelectLabel,
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
@@ -68,8 +64,6 @@ const FormSchema = z.object({
     .string({
       required_error: "Guests must be a number.",
     })
-    // .min(1)
-    // .max(2),
     .min(1, "At least 1 guest is required.")
     .max(8, "Maximum of 4 guests is allowed."),
 })
@@ -83,21 +77,11 @@ const BookingForm = () => {
     defaultValues: {
       checkIn: new Date(),
       checkOut: new Date(),
-      // room: "Executive",
       guests: "1",
     },
   })
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
-    toast({
-      title: "You submitted the following values:",
-      description: (
-        <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-          <code className="text-white">{JSON.stringify(data, null, 2)}</code>
-        </pre>
-      ),
-    })
-
     setIsSubmitted(true)
     push("/")
   }
