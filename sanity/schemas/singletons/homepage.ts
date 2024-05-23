@@ -25,21 +25,21 @@ export default defineType({
       validation: (rule) => rule.required(),
       group: "seo",
     }),
-    defineField({
-      name: "metaDescription",
-      description:
-        "Used both for the <meta> description tag for SEO, and the personal website subheader.",
-      title: "Meta Description",
-      type: "blockContent",
-      group: "seo",
-    }),
-    defineField({
-      name: "sections",
-      type: "array",
-      title: "Sections",
-      of: [],
-      group: "pageBuilder",
-    }),
+    // defineField({
+    //   name: "metaDescription",
+    //   description:
+    //     "Used both for the <meta> description tag for SEO, and the personal website subheader.",
+    //   title: "Meta Description",
+    //   type: "blockContent",
+    //   group: "seo",
+    // }),
+    // defineField({
+    //   name: "sections",
+    //   type: "array",
+    //   title: "Sections",
+    //   of: [],
+    //   group: "pageBuilder",
+    // }),
   ],
   preview: {
     select: {

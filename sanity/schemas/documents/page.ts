@@ -1,11 +1,11 @@
-import { DocumentIcon, ImageIcon } from "@sanity/icons"
+import { IoHomeOutline } from "react-icons/io5"
 import { defineArrayMember, defineField, defineType } from "sanity"
 
 export default defineType({
   type: "document",
   name: "page",
   title: "Page",
-  icon: DocumentIcon,
+  icon: IoHomeOutline,
   groups: [
     {
       name: "seo",
@@ -34,29 +34,29 @@ export default defineType({
       validation: (rule) => rule.required(),
       group: "seo",
     }),
-    defineField({
-      name: "metaDescription",
-      description:
-        "Used both for the <meta> description tag for SEO, and the personal website subheader.",
-      title: "Meta Description",
-      type: "blockContent",
-      group: "seo",
-    }),
-    defineField({
-      name: "body",
-      description:
-        "This is where you can write the page's content. Including custom blocks like timelines for more a more visual display of information.",
-      title: "Body",
-      type: "blockContent",
-      group: "seo",
-    }),
-    defineField({
-      name: "sections",
-      type: "array",
-      title: "Sections",
-      of: [],
-      group: "pageBuilder",
-    }),
+    // defineField({
+    //   name: "metaDescription",
+    //   description:
+    //     "Used both for the <meta> description tag for SEO, and the personal website subheader.",
+    //   title: "Meta Description",
+    //   type: "blockContent",
+    //   group: "seo",
+    // }),
+    // defineField({
+    //   name: "body",
+    //   description:
+    //     "This is where you can write the page's content. Including custom blocks like timelines for more a more visual display of information.",
+    //   title: "Body",
+    //   type: "blockContent",
+    //   group: "seo",
+    // }),
+    // defineField({
+    //   name: "sections",
+    //   type: "array",
+    //   title: "Sections",
+    //   of: [],
+    //   group: "pageBuilder",
+    // }),
   ],
   preview: {
     select: {
