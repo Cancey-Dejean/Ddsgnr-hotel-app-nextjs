@@ -6,11 +6,6 @@ import Footer from "@/components/Footer"
 import { headerButtons, menuListData } from "@/constants"
 import { Toaster } from "@/components/ui/toaster"
 
-// const roboto = Roboto({
-//   // weight: ["400", "500", "700", "900"],
-//   // subsets: ["latin"],
-// })
-
 const roboto = Roboto({
   weight: ["400", "500", "700", "900"],
   style: ["normal", "italic"],
