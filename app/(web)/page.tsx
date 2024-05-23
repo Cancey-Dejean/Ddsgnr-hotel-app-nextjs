@@ -1,5 +1,5 @@
 "use client"
-import BlogPagination from "@/components/Blog/BlogPagination"
+
 import BookingForm from "@/components/BookingForm"
 import GallerySection from "@/components/GallerySection"
 import Hero from "@/components/Hero"

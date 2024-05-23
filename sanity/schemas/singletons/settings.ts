@@ -1,15 +1,13 @@
-import { CogIcon } from "@sanity/icons"
 import { defineArrayMember, defineField, defineType } from "sanity"
+import { FaCog } from "react-icons/fa"
 
 export default defineType({
   name: "settings",
   title: "Settings",
   type: "document",
-  icon: CogIcon,
-  // Uncomment below to have edits publish automatically as you type
-  // liveEdit: true,
+  icon: FaCog,
   fields: [
-    defineField({
+    {
       name: "ogImage",
       title: "Open Graph Image",
       type: "image",
@@ -17,7 +15,7 @@ export default defineType({
       options: {
         hotspot: true,
       },
-    }),
+    },
   ],
   preview: {
     prepare() {

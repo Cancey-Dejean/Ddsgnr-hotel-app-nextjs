@@ -1,6 +1,4 @@
 import BlogList from "@/components/Blog/BlogList"
-import { PaginationBlock } from "@/components/Pagination"
-import PostCard from "@/components/PostCard"
 import { getPosts, getTotalPosts } from "@/sanity/lib/queries"
 import { PostProps } from "@/types/Post"
 

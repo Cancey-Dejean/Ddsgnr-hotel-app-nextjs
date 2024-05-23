@@ -17,14 +17,14 @@ export default defineType({
     },
   ],
   fields: [
-    defineField({
+    {
       type: "string",
       name: "metaTitle",
       title: "Title",
       validation: (rule) => rule.required(),
       group: "seo",
-    }),
-    defineField({
+    },
+    {
       type: "slug",
       name: "slug",
       title: "Slug",
@@ -33,7 +33,7 @@ export default defineType({
       },
       validation: (rule) => rule.required(),
       group: "seo",
-    }),
+    },
     // defineField({
     //   name: "metaDescription",
     //   description:
