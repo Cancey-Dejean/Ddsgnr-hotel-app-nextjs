@@ -29,7 +29,7 @@ import { Input } from "@/components/ui/input"
 import { toast } from "@/components/ui/use-toast"
 import { useEffect, useState } from "react"
 import Paragraph from "../Paragraph"
-import Link from "next/link"
+import { Link } from "next-view-transitions"
 
 // const FormSchema = z.object({
 //   email: email({

@@ -7,6 +7,7 @@ import { headerButtons, menuListData } from "@/constants"
 import { Toaster } from "@/components/ui/toaster"
 import { VisualEditing } from "next-sanity"
 import { draftMode } from "next/headers"
+import { ViewTransitions } from "next-view-transitions"
 
 const roboto = Roboto({
   weight: ["400", "500", "700", "900"],
@@ -26,24 +27,26 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={roboto.className}>
-      <body>
-        {draftMode().isEnabled && (
+    <ViewTransitions>
+      <html lang="en" className={roboto.className}>
+        <body>
+          {draftMode().isEnabled && (
+            <div>
+              <a className="p-4 bg-blue-300 block" href="/api/disable-draft">
+                Disable preview mode
+              </a>
+            </div>
+          )}
           <div>
-            <a className="p-4 bg-blue-300 block" href="/api/disable-draft">
-              Disable preview mode
-            </a>
+            <Header menuListHeader={menuListData} />
+            {children}
+            <Footer />
           </div>
-        )}
-        <div>
-          <Header menuListHeader={menuListData} btnData={headerButtons} />
-          {children}
-          <Footer />
-        </div>
-        <Toaster />
+          <Toaster />
 
-        {draftMode().isEnabled && <VisualEditing />}
-      </body>
-    </html>
+          {draftMode().isEnabled && <VisualEditing />}
+        </body>
+      </html>
+    </ViewTransitions>
   )
 }

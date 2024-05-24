@@ -6,6 +6,7 @@ import { TbMassage } from "react-icons/tb"
 
 export const menuListData = [
   { label: "About", url: "/about" },
+  { label: "Blog", url: "/blog" },
   { label: "Services", url: "/services" },
   { label: "Gallery", url: "/gallery" },
 ]

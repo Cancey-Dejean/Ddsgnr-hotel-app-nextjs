@@ -8,7 +8,7 @@ import {
 import { urlForImage } from "@/sanity/lib/image"
 import { PostProps } from "@/types/Post"
 import Image from "next/image"
-import Link from "next/link"
+import { Link } from "next-view-transitions"
 
 export default function PostCard({
   title,

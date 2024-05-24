@@ -4,23 +4,13 @@ import Wrapper from "../Wrapper"
 import { usePathname } from "next/navigation"
 import Logo from "../Logo"
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
-import ButtonLink from "../ButtonLink"
-import {
-  headerButtonsFake,
-  menuListFake,
-  CTAButtonTypes,
-} from "../../constants/fakeData"
+
+import { headerButtonsFake, menuListFake } from "../../constants/fakeData"
 import MobileMenu from "./MobileMenu"
 import { useState } from "react"
 import { cn } from "@/lib/utils"
-import { Button, ButtonProps } from "../ui/button"
-import Link from "next/link"
-
-// export type CTAButtonTypes = {
-//   url: string
-//   variant?: string
-//   label: string
-// }[]
+import { Button } from "../ui/button"
+import { Link } from "next-view-transitions"
 
 export const btnData = [
   {
@@ -35,10 +25,7 @@ export const btnData = [
   },
 ]
 
-const Header = ({
-  menuListHeader = menuListFake,
-  btnData = headerButtonsFake,
-}) => {
+const Header = ({ menuListHeader = menuListFake }) => {
   const path = usePathname()
   const [showMenu, setShowMenu] = useState(false)
 

@@ -2,7 +2,7 @@ import BlogList from "@/components/Blog/BlogList"
 import { getPosts, getTotalPosts } from "@/sanity/lib/queries"
 import { PostProps } from "@/types/Post"
 
-import Link from "next/link"
+import { Link } from "next-view-transitions"
 
 // export default async function BlogIndex() {
 //   const posts: PostProps[] = await getPosts()
