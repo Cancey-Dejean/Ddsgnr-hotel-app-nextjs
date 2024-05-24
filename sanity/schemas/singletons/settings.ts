@@ -1,4 +1,4 @@
-import { defineArrayMember, defineField, defineType } from "sanity"
+import { defineType } from "sanity"
 import { FaCog } from "react-icons/fa"
 
 export default defineType({

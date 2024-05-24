@@ -5,6 +5,8 @@ import { Roboto } from "next/font/google"
 import Footer from "@/components/Footer"
 import { headerButtons, menuListData } from "@/constants"
 import { Toaster } from "@/components/ui/toaster"
+import { VisualEditing } from "next-sanity"
+import { draftMode } from "next/headers"
 
 const roboto = Roboto({
   weight: ["400", "500", "700", "900"],
@@ -26,12 +28,21 @@ export default function RootLayout({
   return (
     <html lang="en" className={roboto.className}>
       <body>
+        {draftMode().isEnabled && (
+          <div>
+            <a className="p-4 bg-blue-300 block" href="/api/disable-draft">
+              Disable preview mode
+            </a>
+          </div>
+        )}
         <div>
           <Header menuListHeader={menuListData} btnData={headerButtons} />
           {children}
           <Footer />
         </div>
         <Toaster />
+
+        {draftMode().isEnabled && <VisualEditing />}
       </body>
     </html>
   )

@@ -1,7 +1,5 @@
 "use client"
 import { PostProps } from "@/types/Post"
-import Image from "next/image"
-import Link from "next/link"
 import React, { useState } from "react"
 import PostCard from "../PostCard"
 import { Button } from "../ui/button"

@@ -2,17 +2,32 @@ import BlogList from "@/components/Blog/BlogList"
 import { getPosts, getTotalPosts } from "@/sanity/lib/queries"
 import { PostProps } from "@/types/Post"
 
-export default async function BlogIndex() {
-  const posts: PostProps[] = await getPosts()
-  const numberOfPosts = await getTotalPosts()
-  console.log(numberOfPosts)
+import Link from "next/link"
 
-  console.log(posts)
-  return (
-    <div className="max-w-7xl mx-auto">
-      <ul className="">
-        <BlogList posts={posts} />
-      </ul>
-    </div>
-  )
+// export default async function BlogIndex() {
+//   const posts: PostProps[] = await getPosts()
+//   const numberOfPosts = await getTotalPosts()
+//   console.log(numberOfPosts)
+
+//   console.log(posts)
+//   return (
+//     <div className="max-w-7xl mx-auto">
+//       <ul className="">
+//         <BlogList posts={posts} />
+//       </ul>
+//     </div>
+//   )
+// }
+
+import { SanityDocument } from "next-sanity"
+import { sanityFetch } from "@/sanity/lib/fetch"
+import { POSTS_QUERY } from "@/sanity/lib/queries"
+import Posts from "@/components/Blog/Posts"
+
+export default async function Page() {
+  const posts = await sanityFetch<SanityDocument[]>({
+    query: POSTS_QUERY,
+  })
+
+  return <Posts posts={posts} />
 }

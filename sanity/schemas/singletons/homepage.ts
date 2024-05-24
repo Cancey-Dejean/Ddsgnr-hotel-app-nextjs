@@ -1,5 +1,5 @@
 import { IoHomeOutline } from "react-icons/io5"
-import { defineField, defineType } from "sanity"
+import { defineType } from "sanity"
 
 export default defineType({
   name: "homepage",

@@ -1,6 +1,29 @@
 import { groq } from "next-sanity"
 import { client } from "./client"
 
+// Live Mode
+export const POSTS_QUERY = groq`*[_type == "blog"]  | order(_createdAt desc) {
+  _id,
+  title,
+  excerpt,
+  _createdAt,
+  "currentSlug": slug.current,
+  "featuredImage": featuredImage.asset->url,
+  "featuredImageAlt": featuredImage.alt
+}`
+
+export const POST_QUERY = groq`*[_type == "blog" && slug.current == $slug][0] {
+  _createdAt,
+  content,
+  "featuredImage": featuredImage.asset->url,
+  "featuredImageAlt": featuredImage.alt,
+    _id,
+  title,
+  excerpt,
+  "currentSlug": slug.current,
+}`
+// Live Mode
+
 export const homePageQuery = groq`
   *[_type == "home"][0] {
     title,

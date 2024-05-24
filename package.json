@@ -17,6 +17,7 @@
     "@hookform/resolvers": "^3.4.2",
     "@mui/material": "^5.14.5",
     "@netlify/plugin-nextjs": "3.9.0",
+    "@portabletext/react": "^3.0.18",
     "@radix-ui/react-dialog": "^1.0.5",
     "@radix-ui/react-label": "^2.0.2",
     "@radix-ui/react-popover": "^1.0.7",
@@ -24,6 +25,7 @@
     "@radix-ui/react-slot": "^1.0.2",
     "@radix-ui/react-toast": "^1.1.5",
     "@sanity/image-url": "1",
+    "@sanity/preview-url-secret": "^1.6.13",
     "@sanity/vision": "3",
     "@types/node": "20.5.3",
     "@types/react": "18.2.21",
@@ -67,6 +69,7 @@
     "@storybook/nextjs": "^8.1.2",
     "@storybook/react": "^8.1.2",
     "@storybook/test": "^8.1.2",
+    "@tailwindcss/typography": "^0.5.13",
     "@whitespace/storybook-addon-html": "^6.1.1",
     "react-aria-components": "1.0.0-rc.0",
     "storybook": "^8.1.2"
