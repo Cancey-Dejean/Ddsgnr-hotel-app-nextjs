@@ -8,7 +8,7 @@ import { visionTool } from "@sanity/vision"
 import { defineConfig } from "sanity"
 import { structureTool } from "sanity/structure"
 import { presentationTool } from "sanity/presentation"
-
+import { locate } from "@/sanity/presentation/locate"
 import { unsplashImageAsset } from "sanity-plugin-asset-source-unsplash"
 import { media } from "sanity-plugin-media"
 
@@ -31,7 +31,9 @@ export default defineConfig({
     visionTool({ defaultApiVersion: apiVersion }),
     media(),
     presentationTool({
+      locate,
       previewUrl: {
+        origin: "http://localhost:3000",
         draftMode: {
           enable: "/api/draft",
         },
