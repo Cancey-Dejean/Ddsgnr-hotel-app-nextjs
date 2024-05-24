@@ -19,13 +19,12 @@ import Link from "next/link"
 //   )
 // }
 
-import { SanityDocument } from "next-sanity"
 import { sanityFetch } from "@/sanity/lib/fetch"
 import { POSTS_QUERY } from "@/sanity/lib/queries"
 import Posts from "@/components/Blog/Posts"
 
 export default async function Page() {
-  const posts = await sanityFetch<SanityDocument[]>({
+  const posts = await sanityFetch<PostProps[]>({
     query: POSTS_QUERY,
   })
 
