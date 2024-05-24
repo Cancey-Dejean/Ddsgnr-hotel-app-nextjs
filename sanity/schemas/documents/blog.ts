@@ -38,6 +38,7 @@ export default defineType({
       type: "slug",
       options: {
         source: "title",
+        maxLength: 96,
       },
       validation: (rule) => rule.required(),
       group: "seo",
@@ -54,47 +55,15 @@ export default defineType({
     {
       name: "featuredImage",
       title: "Featured Image",
-      type: "image",
-      options: {
-        hotspot: true,
-      },
-      fields: [
-        {
-          name: "alt",
-          type: "string",
-          title: "Alternative text",
-          validation: (Rule) => Rule.required(),
-        },
-      ],
-      validation: (rule) => rule.required(),
+      type: "customImage",
       group: "content",
     },
     {
-      name: "content",
-      title: "Content",
-      type: "array",
-      of: [
-        { type: "block" },
-        {
-          type: "image",
-          fields: [
-            {
-              name: "alt",
-              type: "string",
-              title: "Alternative text",
-            },
-          ],
-        },
-        { type: "youtube" },
-      ],
+      name: "body",
+      title: "Body",
+      type: "bodyText",
       group: "content",
     },
-    // defineField({
-    //   name: "author",
-    //   title: "Author",
-    //   type: "reference",
-    //   to: { type: "author" },
-    // }),
     // defineField({
     //   name: "tags",
     //   title: "Tags",
@@ -105,4 +74,16 @@ export default defineType({
     //   },
     // }),
   ],
+  preview: {
+    select: {
+      title: "title",
+      image: "featuredImage",
+    },
+    prepare({ title, image }) {
+      return {
+        title,
+        media: image,
+      }
+    },
+  },
 })

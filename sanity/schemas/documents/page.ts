@@ -12,8 +12,8 @@ export default defineType({
       title: "SEO",
     },
     {
-      name: "pageBuilder",
-      title: "Page Builder",
+      name: "content",
+      title: "Page Content",
     },
   ],
   fields: [
@@ -30,9 +30,16 @@ export default defineType({
       title: "Slug",
       options: {
         source: "title",
+        maxLength: 96,
       },
       validation: (rule) => rule.required(),
       group: "seo",
+    },
+    {
+      name: "body",
+      title: "Body",
+      type: "bodyText",
+      group: "content",
     },
     // defineField({
     //   name: "metaDescription",

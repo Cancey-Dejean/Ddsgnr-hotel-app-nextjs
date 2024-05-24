@@ -8,7 +8,7 @@ import { urlForImage } from "@/sanity/lib/image"
 import { blockImageRenderer } from "@/utils"
 
 export default function Post({ post }: { post: SanityDocument }) {
-  const { title, featuredImage, content, excerpt } = post
+  const { title, featuredImage, body, excerpt } = post
 
   return (
     <article className="prose max-w-3xl mx-auto py-20">
@@ -23,8 +23,8 @@ export default function Post({ post }: { post: SanityDocument }) {
           alt={featuredImage.alt || ""}
         />
       ) : null}
-      {content ? (
-        <PortableText value={content} components={blockImageRenderer} />
+      {body ? (
+        <PortableText value={body} components={blockImageRenderer} />
       ) : null}
     </article>
   )

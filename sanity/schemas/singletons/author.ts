@@ -18,25 +18,19 @@ export default defineType({
       type: "slug",
       options: {
         source: "name",
+        maxLength: 96,
       },
     },
     {
       name: "image",
       title: "Image",
-      type: "image",
-      fields: [
-        {
-          name: "alt",
-          type: "string",
-          title: "Alternative Text",
-        },
-      ],
+      type: "customImage",
     },
     {
       name: "bio",
       title: "Bio",
       type: "array",
-      of: [{ type: "block" }, { type: "image" }],
+      of: [{ type: "block" }, { type: "customImage" }],
     },
   ],
   preview: {
