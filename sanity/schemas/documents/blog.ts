@@ -25,6 +25,13 @@ export default defineType({
       group: "content",
     },
     {
+      name: "category",
+      title: "Category",
+      type: "reference",
+      to: { type: "category" },
+      group: "content",
+    },
+    {
       name: "title",
       description: "This field is the title of your project.",
       title: "Title",
@@ -45,11 +52,9 @@ export default defineType({
     },
     {
       name: "excerpt",
+      type: "text",
       description:
         "Used both for the <meta> description tag for SEO, and project subheader.",
-      title: "Excerpt",
-      type: "text",
-      validation: (rule) => rule.max(155).required(),
       group: "seo",
     },
     {
@@ -64,15 +69,6 @@ export default defineType({
       type: "bodyText",
       group: "content",
     },
-    // defineField({
-    //   name: "tags",
-    //   title: "Tags",
-    //   type: "array",
-    //   of: [{ type: "string" }],
-    //   options: {
-    //     layout: "tags",
-    //   },
-    // }),
   ],
   preview: {
     select: {

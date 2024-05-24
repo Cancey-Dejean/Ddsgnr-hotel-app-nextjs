@@ -15,6 +15,7 @@ import { media } from "sanity-plugin-media"
 // Go to https://www.sanity.io/docs/api-versioning to learn how API versioning works
 import { apiVersion, dataset, projectId } from "./sanity/env"
 import { schema } from "./sanity/schema"
+import { SideBarList } from "./sanity/schemas/components/deskStructure"
 
 export default defineConfig({
   basePath: "/studio",
@@ -23,7 +24,9 @@ export default defineConfig({
   // Add and edit the content schema in the './sanity/schema' folder
   schema,
   plugins: [
-    structureTool(),
+    structureTool({
+      structure: SideBarList,
+    }),
     unsplashImageAsset(),
 
     // Vision is a tool that lets you query your content with GROQ in the studio
