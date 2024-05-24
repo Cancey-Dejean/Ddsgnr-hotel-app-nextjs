@@ -1,52 +1,43 @@
-import { defineField, defineType } from "sanity"
+import { defineType } from "sanity"
+import { CiUser } from "react-icons/ci"
 
 export default defineType({
   name: "author",
   title: "Author",
   type: "document",
+  icon: CiUser,
   fields: [
-    defineField({
+    {
       name: "name",
       title: "Name",
       type: "string",
-    }),
-    defineField({
+    },
+    {
       name: "slug",
       title: "Slug",
       type: "slug",
       options: {
         source: "name",
-        maxLength: 96,
       },
-    }),
-    defineField({
+    },
+    {
       name: "image",
       title: "Image",
       type: "image",
-      // options: {
-      //   hotspot: true,
-      // },
-      // fields: [
-      //   {
-      //     name: 'alt',
-      //     type: 'string',
-      //     title: 'Alternative Text',
-      //   }
-      // ]
-    }),
-    // defineField({
-    //   name: "bio",
-    //   title: "Bio",
-    //   type: "array",
-    //   of: [
-    //     {
-    //       title: "Block",
-    //       type: "block",
-    //       styles: [{ title: "Normal", value: "normal" }],
-    //       lists: [],
-    //     },
-    //   ],
-    // }),
+      fields: [
+        {
+          name: "alt",
+          type: "string",
+          title: "Alternative Text",
+        },
+      ],
+    },
+    {
+      name: "bio",
+      title: "Bio",
+      type: "array",
+      of: [{ type: "block" }, { type: "image" }],
+    },
   ],
   preview: {
     select: {

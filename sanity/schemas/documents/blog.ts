@@ -18,6 +18,13 @@ export default defineType({
   ],
   fields: [
     {
+      name: "author",
+      title: "Author",
+      type: "reference",
+      to: { type: "author" },
+      group: "content",
+    },
+    {
       name: "title",
       description: "This field is the title of your project.",
       title: "Title",

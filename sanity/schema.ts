@@ -15,9 +15,8 @@ export const schema: { types: SchemaTypeDefinition[] } = {
 
     // Singletons
     homepage,
-    // blockContent,
-    // category,
-    // author,
+    category,
+    author,
     settings,
   ],
 }
