@@ -1,7 +1,31 @@
 import { groq } from "next-sanity"
 import { client } from "./client"
 
-// Live Mode
+// Get settings
+export const settingsQuery = groq`
+  // *[_type == "settings"][0]{
+  //   footer,
+  //   menuItems[]->{
+  //     _type,
+  //     "slug": slug.current,
+  //     title
+  //   },
+  //   ogImage,
+  // }
+`
+
+// Get Header Menu
+export const MAIN_NAV_QUERY = groq`*[_type == "navigation" && title == "Main Navigation"][0] {
+  _id,
+  title,
+  items[] {
+    _type == 'navItem'  => {
+      text,
+    }
+  }
+}`
+
+// Get all posts
 export const POSTS_QUERY = groq`*[_type == "blog"]  | order(_createdAt desc) {
   _id,
   title,
@@ -13,6 +37,7 @@ export const POSTS_QUERY = groq`*[_type == "blog"]  | order(_createdAt desc) {
   "featuredImageAlt": featuredImage.alt
 }`
 
+// Get single post
 export const POST_QUERY = groq`*[_type == "blog" && slug.current == $slug][0] {
   _createdAt,
   body,
@@ -25,6 +50,7 @@ export const POST_QUERY = groq`*[_type == "blog" && slug.current == $slug][0] {
   "currentSlug": slug.current,
 }`
 
+// Get all categories
 export const ALL_CATEGORIES_QUERY = groq`*[_type == "category"] {
   _id,
   title,
@@ -33,58 +59,8 @@ export const ALL_CATEGORIES_QUERY = groq`*[_type == "category"] {
   description,
   "postCount": count(*[_type == 'blog' && references("categories", ^._id)])
 }`
-// Live Mode
-
-// export const homePageQuery = groq`
-//   *[_type == "home"][0] {
-//     title,
-//     metaDescription,
-//     sections[] {
-//       _type == "hero" => {
-//         ...,
-//         "mainImage": mainImage.asset->url,
-//         "mainImageAlt": mainImage.alt,
-//       },
-//     }
-//   }
-// `
-
-// export const pageBySlugQuery = groq`
-//   *[_type == "page" && slug.current == $slug][0] {
-//     _id,
-//     body,
-//     metaDescription,
-//     title,
-//     "slug": slug.current,
-//   }
-// `
-
-export const getPosts = async () => {
-  const query = groq`*[_type == 'blog'] | order(_createdAt desc) {
-      _id,
-      title,
-      excerpt,
-      _createdAt,
-      "currentSlug": slug.current,
-      "featuredImage": featuredImage.asset->url,
-      "featuredImageAlt": featuredImage.alt,
-  }`
-  return client.fetch(query)
-}
 
 export const getTotalPosts = async () => {
   const query = groq`count(*[_type == 'blog'])`
   return client.fetch(query)
 }
-
-export const settingsQuery = groq`
-  *[_type == "settings"][0]{
-    footer,
-    menuItems[]->{
-      _type,
-      "slug": slug.current,
-      title
-    },
-    ogImage,
-  }
-`
