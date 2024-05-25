@@ -1,4 +1,3 @@
-// locations.ts
 import { DocumentLocationResolver } from "sanity/presentation"
 import { map } from "rxjs"
 
