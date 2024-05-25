@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils"
 import { Link } from "next-view-transitions"
 import { CTAButtonTypes } from "@/constants/fakeData"
-import { MenuListItem } from "./NavigationMenu"
+
 import { Button } from "../ui/button"
 import { NavItem, NavItemProps } from "@/types/NavItem"
 
@@ -28,7 +28,7 @@ export default function MobileMenu({
             className={`${showMenu ? "opacity-100" : "opacity-0"}`}
           >
             <Link
-              href="/"
+              href={item.url || "/"}
               className="relative p-5 block text-center"
               onClick={toggleMenu}
             >

@@ -14,7 +14,7 @@ import { Link } from "next-view-transitions"
 import { motion } from "framer-motion"
 import { NavItem } from "@/types/NavItem"
 
-export default function HeaderContent({ menuList }: { menuList: NavItem }) {
+export default function HeaderContent({ menuList }: { menuList: NavItem[] }) {
   const path = usePathname()
   const [showMenu, setShowMenu] = useState(false)
 
@@ -39,7 +39,7 @@ export default function HeaderContent({ menuList }: { menuList: NavItem }) {
             <ul className="flex items-center justify-start gap-8">
               {menuList.map((item) => (
                 <li className="" key={item._key}>
-                  <Link href={"/"} className="relative py-1">
+                  <Link href={item.url || "/"} className="relative py-1">
                     {item.url === path ? (
                       <motion.span
                         layoutId="underline"
