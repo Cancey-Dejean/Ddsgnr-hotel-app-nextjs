@@ -15,12 +15,11 @@ export const settingsQuery = groq`
 `
 
 // Get Header Menu
-export const MAIN_NAV_QUERY = groq`*[_type == "navigation" && title == "Main Navigation"][0] {
-  _id,
-  title,
-  items[] {
-    _type == 'navItem'  => {
-      text,
+export const MAIN_NAV_QUERY = groq`*[_type == "navigation" && title == "Main Menu" ][0] {
+  menuList[] {
+      _type == 'navItem'  => {
+      _key,
+      label,
     }
   }
 }`

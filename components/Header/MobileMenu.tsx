@@ -3,17 +3,16 @@ import { Link } from "next-view-transitions"
 import { CTAButtonTypes } from "@/constants/fakeData"
 import { MenuListItem } from "./NavigationMenu"
 import { Button } from "../ui/button"
+import { NavItem, NavItemProps } from "@/types/NavItem"
 
 export default function MobileMenu({
   showMenu,
   toggleMenu,
-  // btnData,
-  menuListData,
+  menuList,
 }: {
   showMenu: boolean
   toggleMenu: () => void
-  // btnData: CTAButtonTypes
-  menuListData: MenuListItem[]
+  menuList: NavItem[]
 }) {
   return (
     <ul
@@ -22,17 +21,21 @@ export default function MobileMenu({
         showMenu ? "top-0" : "-top-[100vh]"
       )}
     >
-      {menuListData.map(({ label, url }, index) => (
-        <li key={index} className={`${showMenu ? "opacity-100" : "opacity-0"}`}>
-          <Link
-            href={url}
-            className="relative p-5 block text-center"
-            onClick={toggleMenu}
+      {menuList &&
+        menuList.map((item) => (
+          <li
+            key={item._key}
+            className={`${showMenu ? "opacity-100" : "opacity-0"}`}
           >
-            {label}
-          </Link>
-        </li>
-      ))}
+            <Link
+              href="/"
+              className="relative p-5 block text-center"
+              onClick={toggleMenu}
+            >
+              {item.label}
+            </Link>
+          </li>
+        ))}
 
       <div
         className={`mt-5 flex flex-col gap-5 ${showMenu ? "opacity-100" : "opacity-0"}`}

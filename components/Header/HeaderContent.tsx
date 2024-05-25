@@ -11,8 +11,10 @@ import { useState } from "react"
 import { cn } from "@/lib/utils"
 import { Button } from "../ui/button"
 import { Link } from "next-view-transitions"
+import { motion } from "framer-motion"
+import { NavItem } from "@/types/NavItem"
 
-export default function HeaderContent({ menuListHeader = menuListFake }) {
+export default function HeaderContent({ menuList }: { menuList: NavItem }) {
   const path = usePathname()
   const [showMenu, setShowMenu] = useState(false)
 
@@ -33,7 +35,23 @@ export default function HeaderContent({ menuListHeader = menuListFake }) {
         </div>
 
         <div className="hidden md:flex md:flex-1 md:justify-end">
-          <NavigationMenu menuList={menuListHeader} path={path} />
+          <nav role="navigation">
+            <ul className="flex items-center justify-start gap-8">
+              {menuList.map((item) => (
+                <li className="" key={item._key}>
+                  <Link href={"/"} className="relative py-1">
+                    {item.url === path ? (
+                      <motion.span
+                        layoutId="underline"
+                        className="absolute left-0 top-full block h-px w-full bg-black"
+                      />
+                    ) : null}
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
         </div>
 
         <div className="hidden gap-4 md:flex md:items-center">
@@ -57,8 +75,9 @@ export default function HeaderContent({ menuListHeader = menuListFake }) {
           )}
         </button>
       </Wrapper>
+
       <MobileMenu
-        menuListData={menuListHeader}
+        menuList={menuList}
         toggleMenu={toggleMenu}
         showMenu={showMenu}
       />

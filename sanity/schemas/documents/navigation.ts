@@ -13,9 +13,9 @@ export default defineType({
       title: "Title",
     },
     {
-      name: "items",
+      name: "menuList",
       type: "array",
-      title: "Navigation items",
+      title: "Menu List",
       of: [{ type: "navItem" }],
     },
   ],

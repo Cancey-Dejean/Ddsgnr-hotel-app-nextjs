@@ -3,15 +3,22 @@ import HeaderContent from "./HeaderContent"
 import { SanityDocument } from "next-sanity"
 import { MAIN_NAV_QUERY } from "@/sanity/lib/queries"
 import { menuListFake } from "@/constants/fakeData"
+import { Link } from "next-view-transitions"
 
 const Header = async () => {
   const navigation = await sanityFetch<SanityDocument>({
     query: MAIN_NAV_QUERY,
   })
 
-  console.log(navigation)
+  const menuList = navigation.menuList
 
-  return <HeaderContent menuListHeader={menuListFake} />
+  console.log(menuList)
+
+  return (
+    <div>
+      <HeaderContent menuList={menuList} />
+    </div>
+  )
 }
 
 export default Header

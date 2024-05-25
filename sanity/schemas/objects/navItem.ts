@@ -6,14 +6,14 @@ export const navItem = defineType({
   type: "object",
   fields: [
     {
-      name: "text",
+      name: "label",
       type: "string",
-      title: "Navigation Text",
+      title: "Label",
     },
     {
-      name: "navigationItemUrl",
+      name: "url",
       type: "link",
-      title: "Navigation Item URL",
+      title: "Url",
     },
   ],
 })
