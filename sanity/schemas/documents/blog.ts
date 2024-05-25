@@ -25,10 +25,10 @@ export default defineType({
       group: "content",
     },
     {
-      name: "category",
-      title: "Category",
-      type: "reference",
-      to: { type: "category" },
+      name: "categories",
+      title: "Categories",
+      type: "array",
+      of: [{ type: "reference", to: { type: "category" } }],
       group: "content",
     },
     {

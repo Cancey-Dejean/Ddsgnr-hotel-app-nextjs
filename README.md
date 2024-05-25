@@ -35,8 +35,14 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## Resources
 
+[Visual Editing with Next.js App Router and Sanity Studio](https://www.sanity.io/guides/nextjs-app-router-live-preview)
+
+[Query Cheat Sheet - GROQ](https://www.sanity.io/docs/query-cheat-sheet)
+
 [Paginating with Groq](https://www.sanity.io/docs/paginating-with-groq#99e2366d34f5)
 
 [Introduction to Structure Builder](https://www.sanity.io/docs/structure-builder-introduction)
 
 [Load More Button for Blog List](https://www.sanity.io/answers/how-to-add-a-load-more-button-to-a-sanity-blog-list)
+
+[How to integrate mailchimp with React](https://blog.afrieirham.com/how-to-integrate-mailchimp-with-react)

@@ -1,10 +1,10 @@
 import { IoHomeOutline } from "react-icons/io5"
-import { defineArrayMember, defineField, defineType } from "sanity"
+import { defineType } from "sanity"
 
 export default defineType({
-  type: "document",
   name: "page",
   title: "Page",
+  type: "document",
   icon: IoHomeOutline,
   groups: [
     {
@@ -29,7 +29,7 @@ export default defineType({
       name: "slug",
       title: "Slug",
       options: {
-        source: "title",
+        source: "metaTitle",
         maxLength: 96,
       },
       validation: (rule) => rule.required(),

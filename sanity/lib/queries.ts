@@ -24,6 +24,15 @@ export const POST_QUERY = groq`*[_type == "blog" && slug.current == $slug][0] {
   excerpt,
   "currentSlug": slug.current,
 }`
+
+export const ALL_CATEGORIES_QUERY = groq`*[_type == "category"] {
+  _id,
+  title,
+  "categorySlug": slug.current,
+  image,
+  description,
+  "postCount": count(*[_type == 'blog' && references("categories", ^._id)])
+}`
 // Live Mode
 
 // export const homePageQuery = groq`

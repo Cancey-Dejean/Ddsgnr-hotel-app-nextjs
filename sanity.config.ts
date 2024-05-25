@@ -8,7 +8,7 @@ import { visionTool } from "@sanity/vision"
 import { defineConfig } from "sanity"
 import { structureTool } from "sanity/structure"
 import { presentationTool } from "sanity/presentation"
-import { locate } from "@/sanity/presentation/locate"
+
 import { unsplashImageAsset } from "sanity-plugin-asset-source-unsplash"
 import { media } from "sanity-plugin-media"
 
@@ -16,6 +16,7 @@ import { media } from "sanity-plugin-media"
 import { apiVersion, dataset, projectId } from "./sanity/env"
 import { schema } from "./sanity/schema"
 import { SideBarList } from "./sanity/schemas/components/deskStructure"
+import { locations } from "./sanity/lib/locations"
 
 export default defineConfig({
   basePath: "/studio",
@@ -34,7 +35,10 @@ export default defineConfig({
     visionTool({ defaultApiVersion: apiVersion }),
     media(),
     presentationTool({
-      locate,
+      // locate,
+      resolve: {
+        locations,
+      },
       previewUrl: {
         origin: "http://localhost:3000",
         draftMode: {

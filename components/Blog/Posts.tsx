@@ -5,7 +5,7 @@ import { SanityDocument } from "next-sanity"
 import Image from "next/image"
 import { Link } from "next-view-transitions"
 import { useState } from "react"
-import PostCard from "../PostCard"
+import PostCard from "./PostCard"
 import { Button } from "../ui/button"
 import { PostProps } from "@/types/Post"
 

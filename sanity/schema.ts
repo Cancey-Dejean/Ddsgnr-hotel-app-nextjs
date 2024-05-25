@@ -10,23 +10,31 @@ import { customImage } from "./schemas/objects/customImage"
 import { bodyText } from "./schemas/objects/bodyText"
 import { excerpt } from "./schemas/objects/excerpt"
 import siteSettings from "./schemas/singletons/siteSettings"
+import header from "./schemas/singletons/header"
+import navigation from "./schemas/documents/navigation"
+import { link } from "./schemas/objects/link"
+import { navItem } from "./schemas/objects/navItem"
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
     // Documents
     page,
     blog,
+    navigation,
 
     // Objects
     customImage,
     bodyText,
     excerpt,
+    link,
+    navItem,
 
     // Singletons
     homepage,
     category,
     author,
     siteSettings,
+    header,
     youtube,
   ],
 }

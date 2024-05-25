@@ -6,4 +6,5 @@ export type PostProps = {
   currentSlug: string
   featuredImage?: string
   featuredImageAlt: string
+  body: any
 }

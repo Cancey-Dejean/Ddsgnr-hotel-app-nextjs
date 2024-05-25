@@ -1,7 +1,7 @@
 "use client"
 import { PostProps } from "@/types/Post"
 import React, { useState } from "react"
-import PostCard from "../PostCard"
+import PostCard from "./PostCard"
 import { Button } from "../ui/button"
 
 export default function BlogList({ posts }: { posts: PostProps[] }) {
