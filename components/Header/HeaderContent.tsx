@@ -11,7 +11,6 @@ import { Button, ButtonProps } from "../ui/button"
 import { Link } from "next-view-transitions"
 import { motion } from "framer-motion"
 import { NavItem } from "@/types/NavItem"
-import { SanityDocument } from "next-sanity"
 import Image from "next/image"
 import { urlForImage } from "@/sanity/lib/image"
 
@@ -46,18 +45,16 @@ export default function HeaderContent({
           imgAlt="Ddsgnr Logo"
           className={cn(showMenu && "z-[51]")}
         />
-        {/*
-        <div className="relative h-[31px] w-[34px]">
+        {/* <div className="relative h-[31px] w-[34px]">
           <Image
-            src={urlForImage(logoSrc as SanityDocument)}
-            // src={urlForImage(logoSrc)}
+            // src={urlForImage(logoSrc as SanityDocument)}
+            // src={logoSrc || "No Logo"}
+            src={logoSrc || ""}
             className="object-contain"
-            alt="Ddsgnr Logo"
+            alt={logoText || "Logo"}
             fill
           />
-
-        </div>
-           */}
+        </div> */}
         {menuList && (
           <div className="hidden md:flex md:flex-1 md:justify-end">
             <nav role="navigation">

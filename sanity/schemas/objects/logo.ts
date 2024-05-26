@@ -6,7 +6,7 @@ export const logo = defineType({
   type: "object",
   fields: [
     {
-      name: "logoImage",
+      name: "brandLogo",
       type: "customImage",
       title: "Image",
     },

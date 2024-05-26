@@ -12,15 +12,15 @@ const Header = async () => {
   const menuList = navigation.menuList
   const navCTA = navigation.ctaButtons
 
-  console.log(navigation)
+  console.log(navigation.logoImage)
   console.log(navCTA)
 
   return (
     <HeaderContent
       menuList={menuList}
       navCTA={navCTA}
-      logoSrc={navigation.logo}
-      logoText={navigation.text}
+      logoSrc={navigation.logoImage.brandLogo}
+      logoText={navigation.logoImage.brandLogoAlt}
     />
   )
 }

@@ -32,7 +32,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     link,
     navItem,
     buttonGroup,
-    // logo,
+    logo,
 
     // Singletons
     homepage,

@@ -16,23 +16,26 @@ export const settingsQuery = groq`
 
 // Get Header Menu
 export const MAIN_NAV_QUERY = groq`*[_type == "navigation" && title == "Main Menu" ][0] {
-  logo {
-    logoImage
+  ...,
+  logoImage {
+    "brandLogo": brandLogo.asset->url,
+    "brandLogoAlt": brandLogo.alt,
   },
-   menuList[] {
-     _type == 'navItem'  => {
-       _key,
-       label,
-     }
-   },
-   ctaButtons [] {
-     _type == 'button'  => {
-       _key,
-       variant,
-       label,
-     }
-   }
- }`
+
+  menuList[] {
+    _type == 'navItem'  => {
+      _key,
+      label,
+    }
+  },
+  ctaButtons [] {
+    _type == 'button'  => {
+      _key,
+      variant,
+      label,
+    }
+  }
+}`
 
 // Get all posts
 export const POSTS_QUERY = groq`*[_type == "blog"]  | order(_createdAt desc) {

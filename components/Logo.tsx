@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { Link } from "next-view-transitions"
 import { cn } from "@/lib/utils"
-import { urlForImage } from "@/sanity/lib/image"
+import { urlFor, urlForImage } from "@/sanity/lib/image"
 
 const Logo = ({
   className,
@@ -22,7 +22,7 @@ const Logo = ({
         <div className="relative h-[31px] w-[34px]">
           <Image
             // src={urlForImage(logoSrc as any)}
-            src={logoSrc || ""}
+            src={logoSrc as any}
             className={cn("object-contain", className)}
             alt={imgAlt}
             fill

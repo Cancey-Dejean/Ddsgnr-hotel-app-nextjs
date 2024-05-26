@@ -13,11 +13,16 @@ export default defineType({
       title: "Menu Title",
       validation: (Rule: Rule) => Rule.required(),
     },
+    // {
+    //   name: "logo",
+    //   type: "image",
+    //   title: "Logo",
+    //   validation: (Rule: Rule) => Rule.required(),
+    // },
     {
-      name: "logo",
-      type: "image",
+      name: "logoImage",
+      type: "logo",
       title: "Logo",
-      validation: (Rule: Rule) => Rule.required(),
     },
     {
       name: "menuList",
