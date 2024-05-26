@@ -1,9 +1,5 @@
 import { IoHomeOutline } from "react-icons/io5"
 import { defineField, defineType } from "sanity"
-import {
-  orderRankField,
-  orderRankOrdering,
-} from "@sanity/orderable-document-list"
 
 export default defineType({
   name: "blog",
