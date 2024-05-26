@@ -1,11 +1,9 @@
 "use client"
-import NavigationMenu from "./NavigationMenu"
 import Wrapper from "../Wrapper"
 import { usePathname } from "next/navigation"
 import Logo from "../Logo"
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
 
-import { headerButtonsFake, menuListFake } from "../../constants/fakeData"
 import MobileMenu from "./MobileMenu"
 import { useState } from "react"
 import { cn } from "@/lib/utils"

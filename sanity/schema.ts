@@ -11,9 +11,10 @@ import { bodyText } from "./schemas/objects/bodyText"
 import { excerpt } from "./schemas/objects/excerpt"
 import siteSettings from "./schemas/singletons/siteSettings"
 import header from "./schemas/singletons/header"
-import navigation from "./schemas/documents/navigation"
+import navigation from "./schemas/singletons/navigation"
 import { link } from "./schemas/objects/link"
 import { navItem } from "./schemas/objects/navItem"
+import { button } from "./schemas/objects/button"
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -36,5 +37,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     siteSettings,
     header,
     youtube,
+    button,
   ],
 }

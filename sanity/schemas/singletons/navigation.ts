@@ -18,6 +18,13 @@ export default defineType({
       title: "Menu List",
       of: [{ type: "navItem" }],
     },
+    {
+      name: "ctaButtons",
+      type: "array",
+      title: "CTA Buttons",
+      of: [{ type: "button" }],
+      validation: (rule) => rule.max(2).error("Only 2 CTA buttons are allowed"),
+    },
   ],
   preview: {
     select: {
