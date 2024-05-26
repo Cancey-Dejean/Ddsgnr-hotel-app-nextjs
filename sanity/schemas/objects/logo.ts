@@ -11,9 +11,17 @@ export const logo = defineType({
       title: "Image",
     },
     {
+      name: "logoText",
+      type: "string",
+      title: "Logo Text",
+    },
+    {
       name: "url",
       type: "link",
       title: "Url",
     },
   ],
+  initialValue: {
+    logoText: "Logo",
+  },
 })

@@ -7,24 +7,19 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
 import MobileMenu from "./MobileMenu"
 import { useState } from "react"
 import { cn } from "@/lib/utils"
-import { Button, ButtonProps } from "../ui/button"
+import { Button } from "../ui/button"
 import { Link } from "next-view-transitions"
 import { motion } from "framer-motion"
-import { NavItem } from "@/types/NavItem"
-import Image from "next/image"
-import { urlForImage } from "@/sanity/lib/image"
+
+import { HeaderContentProps } from "@/types/HeaderContent"
 
 export default function HeaderContent({
   menuList,
   navCTA,
   logoSrc,
+  logoAlt,
   logoText,
-}: {
-  logoSrc?: string
-  logoText?: string
-  menuList: NavItem[]
-  navCTA: ButtonProps[]
-}) {
+}: HeaderContentProps) {
   const path = usePathname()
   const [showMenu, setShowMenu] = useState(false)
 
@@ -38,23 +33,12 @@ export default function HeaderContent({
       <Wrapper className="flex items-center justify-between gap-8">
         <Logo
           logoSrc={logoSrc}
-          // imgSrc="/images/logo.svg"
           url="/"
           logoText={logoText}
-          // text="Ddsgnr"
-          imgAlt="Ddsgnr Logo"
+          imgAlt={logoAlt || "No Logo Alt"}
           className={cn(showMenu && "z-[51]")}
         />
-        {/* <div className="relative h-[31px] w-[34px]">
-          <Image
-            // src={urlForImage(logoSrc as SanityDocument)}
-            // src={logoSrc || "No Logo"}
-            src={logoSrc || ""}
-            className="object-contain"
-            alt={logoText || "Logo"}
-            fill
-          />
-        </div> */}
+
         {menuList && (
           <div className="hidden md:flex md:flex-1 md:justify-end">
             <nav role="navigation">
@@ -102,6 +86,7 @@ export default function HeaderContent({
 
       <MobileMenu
         menuList={menuList}
+        navCTA={navCTA}
         toggleMenu={toggleMenu}
         showMenu={showMenu}
       />

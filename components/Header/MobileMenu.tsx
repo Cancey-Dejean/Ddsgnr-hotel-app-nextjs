@@ -2,17 +2,20 @@ import { cn } from "@/lib/utils"
 import { Link } from "next-view-transitions"
 import { CTAButtonTypes } from "@/constants/fakeData"
 
-import { Button } from "../ui/button"
+import { Button, ButtonProps } from "../ui/button"
 import { NavItem, NavItemProps } from "@/types/NavItem"
+import { HeaderContentProps } from "@/types/HeaderContent"
 
 export default function MobileMenu({
   showMenu,
   toggleMenu,
   menuList,
+  navCTA,
 }: {
   showMenu: boolean
   toggleMenu: () => void
   menuList: NavItem[]
+  navCTA: ButtonProps[]
 }) {
   return (
     <ul
@@ -40,12 +43,11 @@ export default function MobileMenu({
       <div
         className={`mt-5 flex flex-col gap-5 ${showMenu ? "opacity-100" : "opacity-0"}`}
       >
-        <Button asChild variant="outline" onClick={toggleMenu}>
-          <Link href="/">Sign In</Link>
-        </Button>
-        <Button asChild onClick={toggleMenu}>
-          <Link href="/">Get Started</Link>
-        </Button>
+        {navCTA.map(({ variant, label }) => (
+          <Button key={label} asChild variant={variant} onClick={toggleMenu}>
+            <Link href="/">{label}</Link>
+          </Button>
+        ))}
       </div>
     </ul>
   )

@@ -1,4 +1,4 @@
-import { MdStar } from "react-icons/md"
+import { orderableDocumentListDeskItem } from "@sanity/orderable-document-list"
 import { TfiLayersAlt } from "react-icons/tfi"
 import { RxHome } from "react-icons/rx"
 import { FiLayers } from "react-icons/fi"
@@ -6,7 +6,7 @@ import { FaGears } from "react-icons/fa6"
 import { IoMenuOutline } from "react-icons/io5"
 import { FaPenToSquare } from "react-icons/fa6"
 
-export const SideBarList = (S: any) =>
+export const SideBarList = (S: any, context: any) =>
   S.list()
     .title("Base")
     .items([
@@ -31,7 +31,7 @@ export const SideBarList = (S: any) =>
             .title("Pages")
             .items([
               S.divider(),
-
+              orderableDocumentListDeskItem({ type: "page", S, context }),
               S.listItem()
                 .title("Homepage")
                 .icon(RxHome)

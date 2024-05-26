@@ -20,7 +20,8 @@ const Header = async () => {
       menuList={menuList}
       navCTA={navCTA}
       logoSrc={navigation.logoImage.brandLogo}
-      logoText={navigation.logoImage.brandLogoAlt}
+      logoAlt={navigation.logoImage.brandLogoAlt}
+      logoText={navigation.logoImage.logoText}
     />
   )
 }

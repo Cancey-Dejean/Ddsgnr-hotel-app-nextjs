@@ -18,10 +18,10 @@ export const settingsQuery = groq`
 export const MAIN_NAV_QUERY = groq`*[_type == "navigation" && title == "Main Menu" ][0] {
   ...,
   logoImage {
+    logoText,
     "brandLogo": brandLogo.asset->url,
     "brandLogoAlt": brandLogo.alt,
   },
-
   menuList[] {
     _type == 'navItem'  => {
       _key,
