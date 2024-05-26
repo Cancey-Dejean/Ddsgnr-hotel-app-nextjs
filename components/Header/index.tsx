@@ -10,13 +10,18 @@ const Header = async () => {
   })
 
   const menuList = navigation.menuList
+  const navCTA = navigation.ctaButtons
 
-  console.log(menuList)
+  console.log(navigation)
+  console.log(navCTA)
 
   return (
-    <div>
-      <HeaderContent menuList={menuList} />
-    </div>
+    <HeaderContent
+      menuList={menuList}
+      navCTA={navCTA}
+      logoSrc={navigation.logo}
+      logoText={navigation.text}
+    />
   )
 }
 

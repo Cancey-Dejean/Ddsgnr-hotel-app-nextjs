@@ -1,5 +1,5 @@
 import { IoHomeOutline } from "react-icons/io5"
-import { defineType } from "sanity"
+import { Rule, defineType } from "sanity"
 
 export default defineType({
   name: "navigation",
@@ -10,20 +10,26 @@ export default defineType({
     {
       name: "title",
       type: "string",
-      title: "Title",
+      title: "Menu Title",
+      validation: (Rule: Rule) => Rule.required(),
+    },
+    {
+      name: "logo",
+      type: "image",
+      title: "Logo",
+      validation: (Rule: Rule) => Rule.required(),
     },
     {
       name: "menuList",
       type: "array",
       title: "Menu List",
       of: [{ type: "navItem" }],
+      validation: (Rule: Rule) => Rule.required(),
     },
     {
       name: "ctaButtons",
-      type: "array",
+      type: "buttonGroup",
       title: "CTA Buttons",
-      of: [{ type: "button" }],
-      validation: (rule) => rule.max(2).error("Only 2 CTA buttons are allowed"),
     },
   ],
   preview: {

@@ -1,35 +1,36 @@
 import Image from "next/image"
 import { Link } from "next-view-transitions"
-import { twMerge } from "tailwind-merge"
+import { cn } from "@/lib/utils"
+import { urlForImage } from "@/sanity/lib/image"
 
 const Logo = ({
-  className = "",
-  url = "",
-  text = "",
-  imgSrc = "",
-  imgAlt = "Logo",
-  showMenu,
+  className,
+  url = "/",
+  logoText,
+  logoSrc,
+  imgAlt,
 }: {
   className?: string
   url?: string
-  text?: string
-  imgSrc?: string
-  imgAlt?: string
-  showMenu?: boolean
+  logoText?: string
+  logoSrc?: string
+  imgAlt: string
 }) => {
   return (
-    <Link href={url} className="flex items-center gap-[7px]">
-      {imgSrc !== "" ? (
-        <Image
-          src={imgSrc}
-          className={twMerge("h-[31px] w-[34px] object-contain", className)}
-          alt={imgAlt}
-          width={34}
-          height={31}
-        />
+    <Link href={url} className={cn("flex items-center gap-[7px]", className)}>
+      {logoSrc !== null ? (
+        <div className="relative h-[31px] w-[34px]">
+          <Image
+            // src={urlForImage(logoSrc as any)}
+            src={logoSrc || ""}
+            className={cn("object-contain", className)}
+            alt={imgAlt}
+            fill
+          />
+        </div>
       ) : null}
 
-      {text !== "" ? <p className="text-[25px] font-bold">{text}</p> : null}
+      {logoText !== null && <p className="text-[25px] font-bold">{logoText}</p>}
     </Link>
   )
 }

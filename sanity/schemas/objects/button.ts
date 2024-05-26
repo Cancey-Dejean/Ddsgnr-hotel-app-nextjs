@@ -31,4 +31,8 @@ export const button = defineType({
       },
     },
   ],
+  initialValue: {
+    label: "Button",
+    variant: "default",
+  },
 })

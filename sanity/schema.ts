@@ -15,6 +15,8 @@ import navigation from "./schemas/singletons/navigation"
 import { link } from "./schemas/objects/link"
 import { navItem } from "./schemas/objects/navItem"
 import { button } from "./schemas/objects/button"
+import { buttonGroup } from "./schemas/objects/buttonGroup"
+import { logo } from "./schemas/objects/logo"
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -29,6 +31,8 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     excerpt,
     link,
     navItem,
+    buttonGroup,
+    // logo,
 
     // Singletons
     homepage,

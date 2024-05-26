@@ -16,4 +16,7 @@ export const navItem = defineType({
       title: "Url",
     },
   ],
+  initialValue: {
+    label: "Button",
+  },
 })
