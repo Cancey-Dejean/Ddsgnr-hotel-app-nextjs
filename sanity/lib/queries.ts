@@ -37,6 +37,19 @@ export const MAIN_NAV_QUERY = groq`*[_type == "navigation" && title == "Main Men
   }
 }`
 
+// Get all pages
+export const PAGES_QUERY = groq`*[_type == "page"] {
+  ...,
+}`
+
+// Get Single Page
+export const PAGE_QUERY = groq`*[_type == "page" && slug.current == $slug][0] {
+  // ...,
+  "slug": slug.current,
+  "ogImage": ogImage.asset->url,
+  "ogImageAlt": ogImage.alt,
+}`
+
 // Get all posts
 export const POSTS_QUERY = groq`*[_type == "blog"]  | order(_createdAt desc) {
   _id,

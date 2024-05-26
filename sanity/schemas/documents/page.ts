@@ -12,11 +12,21 @@ export default defineType({
       title: "SEO",
     },
     {
-      name: "content",
-      title: "Page Content",
+      name: "pageBuilder",
+      title: "Page Builder",
     },
   ],
   fields: [
+    {
+      type: "string",
+      name: "pageId",
+      title: "Page ID",
+      options: {
+        source: "metaTitle",
+      },
+      validation: (rule) => rule.required(),
+      group: "seo",
+    },
     {
       type: "string",
       name: "metaTitle",
@@ -36,34 +46,57 @@ export default defineType({
       group: "seo",
     },
     {
+      name: "metaDescription",
+      title: "Meta Description",
+      description:
+        "Used both for the <meta> description tag for SEO, and the personal website subheader.",
+      type: "array",
+      of: [
+        {
+          lists: [],
+          marks: {
+            annotations: [],
+            decorators: [
+              {
+                title: "Italic",
+                value: "em",
+              },
+              {
+                title: "Strong",
+                value: "strong",
+              },
+            ],
+          },
+          styles: [],
+          type: "block",
+        },
+      ],
+      validation: (rule) => rule.max(155).required(),
+      group: "pageBuilder",
+    },
+    {
+      name: "ogImage",
+      title: "OG Image",
+      type: "customImage",
+    },
+    {
       name: "body",
       title: "Body",
       type: "bodyText",
-      group: "content",
+      group: "pageBuilder",
     },
-    // defineField({
-    //   name: "metaDescription",
-    //   description:
-    //     "Used both for the <meta> description tag for SEO, and the personal website subheader.",
-    //   title: "Meta Description",
-    //   type: "blockContent",
-    //   group: "seo",
-    // }),
-    // defineField({
-    //   name: "body",
-    //   description:
-    //     "This is where you can write the page's content. Including custom blocks like timelines for more a more visual display of information.",
-    //   title: "Body",
-    //   type: "blockContent",
-    //   group: "seo",
-    // }),
-    // defineField({
-    //   name: "sections",
-    //   type: "array",
-    //   title: "Sections",
-    //   of: [],
-    //   group: "pageBuilder",
-    // }),
+    {
+      name: "sections",
+      type: "array",
+      title: "Sections",
+      of: [
+        {
+          name: "hero",
+          type: "hero",
+        },
+      ],
+      group: "pageBuilder",
+    },
   ],
   preview: {
     select: {

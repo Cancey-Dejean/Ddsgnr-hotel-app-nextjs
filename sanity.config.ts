@@ -15,8 +15,8 @@ import { media } from "sanity-plugin-media"
 // Go to https://www.sanity.io/docs/api-versioning to learn how API versioning works
 import { apiVersion, dataset, projectId } from "./sanity/env"
 import { schema } from "./sanity/schema"
-import { SideBarList } from "./sanity/schemas/components/deskStructure"
 import { locations } from "./sanity/lib/locations"
+import { SideBarList } from "./sanity/lib/deskStructure"
 
 export default defineConfig({
   basePath: "/studio",

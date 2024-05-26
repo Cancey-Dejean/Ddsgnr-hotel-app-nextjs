@@ -1,4 +1,3 @@
-import { orderableDocumentListDeskItem } from "@sanity/orderable-document-list"
 import { TfiLayersAlt } from "react-icons/tfi"
 import { RxHome } from "react-icons/rx"
 import { FiLayers } from "react-icons/fi"
@@ -31,7 +30,7 @@ export const SideBarList = (S: any, context: any) =>
             .title("Pages")
             .items([
               S.divider(),
-              orderableDocumentListDeskItem({ type: "page", S, context }),
+
               S.listItem()
                 .title("Homepage")
                 .icon(RxHome)

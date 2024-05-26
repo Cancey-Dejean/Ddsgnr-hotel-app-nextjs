@@ -25,6 +25,18 @@ export default defineType({
       validation: (rule) => rule.required(),
       group: "seo",
     },
+    {
+      name: "sections",
+      type: "array",
+      title: "Sections",
+      of: [
+        {
+          name: "hero",
+          type: "hero",
+        },
+      ],
+      group: "pageBuilder",
+    },
     // defineField({
     //   name: "metaDescription",
     //   description:
