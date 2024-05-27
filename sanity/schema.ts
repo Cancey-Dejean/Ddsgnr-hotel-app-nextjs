@@ -18,6 +18,7 @@ import { button } from "./schemas/objects/button"
 import { buttonGroup } from "./schemas/objects/buttonGroup"
 import { logo } from "./schemas/objects/logo"
 import { hero } from "./schemas/sections/hero"
+import { pageSections } from "./schemas/objects/pageSections"
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -35,6 +36,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     buttonGroup,
     logo,
     hero,
+    pageSections,
 
     // Singletons
     homepage,

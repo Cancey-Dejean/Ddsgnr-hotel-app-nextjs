@@ -18,40 +18,64 @@ export default defineType({
   ],
   fields: [
     {
-      name: "title",
-      description: "This field is the title of your personal website.",
-      title: "Title",
       type: "string",
+      name: "metaTitle",
+      title: "Title",
       validation: (rule) => rule.required(),
       group: "seo",
     },
     {
-      name: "sections",
+      type: "slug",
+      name: "slug",
+      title: "Slug",
+      options: {
+        source: "metaTitle",
+        maxLength: 96,
+      },
+      validation: (rule) => rule.required(),
+      group: "seo",
+    },
+    {
+      name: "metaDescription",
+      title: "Meta Description",
+      description:
+        "Used both for the <meta> description tag for SEO, and the personal website subheader.",
       type: "array",
-      title: "Sections",
       of: [
         {
-          name: "hero",
-          type: "hero",
+          lists: [],
+          marks: {
+            annotations: [],
+            decorators: [
+              {
+                title: "Italic",
+                value: "em",
+              },
+              {
+                title: "Strong",
+                value: "strong",
+              },
+            ],
+          },
+          styles: [],
+          type: "block",
         },
       ],
+      validation: (rule) => rule.max(155).required(),
+      group: "seo",
+    },
+    {
+      name: "ogImage",
+      title: "OG Image",
+      type: "customImage",
+      group: "seo",
+    },
+    {
+      name: "pageBuilder",
+      title: "Page Builder",
+      type: "pageSections",
       group: "pageBuilder",
     },
-    // defineField({
-    //   name: "metaDescription",
-    //   description:
-    //     "Used both for the <meta> description tag for SEO, and the personal website subheader.",
-    //   title: "Meta Description",
-    //   type: "blockContent",
-    //   group: "seo",
-    // }),
-    // defineField({
-    //   name: "sections",
-    //   type: "array",
-    //   title: "Sections",
-    //   of: [],
-    //   group: "pageBuilder",
-    // }),
   ],
   preview: {
     select: {

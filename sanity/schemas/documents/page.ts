@@ -19,16 +19,6 @@ export default defineType({
   fields: [
     {
       type: "string",
-      name: "pageId",
-      title: "Page ID",
-      options: {
-        source: "metaTitle",
-      },
-      validation: (rule) => rule.required(),
-      group: "seo",
-    },
-    {
-      type: "string",
       name: "metaTitle",
       title: "Title",
       validation: (rule) => rule.required(),
@@ -72,12 +62,13 @@ export default defineType({
         },
       ],
       validation: (rule) => rule.max(155).required(),
-      group: "pageBuilder",
+      group: "seo",
     },
     {
       name: "ogImage",
       title: "OG Image",
       type: "customImage",
+      group: "seo",
     },
     {
       name: "body",
@@ -86,15 +77,9 @@ export default defineType({
       group: "pageBuilder",
     },
     {
-      name: "sections",
-      type: "array",
-      title: "Sections",
-      of: [
-        {
-          name: "hero",
-          type: "hero",
-        },
-      ],
+      name: "pageBuilder",
+      title: "Page Builder",
+      type: "pageSections",
       group: "pageBuilder",
     },
   ],

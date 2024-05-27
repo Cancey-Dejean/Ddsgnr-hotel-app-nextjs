@@ -1,7 +1,6 @@
 // ./components/Post.tsx
 
 import Image from "next/image"
-// import { PortableText } from "@portabletext/react"
 import { PortableText } from "next-sanity"
 import { SanityDocument } from "next-sanity"
 import { urlForImage } from "@/sanity/lib/image"

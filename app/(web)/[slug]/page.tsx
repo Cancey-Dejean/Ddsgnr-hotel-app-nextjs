@@ -23,15 +23,12 @@ export async function generateStaticParams() {
 
 export default async function Page({ params }: { params: QueryParams }) {
   const page = await sanityFetch<SanityDocument>({ query: PAGE_QUERY, params })
-
   console.log(page)
+
   if (!page) {
     return notFound()
   }
 
-  // if (page. === "page") {
-  //   return <p>Homepage</p>
-  // }
   // return <Post post={post} />
-  return <p>No content on the page</p>
+  return <p>No content on this page</p>
 }

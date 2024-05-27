@@ -27,4 +27,9 @@ export const hero = defineType({
       title: "CTA Buttons",
     },
   ],
+  initialValue: {
+    title: "Title",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    mainImage: "https://dummyimage.com/1440x960.png/dddddd/ffffff",
+  },
 })

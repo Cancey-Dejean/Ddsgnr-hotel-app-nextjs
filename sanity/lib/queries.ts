@@ -1,6 +1,21 @@
 import { groq } from "next-sanity"
 import { client } from "./client"
 
+const ALL_SECTION_QUERY = `
+  ...,
+  sections {
+      sections[] {
+        _type == "hero" => {
+        ...,
+        "mainImage": mainImage.asset->url,
+        "mainImageAlt": mainImage.alt,
+      }
+    }
+  }
+`
+
+// ${ALL_SECTION_QUERY}
+
 // Get settings
 export const settingsQuery = groq`
   // *[_type == "settings"][0]{
@@ -44,10 +59,12 @@ export const PAGES_QUERY = groq`*[_type == "page"] {
 
 // Get Single Page
 export const PAGE_QUERY = groq`*[_type == "page" && slug.current == $slug][0] {
-  // ...,
-  "slug": slug.current,
-  "ogImage": ogImage.asset->url,
-  "ogImageAlt": ogImage.alt,
+  ...,
+}`
+
+// Get Homepage
+export const HOME_QUERY = groq`*[_type == "homepage"] {
+  ${ALL_SECTION_QUERY}
 }`
 
 // Get all posts
