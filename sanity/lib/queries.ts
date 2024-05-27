@@ -1,20 +1,19 @@
 import { groq } from "next-sanity"
 import { client } from "./client"
 
-// const ALL_SECTIONS_QUERY = `
-//   ...,
-//   sections {
-//       sections[] {
-//         _type == "hero" => {
-//         ...,
-//         "mainImage": mainImage.asset->url,
-//         "mainImageAlt": mainImage.alt,
-//       }
-//     }
-//   }
-// `
-
-// ${ALL_SECTION_QUERY}
+const ALL_SECTIONS_QUERY = `
+  ...,
+  pageBuilder {
+    ...,
+    sections [] {
+      _type == "hero" => {
+        ...,
+        "mainImage": mainImage.asset->url,
+        "mainImageAlt": mainImage.alt,
+      }
+    }
+  }
+`
 
 // Get settings
 export const settingsQuery = groq`
@@ -65,6 +64,7 @@ export const PAGE_QUERY = groq`*[_type == "page" && slug.current == $slug][0] {
 // Get Homepage
 export const HOME_QUERY = groq`*[_type == "homepage"] {
   ...,
+  ${ALL_SECTIONS_QUERY}
 }`
 
 // Get all posts

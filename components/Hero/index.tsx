@@ -5,6 +5,7 @@ import { PortableText } from "next-sanity"
 import { cn } from "@/lib/utils"
 import { Button } from "../ui/button"
 import { Link } from "next-view-transitions"
+import Image from "next/image"
 
 const Hero = ({
   title,

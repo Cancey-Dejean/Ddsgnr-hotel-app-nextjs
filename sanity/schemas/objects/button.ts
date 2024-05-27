@@ -22,8 +22,10 @@ export const button = defineType({
       options: {
         list: [
           { title: "Default", value: "default" },
+          { title: "White", value: "white" },
           { title: "Destructive", value: "destructive" },
           { title: "Outline", value: "outline" },
+          { title: "Outline White", value: "outlineWhite" },
           { title: "Secondary", value: "secondary" },
           { title: "Ghost", value: "ghost" },
           { title: "Link", value: "link" },
