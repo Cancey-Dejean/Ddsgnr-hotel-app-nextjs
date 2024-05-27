@@ -7,12 +7,15 @@
 //   Roadmap,
 // } from "../components";
 
+import BookingForm from "./BookingForm"
 import Hero from "./Hero"
 
 export const PageContent = (section: any) => {
   switch (section._type) {
     case "hero":
       return <Hero key={section._key} {...section} />
+    case "bookingForm":
+      return <BookingForm key={section._key} {...section} />
 
     default:
       return (

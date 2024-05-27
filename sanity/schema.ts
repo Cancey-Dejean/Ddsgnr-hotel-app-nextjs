@@ -19,6 +19,7 @@ import { buttonGroup } from "./schemas/objects/buttonGroup"
 import { logo } from "./schemas/objects/logo"
 import { hero } from "./schemas/sections/hero"
 import { pageSections } from "./schemas/objects/pageSections"
+import { bookingForm } from "./schemas/sections/bookingForm"
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -36,6 +37,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     buttonGroup,
     logo,
     hero,
+    bookingForm,
     pageSections,
 
     // Singletons

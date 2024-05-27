@@ -10,7 +10,10 @@ const ALL_SECTIONS_QUERY = `
         ...,
         "mainImage": mainImage.asset->url,
         "mainImageAlt": mainImage.alt,
-      }
+      },
+      _type == "bookingForm" => {
+        ...,
+     },
     }
   }
 `

@@ -68,7 +68,20 @@ const FormSchema = z.object({
     .max(8, "Maximum of 4 guests is allowed."),
 })
 
-const BookingForm = () => {
+const BookingForm = ({
+  checkInLabel,
+  checkOutLabel,
+  guestsLabel,
+  roomsLabel,
+  buttonLabel,
+}: {
+  className?: string
+  checkInLabel: string
+  checkOutLabel: string
+  guestsLabel: string
+  roomsLabel: string
+  buttonLabel: string
+}) => {
   const [isSubmitted, setIsSubmitted] = useState<boolean>(false)
   const { push } = useRouter()
 
@@ -100,7 +113,7 @@ const BookingForm = () => {
               name="checkIn"
               render={({ field }) => (
                 <FormItem className="flex flex-col grow">
-                  <FormLabel>Check In</FormLabel>
+                  <FormLabel>{checkInLabel}</FormLabel>
                   <Popover>
                     <PopoverTrigger asChild>
                       <FormControl>
@@ -144,7 +157,7 @@ const BookingForm = () => {
               name="checkOut"
               render={({ field }) => (
                 <FormItem className="flex flex-col grow">
-                  <FormLabel>Check Out</FormLabel>
+                  <FormLabel>{checkOutLabel}</FormLabel>
                   <Popover>
                     <PopoverTrigger asChild>
                       <FormControl>
@@ -185,7 +198,7 @@ const BookingForm = () => {
               name="room"
               render={({ field }) => (
                 <FormItem className="grow">
-                  <FormLabel>Room</FormLabel>
+                  <FormLabel>{roomsLabel}</FormLabel>
                   <Select
                     onValueChange={field.onChange}
                     defaultValue={field.value}
@@ -216,7 +229,7 @@ const BookingForm = () => {
               name="guests"
               render={({ field }) => (
                 <FormItem className="grow">
-                  <FormLabel>Guests</FormLabel>
+                  <FormLabel>{guestsLabel}</FormLabel>
                   <FormControl>
                     <Input type="number" min={1} max={8} {...field} />
                   </FormControl>
@@ -226,7 +239,7 @@ const BookingForm = () => {
               )}
             />
 
-            <Button type="submit">Check Availability</Button>
+            <Button type="submit">{buttonLabel}</Button>
           </form>
         </Form>
 

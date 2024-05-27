@@ -13,6 +13,10 @@ export const pageSections = defineType({
           name: "hero",
           type: "hero",
         },
+        {
+          name: "bookingForm",
+          type: "bookingForm",
+        },
       ],
     },
   ],
