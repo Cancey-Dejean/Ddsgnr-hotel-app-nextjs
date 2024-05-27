@@ -24,7 +24,7 @@ import { PageContent } from "@/components/PageContent"
 
 export default async function Page() {
   const page = await sanityFetch<SanityDocument>({ query: HOME_QUERY })
-  console.log(page[0].sections.sections)
+  console.log(page[0].pageBuilder)
 
   // if (page.currentSlug !== params.slug) {
   //   return notFound()

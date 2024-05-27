@@ -5,9 +5,9 @@ export const pageSections = defineType({
   type: "object",
   fields: [
     {
-      name: "hello",
+      name: "sections",
       type: "array",
-      title: "hello",
+      title: "sections",
       of: [
         {
           name: "hero",
