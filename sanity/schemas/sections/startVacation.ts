@@ -7,6 +7,11 @@ export const startVacation = defineType({
   title: "Start Vacation",
   fields: [
     {
+      name: "hideSection",
+      title: "Hide Section",
+      type: "hideSection",
+    },
+    {
       name: "title",
       title: "Title",
       type: "string",

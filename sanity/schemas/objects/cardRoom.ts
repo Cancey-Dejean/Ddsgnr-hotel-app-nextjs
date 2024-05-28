@@ -1,4 +1,4 @@
-import { defineType } from "sanity"
+import { Rule, defineType } from "sanity"
 
 import { GrNotes } from "react-icons/gr"
 
@@ -8,6 +8,12 @@ export const cardRoom = defineType({
   title: "Room Card",
   icon: GrNotes,
   fields: [
+    {
+      name: "featured",
+      title: "Featured Room",
+      type: "boolean",
+      description: "If true, this will be the featured room",
+    },
     {
       name: "image",
       title: "Image",
@@ -27,11 +33,17 @@ export const cardRoom = defineType({
       name: "price",
       title: "Price",
       type: "number",
+      validation: (Rule: Rule) => Rule.min(1),
     },
     {
-      name: "ctaButtons",
-      type: "buttonGroup",
-      title: "CTA Buttons",
+      name: "buttonLabel",
+      title: "Button Label",
+      type: "string",
+    },
+    {
+      name: "buttonLink",
+      title: "Link",
+      type: "button",
     },
   ],
 })

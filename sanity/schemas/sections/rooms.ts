@@ -7,6 +7,11 @@ export const rooms = defineType({
   title: "Rooms",
   fields: [
     {
+      name: "hideSection",
+      title: "Hide Section",
+      type: "hideSection",
+    },
+    {
       name: "title",
       title: "Title",
       type: "string",
@@ -16,10 +21,24 @@ export const rooms = defineType({
       title: "Description",
       type: "bodyText",
     },
+    {
+      name: "categories",
+      title: "Categories",
+      type: "array",
+      of: [{ type: "reference", to: { type: "room" } }],
+      validation: (Rule) => Rule.unique(),
+    },
+    {
+      name: "rooms",
+      title: "Rooms",
+      type: "array",
+      of: [
+        {
+          name: "roomItems",
+          type: "cardRoom",
+        },
+      ],
+    },
   ],
-  initialValue: {
-    title: "Title",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    mainImage: "https://dummyimage.com/1440x960.png/dddddd/ffffff",
-  },
+  initialValue: {},
 })

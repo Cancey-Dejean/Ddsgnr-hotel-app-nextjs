@@ -7,6 +7,11 @@ export const bookingForm = defineType({
   title: "Booking Form",
   fields: [
     {
+      name: "hideSection",
+      title: "Hide Section",
+      type: "hideSection",
+    },
+    {
       name: "checkInLabel",
       title: "Check-in Label",
       type: "string",

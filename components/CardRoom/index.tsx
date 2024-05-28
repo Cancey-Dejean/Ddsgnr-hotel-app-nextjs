@@ -3,87 +3,69 @@ import Paragraph from "../Paragraph"
 import SectionTitle from "../SectionTitle"
 import { twMerge } from "tailwind-merge"
 import ButtonLink from "../ButtonLink"
+import { cn } from "@/lib/utils"
+import { PortableText } from "next-sanity"
+import { CardRoomProps } from "@/types/CardRoomProps"
+import { Button } from "../ui/button"
 
 const CardRoom = ({
-  imgSrc = "https://dummyimage.com/640x488.png/dddddd/ffffff",
-  imgAlt = "card image",
-  title = "Title",
-  smallCard = false,
-  desc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
-  className = "",
-}: {
-  imgSrc?: string
-  imgAlt?: string
-  title?: string
-  smallCard?: boolean
-  desc?: string
-  className?: string
-}) => {
+  featured,
+  image,
+  imageAlt,
+  title,
+  description,
+  price,
+  className,
+  buttonLabel,
+}: CardRoomProps) => {
   return (
     <div
-      className={twMerge(
+      className={cn(
         "group flex mx-auto  flex-col items-center justify-between overflow-hidden rounded-[10px] border-[0.5px] border-color-border",
-        smallCard ? "lg:max-w-[400px]" : "lg:max-w-[900px]",
+        // featured ? "lg:max-w-[400px]" : "lg:max-w-[900px]",
         className
       )}
     >
-      <div className={twMerge("overflow-hidden w-full flex-1")}>
+      <div className={cn("overflow-hidden w-full flex-1")}>
         <Image
-          src={imgSrc}
+          src={image || ""}
           width={640}
           height={488}
-          className={twMerge(
+          className={cn(
             "w-full h-full object-cover lg:group-hover:scale-110 transition-all duration-300 ease-in-out"
           )}
-          alt={imgAlt}
+          alt={imageAlt || "room image"}
         />
       </div>
 
       <div
-        className={twMerge(
+        className={cn(
           "flex w-full flex-col justify-center",
-          smallCard ? "px-6 py-6" : "px-8 py-8 sm:px-12"
+          featured ? "px-6 py-6" : "px-8 py-8 sm:px-12"
         )}
       >
         <div className="flex flex-col">
           <SectionTitle
-            className={twMerge(
-              smallCard
-                ? "text-[22px] leading-[32px]"
-                : "text-[40px] leading-[48px]"
+            className={cn(
+              "text-[22px] leading-[32px]",
+              featured
+                ? "text-[40px] leading-[48px]"
+                : "text-[22px] leading-[32px]"
             )}
           >
             {title}
           </SectionTitle>
 
-          <Paragraph
-            className={twMerge(
-              "w-full",
-              smallCard ? "mt-2 text-[15px]" : "mt-6"
-            )}
-          >
-            {desc}
-          </Paragraph>
+          <div className={cn("w-full", featured ? "mt-2 text-[15px]" : "mt-6")}>
+            <PortableText value={description} />
+          </div>
         </div>
 
         <div
-          className={twMerge(
-            "flex items-center gap-4",
-            smallCard ? "mt-6" : "mt-8"
-          )}
+          className={cn("flex items-center gap-4", featured ? "mt-6" : "mt-8")}
         >
-          <ButtonLink
-            variant="btn-border-dark"
-            className={twMerge(smallCard ? "!px-5 !py-2" : "")}
-            label="$60/night"
-          />
-
-          <ButtonLink
-            variant="btn-border-none"
-            className={twMerge(smallCard ? "!px-5 !py-2" : "")}
-            icon
-            label="View room"
-          />
+          <Button>${price}/night</Button>
+          <Button>{buttonLabel || "View room"}</Button>
         </div>
       </div>
     </div>

@@ -21,6 +21,14 @@ const ALL_SECTIONS_QUERY = `
         "videoImage": videoImage.asset->url,
         "videoImageAlt": videoImage.alt,
       },
+      _type == "rooms" => {
+        ...,
+        rooms [] {
+          ...,
+          "image": image.asset->url,
+          "imageAlt": image.alt,
+        }
+      },
     }
   }
 `

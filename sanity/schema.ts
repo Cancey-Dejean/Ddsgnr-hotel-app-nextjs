@@ -22,6 +22,9 @@ import { pageSections } from "./schemas/objects/pageSections"
 import { bookingForm } from "./schemas/sections/bookingForm"
 import { startVacation } from "./schemas/sections/startVacation"
 import { cardRoom } from "./schemas/objects/cardRoom"
+import { rooms } from "./schemas/sections/rooms"
+import { hideSection } from "./schemas/objects/hideSection"
+import room from "./schemas/documents/room"
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -29,11 +32,13 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     page,
     blog,
     navigation,
+    room,
 
     // Objects
     customImage,
     bodyText,
     excerpt,
+    hideSection,
     link,
     navItem,
     buttonGroup,
@@ -43,6 +48,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     hero,
     bookingForm,
     startVacation,
+    rooms,
 
     // Singletons
     homepage,

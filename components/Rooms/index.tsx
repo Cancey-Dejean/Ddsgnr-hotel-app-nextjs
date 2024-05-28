@@ -4,8 +4,12 @@ import SectionHeader from "../SectionHeader"
 import SectionTitle from "../SectionTitle"
 import { roomOptions } from "../../constants"
 import { roomOptionsFake } from "../../constants/fakeData"
+import { RoomProps } from "@/types/RoomProps"
+import Image from "next/image"
+import { PortableText } from "next-sanity"
+import { cn } from "@/lib/utils"
 
-const Rooms = ({ data = roomOptionsFake }: { data?: typeof roomOptions }) => {
+const Rooms = ({ rooms }: { rooms?: RoomProps[] }) => {
   return (
     <section className="py-10 sm:py-28">
       <Wrapper className="flex flex-col gap-6 xl:gap-20">
@@ -16,26 +20,23 @@ const Rooms = ({ data = roomOptionsFake }: { data?: typeof roomOptions }) => {
           stunning views, ensuring an extraordinary stay for every guest."
         />
 
-        <div className="mx-auto flex max-w-[900px] flex-col gap-6 xl:max-w-full xl:flex-row">
-          {data.map((room, index) => (
-            <CardRoom
-              imgSrc="/images/card-image.jpg"
-              title="Double deluxe"
-              desc="Our double deluxe room offers cozy luxury, perfect for a restful stay."
-              className=""
-            />
-          ))}
-          {/* <CardRoom
+        {rooms && (
+          <div className="mx-auto max-w-[900px] grid grid-cols-1 gap-6 sm:grid-cols-2">
+            {rooms.map((room, index) => (
+              <CardRoom key={index} {...room} />
+            ))}
+            {/* <CardRoom
             imgSrc="/images/card-image.jpg"
             title="Double deluxe"
             desc="Our double deluxe room offers cozy luxury, perfect for a restful stay."
             className=""
           /> */}
 
-          {/* <div className="flex flex-col items-stretch gap-6 sm:grid sm:grid-cols-2 sm:gap-5">
+            {/* <div className="flex flex-col items-stretch gap-6 sm:grid sm:grid-cols-2 sm:gap-5">
 
           </div> */}
-        </div>
+          </div>
+        )}
       </Wrapper>
     </section>
   )

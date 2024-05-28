@@ -7,6 +7,11 @@ export const hero = defineType({
   title: "Hero",
   fields: [
     {
+      name: "hideSection",
+      title: "Hide Section",
+      type: "hideSection",
+    },
+    {
       name: "title",
       title: "Title",
       type: "string",

@@ -11,7 +11,7 @@ export const PageContent = (section: any) => {
       return <BookingForm key={section._key} {...section} />
     case "startVacation":
       return <StartVacation key={section._key} {...section} />
-    case "startVacation":
+    case "rooms":
       return <Rooms key={section._key} {...section} />
 
     default:

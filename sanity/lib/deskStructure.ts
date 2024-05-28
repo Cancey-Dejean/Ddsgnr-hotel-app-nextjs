@@ -106,6 +106,13 @@ export const SideBarList = (S: any, context: any) =>
 
       S.divider(),
 
+      S.listItem()
+        .title("Rooms")
+        .icon(IoMenuOutline)
+        .child(S.documentList().title("All Rooms").filter('_type == "room"')),
+
+      S.divider(),
+
       // List the site settings
       S.listItem()
         .title("Settings")

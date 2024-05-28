@@ -21,6 +21,10 @@ export const pageSections = defineType({
           name: "startVacation",
           type: "startVacation",
         },
+        {
+          name: "rooms",
+          type: "rooms",
+        },
       ],
     },
   ],
