@@ -5,7 +5,7 @@ import YouTube, { YouTubeProps } from "react-youtube"
 export default function ModalVideo({
   youtubeVideoId,
 }: {
-  youtubeVideoId: string
+  youtubeVideoId?: string
 }) {
   const onPlayerReady: YouTubeProps["onReady"] = (event) => {
     // access to player in all event handlers via event.target

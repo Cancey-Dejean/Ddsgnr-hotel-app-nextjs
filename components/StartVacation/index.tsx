@@ -1,21 +1,30 @@
 import Wrapper from "../Wrapper"
-import Paragraph from "../Paragraph"
 import SectionTitle from "../SectionTitle"
 import VideoImage from "../VideoImage"
-import { vacationButtons } from "../../constants"
-import { vacationButtonsFake } from "../../constants/fakeData"
-import ButtonLink from "../ButtonLink"
+import { Button, ButtonProps } from "../ui/button"
+import { PortableText } from "next-sanity"
+import { Link } from "next-view-transitions"
 
 const StartVacation = ({
-  title = "Section Title",
-  videoImg = "https://dummyimage.com/572x594.png/dddddd/ffffff",
-  desc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  btnData = vacationButtonsFake,
+  title,
+  videoImage,
+  videoImageAlt,
+  youtubeVideoId,
+  description,
+  ctaButtons,
 }: {
   /**
    * Description goes here
    */
-  videoImg: string
+  videoImage: string
+  /**
+   * Description goes here
+   */
+  videoImageAlt: string
+  /**
+   * Description goes here
+   */
+  youtubeVideoId?: string
   /**
    * Description goes here
    */
@@ -23,19 +32,19 @@ const StartVacation = ({
   /**
    * Description goes here
    */
-  desc?: string
+  description?: any
   /**
    * Description goes here
    */
-  btnData: typeof vacationButtons
+  ctaButtons: ButtonProps[]
 }) => {
   return (
     <section className="py-10 sm:py-28">
       <Wrapper className="flex flex-col items-center gap-6 xl:flex-row xl:gap-20">
         <VideoImage
-          imgSrc={videoImg}
-          youtubeVideoId="NpEaa2P7qZI"
-          imgAlt="Lobby with green plants"
+          videoImage={videoImage}
+          youtubeVideoId={youtubeVideoId}
+          videoImageAlt={videoImageAlt}
         />
 
         <div className="flex w-full max-w-[616px] flex-col gap-6">
@@ -43,16 +52,15 @@ const StartVacation = ({
             {title}
           </SectionTitle>
 
-          <Paragraph className="text-lg">{desc}</Paragraph>
+          <div className="text-lg">
+            <PortableText value={description} />
+          </div>
 
           <div className="flex gap-4">
-            {btnData.map((button, i) => (
-              <ButtonLink
-                key={i}
-                label={button.label}
-                url={button.url}
-                variant={button.variant}
-              />
+            {ctaButtons.slice(0, 2).map(({ variant, label }) => (
+              <Button key={label} asChild variant={variant}>
+                <Link href="/">{label}</Link>
+              </Button>
             ))}
           </div>
         </div>

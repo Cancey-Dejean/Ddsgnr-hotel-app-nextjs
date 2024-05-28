@@ -5,15 +5,8 @@ import { PortableText } from "next-sanity"
 import { cn } from "@/lib/utils"
 import { Button } from "../ui/button"
 import { Link } from "next-view-transitions"
-import Image from "next/image"
 
-const Hero = ({
-  title,
-  description,
-  mainImage,
-  ctaButtons,
-  // btnData = heroButtonsFake,
-}: HeroProps) => {
+const Hero = ({ title, description, mainImage, ctaButtons }: HeroProps) => {
   return (
     <section
       className={cn(

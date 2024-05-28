@@ -1,14 +1,7 @@
-// import {
-//   Hero,
-//   Benefits,
-//   Collaboration,
-//   Services,
-//   Pricing,
-//   Roadmap,
-// } from "../components";
-
 import BookingForm from "./BookingForm"
 import Hero from "./Hero"
+import Rooms from "./Rooms"
+import StartVacation from "./StartVacation"
 
 export const PageContent = (section: any) => {
   switch (section._type) {
@@ -16,6 +9,10 @@ export const PageContent = (section: any) => {
       return <Hero key={section._key} {...section} />
     case "bookingForm":
       return <BookingForm key={section._key} {...section} />
+    case "startVacation":
+      return <StartVacation key={section._key} {...section} />
+    case "startVacation":
+      return <Rooms key={section._key} {...section} />
 
     default:
       return (

@@ -17,6 +17,10 @@ export const pageSections = defineType({
           name: "bookingForm",
           type: "bookingForm",
         },
+        {
+          name: "startVacation",
+          type: "startVacation",
+        },
       ],
     },
   ],

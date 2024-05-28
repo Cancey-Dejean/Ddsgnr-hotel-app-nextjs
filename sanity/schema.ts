@@ -20,6 +20,8 @@ import { logo } from "./schemas/objects/logo"
 import { hero } from "./schemas/sections/hero"
 import { pageSections } from "./schemas/objects/pageSections"
 import { bookingForm } from "./schemas/sections/bookingForm"
+import { startVacation } from "./schemas/sections/startVacation"
+import { cardRoom } from "./schemas/objects/cardRoom"
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -36,9 +38,11 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     navItem,
     buttonGroup,
     logo,
+    cardRoom,
+    pageSections,
     hero,
     bookingForm,
-    pageSections,
+    startVacation,
 
     // Singletons
     homepage,

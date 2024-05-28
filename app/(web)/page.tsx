@@ -10,18 +10,6 @@ import { sanityFetch } from "@/sanity/lib/fetch"
 import Post from "@/components/Blog/Post"
 import { PageContent } from "@/components/PageContent"
 
-// export async function generateStaticParams() {
-//   const pages = await sanityFetch<SanityDocument[]>({
-//     query: PAGES_QUERY,
-//     perspective: "published",
-//     stega: false,
-//   })
-
-//   return pages.map((page) => ({
-//     slug: page.currentSlug,
-//   }))
-// }
-
 export default async function Page() {
   const page = await sanityFetch<SanityDocument>({ query: HOME_QUERY })
   console.log(page[0].pageBuilder.sections)

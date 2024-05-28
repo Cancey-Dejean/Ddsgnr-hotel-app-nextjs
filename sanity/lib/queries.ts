@@ -3,6 +3,8 @@ import { client } from "./client"
 
 const ALL_SECTIONS_QUERY = `
   ...,
+  "slug": slug.current,
+  "ogImage": ogImage.asset->url,
   pageBuilder {
     ...,
     sections [] {
@@ -13,7 +15,12 @@ const ALL_SECTIONS_QUERY = `
       },
       _type == "bookingForm" => {
         ...,
-     },
+      },
+      _type == "startVacation" => {
+        ...,
+        "videoImage": videoImage.asset->url,
+        "videoImageAlt": videoImage.alt,
+      },
     }
   }
 `

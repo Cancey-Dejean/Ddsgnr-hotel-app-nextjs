@@ -17,24 +17,24 @@ const Rooms = ({ data = roomOptionsFake }: { data?: typeof roomOptions }) => {
         />
 
         <div className="mx-auto flex max-w-[900px] flex-col gap-6 xl:max-w-full xl:flex-row">
-          <CardRoom
-            imgSrc={data.map((room) => room.imgSrc)[0]}
-            title={data.map((room) => room.title)[0]}
-            desc={data.map((room) => room.desc)[0]}
-            className="w-full xl:max-w-[50%]"
-          />
+          {data.map((room, index) => (
+            <CardRoom
+              imgSrc="/images/card-image.jpg"
+              title="Double deluxe"
+              desc="Our double deluxe room offers cozy luxury, perfect for a restful stay."
+              className=""
+            />
+          ))}
+          {/* <CardRoom
+            imgSrc="/images/card-image.jpg"
+            title="Double deluxe"
+            desc="Our double deluxe room offers cozy luxury, perfect for a restful stay."
+            className=""
+          /> */}
 
-          <div className="flex flex-col items-stretch gap-6 sm:grid sm:grid-cols-2 sm:gap-5">
-            {data.slice(1, 5).map((room, index) => (
-              <CardRoom
-                key={index}
-                imgSrc={room.imgSrc}
-                title={room.title}
-                desc={room.desc}
-                smallCard={room.smallCard}
-              />
-            ))}
-          </div>
+          {/* <div className="flex flex-col items-stretch gap-6 sm:grid sm:grid-cols-2 sm:gap-5">
+
+          </div> */}
         </div>
       </Wrapper>
     </section>
