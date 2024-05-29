@@ -17,6 +17,7 @@ const CardRoom = ({
   price,
   className,
   buttonLabel,
+  roomReference,
 }: CardRoomProps) => {
   return (
     <div
@@ -28,44 +29,52 @@ const CardRoom = ({
     >
       <div className={cn("overflow-hidden w-full flex-1")}>
         <Image
-          src={image || ""}
+          src={roomReference.image || ""}
           width={640}
           height={488}
           className={cn(
             "w-full h-full object-cover lg:group-hover:scale-110 transition-all duration-300 ease-in-out"
           )}
-          alt={imageAlt || "room image"}
+          alt={roomReference.imageAlt || "room image"}
         />
       </div>
 
       <div
         className={cn(
           "flex w-full flex-col justify-center",
-          featured ? "px-6 py-6" : "px-8 py-8 sm:px-12"
+          roomReference.featured ? "px-6 py-6" : "px-8 py-8 sm:px-12"
         )}
       >
         <div className="flex flex-col">
           <SectionTitle
             className={cn(
               "text-[22px] leading-[32px]",
-              featured
+              roomReference.featured
                 ? "text-[40px] leading-[48px]"
                 : "text-[22px] leading-[32px]"
             )}
           >
-            {title}
+            {roomReference.title}
           </SectionTitle>
 
-          <div className={cn("w-full", featured ? "mt-2 text-[15px]" : "mt-6")}>
-            <PortableText value={description} />
+          <div
+            className={cn(
+              "w-full",
+              roomReference.featured ? "mt-2 text-[15px]" : "mt-6"
+            )}
+          >
+            <PortableText value={roomReference.description} />
           </div>
         </div>
 
         <div
-          className={cn("flex items-center gap-4", featured ? "mt-6" : "mt-8")}
+          className={cn(
+            "flex items-center gap-4",
+            roomReference.featured ? "mt-6" : "mt-8"
+          )}
         >
-          <Button>${price}/night</Button>
-          <Button>{buttonLabel || "View room"}</Button>
+          <Button>${roomReference.price}/night</Button>
+          <Button>{roomReference.buttonLabel || "View room"}</Button>
         </div>
       </div>
     </div>

@@ -15,35 +15,26 @@ export const cardRoom = defineType({
       description: "If true, this will be the featured room",
     },
     {
-      name: "image",
-      title: "Image",
-      type: "customImage",
-    },
-    {
-      name: "title",
-      title: "Title",
-      type: "string",
-    },
-    {
-      name: "description",
-      title: "Description",
-      type: "bodyText",
-    },
-    {
-      name: "price",
-      title: "Price",
-      type: "number",
-      validation: (Rule: Rule) => Rule.min(1),
+      name: "roomReference",
+      title: "Room Reference",
+      type: "reference",
+      to: [{ type: "room" }],
     },
     {
       name: "buttonLabel",
       title: "Button Label",
       type: "string",
     },
-    {
-      name: "buttonLink",
-      title: "Link",
-      type: "button",
-    },
   ],
+  preview: {
+    select: {
+      reference: "title",
+    },
+    prepare({ reference }) {
+      return {
+        reference,
+        subtitle: "Room",
+      }
+    },
+  },
 })

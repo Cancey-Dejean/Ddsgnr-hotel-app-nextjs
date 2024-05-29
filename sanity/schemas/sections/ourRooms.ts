@@ -4,7 +4,7 @@ import { Rule } from "sanity"
 export const rooms = defineType({
   name: "rooms",
   type: "object",
-  title: "Rooms",
+  title: "Our Rooms",
   fields: [
     {
       name: "hideSection",
@@ -21,13 +21,7 @@ export const rooms = defineType({
       title: "Description",
       type: "bodyText",
     },
-    {
-      name: "categories",
-      title: "Categories",
-      type: "array",
-      of: [{ type: "reference", to: { type: "room" } }],
-      validation: (Rule) => Rule.unique(),
-    },
+
     {
       name: "rooms",
       title: "Rooms",
@@ -40,5 +34,6 @@ export const rooms = defineType({
       ],
     },
   ],
+
   initialValue: {},
 })

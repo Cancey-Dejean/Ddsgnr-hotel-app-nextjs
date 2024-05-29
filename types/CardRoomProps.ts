@@ -1,10 +1,12 @@
 export type CardRoomProps = {
-  className?: string
+  roomReference?: any
   title?: string
-  featured?: boolean
-  description?: any
+  currentSlug?: string
   image?: string
   imageAlt?: string
+  description?: any
+  featured?: boolean
   price?: number
   buttonLabel?: string
+  className?: string
 }

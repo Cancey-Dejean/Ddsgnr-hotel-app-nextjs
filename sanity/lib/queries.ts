@@ -8,27 +8,38 @@ const ALL_SECTIONS_QUERY = `
   pageBuilder {
     ...,
     sections [] {
+      // Hero
       _type == "hero" => {
         ...,
         "mainImage": mainImage.asset->url,
         "mainImageAlt": mainImage.alt,
       },
+
+      // Booking Form
       _type == "bookingForm" => {
         ...,
       },
+
+      // Start Vacation
       _type == "startVacation" => {
         ...,
         "videoImage": videoImage.asset->url,
         "videoImageAlt": videoImage.alt,
       },
+
+      // Rooms
       _type == "rooms" => {
         ...,
         rooms [] {
           ...,
-          "image": image.asset->url,
-          "imageAlt": image.alt,
-        }
-      },
+          roomReference-> {
+            ...,
+            "currentSlug": slug.current,
+            "image": image.asset->url,
+            "imageAlt": image.alt,
+          },
+       }
+      }
     }
   }
 `
@@ -67,6 +78,11 @@ export const MAIN_NAV_QUERY = groq`*[_type == "navigation" && title == "Main Men
       label,
     }
   }
+}`
+
+// Get all Rooms
+export const ROOMS_QUERY = groq`*[_type == "room"] {
+  ...,
 }`
 
 // Get all pages
