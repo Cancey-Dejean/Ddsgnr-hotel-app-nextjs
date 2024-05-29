@@ -16,10 +16,18 @@ const Rooms = ({ rooms }: { rooms?: CardRoomProps[] }) => {
         />
 
         {rooms && (
-          <div className="mx-auto max-w-[900px] grid grid-cols-1 gap-6 sm:grid-cols-2">
-            {rooms.map((room, index) => (
-              <CardRoom key={index} {...room} />
-            ))}
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+            <div className="col-start-1 col-span-1">
+              {rooms.slice(0, 1).map((room, index) => (
+                <CardRoom featured key={index} {...room} className="h-full" />
+              ))}
+            </div>
+
+            <div className="grid grid-cols-2 gap-6">
+              {rooms.slice(1, 6).map((room, index) => (
+                <CardRoom key={index} {...room} />
+              ))}
+            </div>
           </div>
         )}
       </Wrapper>
