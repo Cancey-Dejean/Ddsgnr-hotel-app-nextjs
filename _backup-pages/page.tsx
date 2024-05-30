@@ -7,7 +7,7 @@ import PageWrapper from "@/components/PageWrapper"
 import Reviews from "@/components/Reviews"
 import Rooms from "@/components/Rooms"
 import StartVacation from "@/components/StartVacation"
-import VacationSection from "@/components/VacationSection"
+import VacationSection from "@/components/Services"
 import {
   featuresData,
   heroButtons,

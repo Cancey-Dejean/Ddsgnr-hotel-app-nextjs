@@ -38,10 +38,23 @@ const ALL_SECTIONS_QUERY = `
             "image": image.asset->url,
             "imageAlt": image.alt,
           },
-       }
-      }
+      },
+
+      // Services
+      _type == "services" => {
+        ...,
+        "videoImage": videoImage.asset->url,
+        "videoImageAlt": videoImage.alt,
+        perks [] {
+          _key,
+          icon,
+          description,
+          title,
+        }
+      },
     }
   }
+}
 `
 
 // Get settings

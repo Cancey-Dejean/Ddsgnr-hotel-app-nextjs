@@ -1,6 +1,6 @@
 "use client"
 import PageWrapper from "@/components/PageWrapper"
-import VacationSection from "@/components/VacationSection"
+import VacationSection from "@/components/Services"
 import { featuresData, perksButtons } from "@/constants"
 
 export default function Home() {

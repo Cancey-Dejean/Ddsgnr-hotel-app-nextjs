@@ -2,6 +2,7 @@ import BookingForm from "./BookingForm"
 import Hero from "./Hero"
 import Rooms from "./Rooms"
 import StartVacation from "./StartVacation"
+import Services from "./Services"
 
 export const PageContent = (section: any) => {
   switch (section._type) {
@@ -13,6 +14,8 @@ export const PageContent = (section: any) => {
       return <StartVacation key={section._key} {...section} />
     case "rooms":
       return <Rooms key={section._key} {...section} />
+    case "services":
+      return <Services key={section._key} {...section} />
 
     default:
       return (

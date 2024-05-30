@@ -25,6 +25,8 @@ import { cardRoom } from "./schemas/objects/cardRoom"
 import { rooms } from "./schemas/sections/ourRooms"
 import { hideSection } from "./schemas/objects/hideSection"
 import room from "./schemas/documents/room"
+import { services } from "./schemas/sections/services"
+import { cardPerk } from "./schemas/objects/cardPerk"
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -44,11 +46,13 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     buttonGroup,
     logo,
     cardRoom,
+    cardPerk,
     pageSections,
     hero,
     bookingForm,
     startVacation,
     rooms,
+    services,
 
     // Singletons
     homepage,

@@ -25,6 +25,10 @@ export const pageSections = defineType({
           name: "rooms",
           type: "rooms",
         },
+        {
+          name: "services",
+          type: "services",
+        },
       ],
     },
   ],

@@ -1,33 +1,28 @@
 import type { Meta, StoryObj } from "@storybook/react"
-import VacationSection from "./"
-import { featuresDataFake, perksButtonsFake } from "../../constants/fakeData"
+import VacationFeatures from "."
+import { BsFillBoxFill } from "react-icons/bs"
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
-  title: "Sections/Vacation",
-  component: VacationSection,
+  tags: ["autodocs"],
+  title: "Sections/Vacation/Features",
+  component: VacationFeatures,
   args: {
-    btnData: perksButtonsFake,
-    featuresDataVacation: featuresDataFake,
-    mainImg: "https://dummyimage.com/572x594.png/dddddd/ffffff",
-    showHeader: true,
+    icon: <BsFillBoxFill />,
+    title: "Title",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/react/configure/story-layout
-    layout: "fullscreen",
+    layout: "centered",
   },
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
 
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
-    btnData: {
-      control: false,
-    },
-    featuresDataVacation: {
-      control: false,
-    },
+    icon: { control: false },
   },
-} satisfies Meta<typeof VacationSection>
+} satisfies Meta<typeof VacationFeatures>
 
 export default meta
 type Story = StoryObj<typeof meta>
@@ -35,6 +30,6 @@ type Story = StoryObj<typeof meta>
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Default: Story = {
   render: (args) => {
-    return <VacationSection {...args} />
+    return <VacationFeatures {...args} />
   },
 }

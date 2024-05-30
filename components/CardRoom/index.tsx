@@ -1,12 +1,10 @@
 import Image from "next/image"
-import Paragraph from "../Paragraph"
 import SectionTitle from "../SectionTitle"
-import { twMerge } from "tailwind-merge"
-import ButtonLink from "../ButtonLink"
 import { cn } from "@/lib/utils"
 import { PortableText } from "next-sanity"
 import { CardRoomProps } from "@/types/CardRoomProps"
 import { Button } from "../ui/button"
+import { LiaAngleRightSolid } from "react-icons/lia"
 
 const CardRoom = ({ featured, className, roomReference }: CardRoomProps) => {
   return (
@@ -19,7 +17,7 @@ const CardRoom = ({ featured, className, roomReference }: CardRoomProps) => {
       <div
         className={cn(
           "relative overflow-hidden max-h-[488px] flex-shrink-0",
-          featured ? " max-h-[488px]" : "min-h-[187px]"
+          featured ? " max-h-[488px]" : "h-auto"
         )}
       >
         <Image
@@ -35,8 +33,8 @@ const CardRoom = ({ featured, className, roomReference }: CardRoomProps) => {
 
       <div
         className={cn(
-          "flex h-full flex-col px-8 py-8 justify-center",
-          featured ? "px-12 py-6" : " px-6 py-6"
+          "flex h-full w-full flex-col px-8 py-8 justify-center",
+          featured ? "px-4 sm:px-6 md:px-12 py-6" : "px-6 py-6"
         )}
       >
         <div className="flex flex-col">
@@ -62,7 +60,12 @@ const CardRoom = ({ featured, className, roomReference }: CardRoomProps) => {
           )}
         >
           <Button>${roomReference.price}/Night</Button>
-          <Button>{roomReference.buttonLabel || "View room"}</Button>
+          <Button className="flex items-center gap-1" variant="outline">
+            {roomReference.buttonLabel || "View room"}{" "}
+            <span>
+              <LiaAngleRightSolid />
+            </span>
+          </Button>
         </div>
       </div>
     </div>

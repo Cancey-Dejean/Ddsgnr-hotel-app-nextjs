@@ -28,7 +28,7 @@ const Hero = ({ title, description, mainImage, ctaButtons }: HeroProps) => {
           </div>
 
           <div className="flex items-center gap-4 max-md:justify-center">
-            {ctaButtons.slice(0, 2).map(({ variant, label }) => (
+            {ctaButtons.map(({ variant, label }) => (
               <Button key={label} asChild variant={variant}>
                 <Link href="/">{label}</Link>
               </Button>
