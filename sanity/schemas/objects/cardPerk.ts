@@ -14,11 +14,11 @@ export const cardPerk = defineType({
       type: "string",
       options: {
         list: [
-          { title: "None", value: null },
-          { title: "Swimmer", value: "LiaSwimmerSolid" },
-          { title: "Massage", value: "TbMassage" },
-          { title: "Gym", value: "CgGym" },
-          { title: "Food", value: "MdOutlineFoodBank" },
+          { title: "None", value: "None" },
+          { title: "Swimmer", value: "Swimmer" },
+          { title: "Massage", value: "Massage" },
+          { title: "Gym", value: "Gym" },
+          { title: "Food", value: "Food" },
         ],
       },
     },

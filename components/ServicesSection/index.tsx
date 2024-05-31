@@ -48,7 +48,6 @@ const ServicesSection = ({
           <VideoImage
             youtubeVideoId="ScMzIvxBSi4"
             videoImage={videoImage}
-            // imgStyles="mx-auto w-full max-w-[900px]"
             videoImageAlt={videoImageAlt}
           />
 

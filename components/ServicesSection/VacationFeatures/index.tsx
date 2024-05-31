@@ -3,6 +3,7 @@ import { BsFillBoxFill } from "react-icons/bs"
 import { CgGym } from "react-icons/cg"
 import { MdOutlineFoodBank } from "react-icons/md"
 import { TbMassage } from "react-icons/tb"
+import { GrSwim } from "react-icons/gr"
 
 const VacationFeatures = ({
   icon,
@@ -12,7 +13,7 @@ const VacationFeatures = ({
   /**
    * Description goes here
    */
-  icon?: React.ReactNode
+  icon?: "Swimmer" | "Massage" | "Gym" | "Food" | "None"
   /**
    * Description goes here
    */
@@ -25,7 +26,7 @@ const VacationFeatures = ({
   const renderIcon = () => {
     switch (icon) {
       case "Swimmer":
-        return <BsFillBoxFill className="text-xl" />
+        return <GrSwim />
       case "Massage":
         return <TbMassage />
       case "Gym":
@@ -34,7 +35,7 @@ const VacationFeatures = ({
         return <MdOutlineFoodBank />
       case "None":
       default:
-        return null
+        return <BsFillBoxFill />
     }
   }
 
