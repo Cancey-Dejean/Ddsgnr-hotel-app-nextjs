@@ -27,6 +27,9 @@ import { hideSection } from "./schemas/objects/hideSection"
 import room from "./schemas/documents/room"
 import { services } from "./schemas/sections/services"
 import { cardPerk } from "./schemas/objects/cardPerk"
+import { gallery } from "./schemas/sections/gallery"
+import { review } from "./schemas/objects/review"
+import { reviews } from "./schemas/sections/reviews"
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -45,6 +48,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     navItem,
     buttonGroup,
     logo,
+    review,
     cardRoom,
     cardPerk,
     pageSections,
@@ -53,6 +57,8 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     startVacation,
     rooms,
     services,
+    gallery,
+    reviews,
 
     // Singletons
     homepage,

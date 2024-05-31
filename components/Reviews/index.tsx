@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from "react"
 import Image from "next/image"
 
@@ -10,14 +11,15 @@ import ReviewBlock from "./ReviewBlock"
 import Wrapper from "../Wrapper"
 import { reviewsFakeData } from "../../constants/fakeData"
 import { reviewsData } from "../../constants"
+import { ReviewsProps } from "@/types/ReviewsProps"
 
 const Reviews = ({
-  data = reviewsFakeData,
+  Reviews,
 }: {
   /**
    * Description goes here
    */
-  data?: typeof reviewsData
+  Reviews?: ReviewsProps
 }) => {
   const [totalSlides, setTotalSlides] = useState(0)
   return (
@@ -38,15 +40,9 @@ const Reviews = ({
             prevEl: ".prev-btn",
           }}
         >
-          {data.slice(0, 3).map(({ stars, reviewer, desc, imgSrc, imgAlt }) => (
-            <SwiperSlide key={reviewer}>
-              <ReviewBlock
-                imgSrc={imgSrc}
-                imgAlt={imgAlt}
-                stars={stars}
-                desc={desc}
-                reviewer={reviewer}
-              />
+          {Reviews.slice(0, 3).map((review, i) => (
+            <SwiperSlide key={review._key}>
+              <ReviewBlock {...review} />
             </SwiperSlide>
           ))}
         </Swiper>

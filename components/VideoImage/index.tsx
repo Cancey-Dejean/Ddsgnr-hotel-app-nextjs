@@ -1,15 +1,12 @@
 import Image from "next/image"
 import ModalVideo from "../ModalVideo"
+import { VideoImageProps } from "@/types/VideoImageProps"
 
 const VideoImage = ({
   videoImage,
   videoImageAlt,
   youtubeVideoId,
-}: {
-  videoImage?: string
-  videoImageAlt?: string
-  youtubeVideoId?: string
-}) => {
+}: VideoImageProps) => {
   return (
     <div className={`max-w-[600px] mx-auto relative flex-1 overflow-hidden`}>
       <div className="absolute z-0 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-full w-full flex items-center justify-center">
@@ -23,8 +20,8 @@ const VideoImage = ({
       </div>
 
       <Image
-        src={videoImage}
-        alt={videoImageAlt}
+        src={videoImage || "/images/video-image.png"}
+        alt={videoImageAlt || "Video Image"}
         className={`w-full rounded-[10px]`}
         width={616}
         height={640}

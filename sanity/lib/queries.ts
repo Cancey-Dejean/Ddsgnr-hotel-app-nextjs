@@ -9,20 +9,28 @@ const ALL_SECTIONS_QUERY = `
 pageBuilder {
   ...,
   sections [] {
+
+    // Hero
     _type == "hero" => {
       ...,
       "mainImage": mainImage.asset->url,
       "mainImageAlt": mainImage.alt,
     },
+
+    // Booking Form
      _type == "bookingForm" => {
         ...,
      },
+
+     // Start Vacation
      _type == "startVacation" => {
        ...,
        "videoImage": videoImage.asset->url,
        "videoImageAlt": videoImage.alt,
        ctaButtons
       },
+
+      // Rooms
       _type == "rooms" => {
        ...,
        rooms [] {
@@ -35,6 +43,8 @@ pageBuilder {
          },
         }
       },
+
+      // Services
      _type == "services" => {
         ...,
         "videoImage": videoImage.asset->url,
@@ -45,7 +55,36 @@ pageBuilder {
           description,
           title,
         }
-     }
+     },
+
+     // Gallery
+     _type == "gallery" => {
+      ...,
+      "imageOne": imageOne.asset->url,
+      "imageOneAlt": imageOne.alt,
+      "imageTwo": imageTwo.asset->url,
+      "imageTwoAlt": imageTwo.alt,
+      "imageThree": imageThree.asset->url,
+      "imageThreeAlt": imageThree.alt,
+      "imageFour": imageFour.asset->url,
+      "imageFourAlt": imageFour.alt,
+      Button {
+        ...
+      }
+    },
+
+    // Reviews
+    _type == "reviews" => {
+      ...,
+      Reviews [] {
+        ...,
+        "videoImage": videoImage.asset->url,
+        "videoImageAlt": videoImage.alt,
+      }
+    },
+
+
+
    }
  }
 `

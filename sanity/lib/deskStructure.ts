@@ -11,16 +11,6 @@ export const SideBarList = (S: any, context: any) =>
     .items([
       S.divider(),
 
-      // List of Menus
-      S.listItem()
-        .title("Navigation")
-        .icon(IoMenuOutline)
-        .child(
-          S.documentList().title("All Menus").filter('_type == "navigation"')
-        ),
-
-      S.divider(),
-
       // List of Pages
       S.listItem()
         .title("Pages")
@@ -113,6 +103,15 @@ export const SideBarList = (S: any, context: any) =>
 
       S.divider(),
 
+      // List of Menus
+      S.listItem()
+        .title("Navigation")
+        .icon(IoMenuOutline)
+        .child(
+          S.documentList().title("All Menus").filter('_type == "navigation"')
+        ),
+
+      S.divider(),
       // List the site settings
       S.listItem()
         .title("Settings")

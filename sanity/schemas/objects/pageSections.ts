@@ -29,6 +29,14 @@ export const pageSections = defineType({
           name: "services",
           type: "services",
         },
+        {
+          name: "gallery",
+          type: "gallery",
+        },
+        {
+          name: "reviews",
+          type: "reviews",
+        },
       ],
     },
   ],

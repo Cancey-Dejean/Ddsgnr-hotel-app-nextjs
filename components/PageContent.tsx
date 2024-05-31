@@ -1,5 +1,7 @@
 import BookingForm from "./BookingForm"
+import GallerySection from "./GallerySection"
 import Hero from "./Hero"
+import Reviews from "./Reviews"
 import Rooms from "./Rooms"
 import ServicesSection from "./ServicesSection"
 import StartVacation from "./StartVacation"
@@ -16,6 +18,10 @@ export const PageContent = (section: any) => {
       return <Rooms key={section._key} {...section} />
     case "services":
       return <ServicesSection key={section._key} {...section} />
+    case "gallery":
+      return <GallerySection key={section._key} {...section} />
+    case "reviews":
+      return <Reviews key={section._key} {...section} />
 
     default:
       return (
