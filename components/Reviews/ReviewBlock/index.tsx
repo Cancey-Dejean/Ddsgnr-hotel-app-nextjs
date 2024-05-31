@@ -2,28 +2,28 @@ import { BsStarFill } from "react-icons/bs"
 import VideoImage from "../../VideoImage"
 
 const ReviewBlock = ({
-  desc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
-  reviewer = "First Last",
-  imgSrc = "https://dummyimage.com/572x594.png/dddddd/ffffff",
-  imgAlt = "Image",
+  quote,
+  reviewerName,
+  videoImage = "https://dummyimage.com/572x594.png/dddddd/ffffff",
+  videoImageAlt,
   stars = 5,
 }: {
   /**
    * Description goes here
    */
-  imgSrc?: string
+  videoImage?: string
   /**
    * Description goes here
    */
-  imgAlt?: string
+  videoImageAlt?: string
   /**
    * Description goes here
    */
-  desc?: string
+  quote?: string
   /**
    * Description goes here
    */
-  reviewer?: string
+  reviewerName?: string
   /**
    * Description goes here
    */
@@ -34,8 +34,8 @@ const ReviewBlock = ({
       <div className="flex-1">
         <VideoImage
           youtubeVideoId="NpEaa2P7qZI"
-          imgSrc={imgSrc}
-          imgAlt={imgAlt}
+          videoImage={videoImage}
+          videoImageAlt={videoImageAlt}
         />
       </div>
 
@@ -48,9 +48,9 @@ const ReviewBlock = ({
             ))}
         </div>
 
-        <div className="text-2xl font-bold">{desc}</div>
+        <div className="text-2xl font-bold">{quote}</div>
 
-        <p className="font-medium">{reviewer}</p>
+        <p className="font-medium">{reviewerName}</p>
       </div>
     </div>
   )
