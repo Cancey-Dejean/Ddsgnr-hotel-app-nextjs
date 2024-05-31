@@ -14,6 +14,7 @@ import { motion } from "framer-motion"
 import { HeaderContentProps } from "@/types/HeaderContent"
 
 export default function HeaderContent({
+  menuPosition,
   menuList,
   navCTA,
   logoSrc,
@@ -28,6 +29,12 @@ export default function HeaderContent({
     document.body.classList.toggle("overflow-hidden")
   }
 
+  const menuPositionStyles = {
+    Left: "md:justify-start",
+    Center: "md:justify-center",
+    Right: "md:justify-end",
+  }
+
   return (
     <header className="sticky top-0 left-0 w-full z-50 bg-white py-4">
       <Wrapper className="flex items-center justify-between gap-8">
@@ -40,9 +47,14 @@ export default function HeaderContent({
         />
 
         {menuList && (
-          <div className="hidden md:flex md:flex-1 md:justify-end">
+          <div
+            className={cn(
+              "hidden md:flex md:grow",
+              menuPositionStyles[menuPosition]
+            )}
+          >
             <nav role="navigation">
-              <ul className="flex items-center justify-start gap-8">
+              <ul className={cn("flex items-center  gap-8 ")}>
                 {menuList.map((item) => (
                   <li className="" key={item._key}>
                     <Link href={item.url || "/"} className="relative py-1">

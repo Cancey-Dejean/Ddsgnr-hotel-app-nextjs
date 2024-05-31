@@ -13,16 +13,22 @@ export default defineType({
       title: "Menu Title",
       validation: (Rule: Rule) => Rule.required(),
     },
-    // {
-    //   name: "logo",
-    //   type: "image",
-    //   title: "Logo",
-    //   validation: (Rule: Rule) => Rule.required(),
-    // },
     {
       name: "logoImage",
       type: "logo",
       title: "Logo",
+    },
+    {
+      name: "menuPosition",
+      title: "Menu Position",
+      type: "string",
+      options: {
+        list: [
+          { title: "Left", value: "left" },
+          { title: "Center", value: "center" },
+          { title: "Right", value: "right" },
+        ],
+      },
     },
     {
       name: "menuList",
@@ -47,5 +53,8 @@ export default defineType({
         title,
       }
     },
+  },
+  initialValue: {
+    menuPosition: "left",
   },
 })
