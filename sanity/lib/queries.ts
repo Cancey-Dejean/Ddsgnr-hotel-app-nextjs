@@ -2,46 +2,40 @@ import { groq } from "next-sanity"
 import { client } from "./client"
 
 const ALL_SECTIONS_QUERY = `
+...,
+"slug": slug.current,
+"ogImage": ogImage.asset->url,
+"ogImageAlt": ogImage.alt,
+pageBuilder {
   ...,
-  "slug": slug.current,
-  "ogImage": ogImage.asset->url,
-  pageBuilder {
-    ...,
-    sections [] {
-      // Hero
-      _type == "hero" => {
+  sections [] {
+    _type == "hero" => {
+      ...,
+      "mainImage": mainImage.asset->url,
+      "mainImageAlt": mainImage.alt,
+    },
+     _type == "bookingForm" => {
         ...,
-        "mainImage": mainImage.asset->url,
-        "mainImageAlt": mainImage.alt,
+     },
+     _type == "startVacation" => {
+       ...,
+       "videoImage": videoImage.asset->url,
+       "videoImageAlt": videoImage.alt,
+       ctaButtons
       },
-
-      // Booking Form
-      _type == "bookingForm" => {
-        ...,
-      },
-
-      // Start Vacation
-      _type == "startVacation" => {
-        ...,
-        "videoImage": videoImage.asset->url,
-        "videoImageAlt": videoImage.alt,
-      },
-
-      // Rooms
       _type == "rooms" => {
-        ...,
-        rooms [] {
-          ...,
-          roomReference-> {
-            ...,
-            "currentSlug": slug.current,
-            "image": image.asset->url,
-            "imageAlt": image.alt,
-          },
+       ...,
+       rooms [] {
+         ...,
+         roomReference-> {
+           ...,
+           "currentSlug": slug.current,
+           "image": image.asset->url,
+           "imageAlt": image.alt,
+         },
+        }
       },
-
-      // Services
-      _type == "services" => {
+     _type == "services" => {
         ...,
         "videoImage": videoImage.asset->url,
         "videoImageAlt": videoImage.alt,
@@ -51,24 +45,23 @@ const ALL_SECTIONS_QUERY = `
           description,
           title,
         }
-      },
-    }
-  }
-}
+     }
+   }
+ }
 `
 
 // Get settings
-export const settingsQuery = groq`
-  // *[_type == "settings"][0]{
-  //   footer,
-  //   menuItems[]->{
-  //     _type,
-  //     "slug": slug.current,
-  //     title
-  //   },
-  //   ogImage,
-  // }
-`
+// export const settingsQuery = groq`
+//  *[_type == "settings"][0]{
+//    footer,
+//    menuItems[]->{
+//      _type,
+//      "slug": slug.current,
+//      title
+//    },
+//    ogImage,
+//  }
+// `
 
 // Get Header Menu
 export const MAIN_NAV_QUERY = groq`*[_type == "navigation" && title == "Main Menu" ][0] {

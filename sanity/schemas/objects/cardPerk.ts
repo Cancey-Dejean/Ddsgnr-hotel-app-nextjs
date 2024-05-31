@@ -14,6 +14,7 @@ export const cardPerk = defineType({
       type: "string",
       options: {
         list: [
+          { title: "None", value: null },
           { title: "Swimmer", value: "LiaSwimmerSolid" },
           { title: "Massage", value: "TbMassage" },
           { title: "Gym", value: "CgGym" },

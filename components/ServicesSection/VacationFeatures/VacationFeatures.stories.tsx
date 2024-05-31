@@ -8,7 +8,7 @@ const meta = {
   title: "Sections/Vacation/Features",
   component: VacationFeatures,
   args: {
-    icon: <BsFillBoxFill />,
+    as: <BsFillBoxFill />,
     title: "Title",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },

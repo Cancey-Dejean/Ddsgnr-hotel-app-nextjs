@@ -4,6 +4,5 @@ export type PerkProps = {
   _key?: string
   title?: string
   description?: string
-  icon?: "LiaSwimmerSolid" | "TbMassage" | "CgGym" | "MdOutlineFoodBank"
   ctaButtons: ButtonProps[]
 }

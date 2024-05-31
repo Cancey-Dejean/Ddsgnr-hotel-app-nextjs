@@ -6,8 +6,8 @@ const VideoImage = ({
   videoImageAlt,
   youtubeVideoId,
 }: {
-  videoImage: string
-  videoImageAlt: string
+  videoImage?: string
+  videoImageAlt?: string
   youtubeVideoId?: string
 }) => {
   return (
