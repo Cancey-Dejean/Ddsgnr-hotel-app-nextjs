@@ -28,12 +28,6 @@ export default function HeaderContent({
     document.body.classList.toggle("overflow-hidden")
   }
 
-  const menuPositionStyles = {
-    left: `md:justify-start`,
-    center: `md:justify-center`,
-    right: `md:justify-end`,
-  }
-
   return (
     <header className="sticky top-0 left-0 w-full z-50 bg-white py-4">
       <Wrapper className="flex items-center justify-between gap-8">

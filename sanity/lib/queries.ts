@@ -126,13 +126,36 @@ export const MAIN_NAV_QUERY = groq`*[_type == "navigation" && title == "Main Men
 }`
 
 // Get Footer
-export const FOOTER_QUERY = groq`*[_type == "footer"][0] {
-  ...,
-  logoImage {
+export const HEADER_FOOTER_QUERY = groq`{
+  "header": *[_type == "navigation" && title == "Main Menu"][0] {
+    ...,
+    logoImage {
+      logoText,
+      "brandLogo": brandLogo.asset->url,
+      "brandLogoAlt": brandLogo.alt,
+    },
+    menuList[] {
+      _type == 'navItem'  => {
+        _key,
+        label,
+      }
+    },
+    ctaButtons [] {
+      _type == 'button'  => {
+        _key,
+        variant,
+        label,
+      }
+    }
+  },
+  "footer": *[_type == "footer"][0] {
+    ...,
+    logoImage {
     logoText,
     "brandLogo": brandLogo.asset->url,
     "brandLogoAlt": brandLogo.alt,
-  },
+    },
+  }
 }`
 
 // Get all Rooms

@@ -10,5 +10,25 @@ export default defineType({
       type: "logo",
       title: "Logo",
     },
+    {
+      name: "facebook",
+      title: "Facebook",
+      type: "url",
+    },
+    {
+      name: "instagram",
+      title: "Instagram",
+      type: "url",
+    },
+    {
+      name: "twitter",
+      title: "Twitter",
+      type: "url",
+    },
+    {
+      name: "linkedin",
+      title: "Linkedin",
+      type: "url",
+    },
   ],
 })

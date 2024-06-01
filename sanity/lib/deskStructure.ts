@@ -112,13 +112,6 @@ export const SideBarList = (S: any, context: any) =>
         ),
 
       S.divider(),
-
-      S.listItem()
-        .title("Footer")
-        .icon(IoMenuOutline)
-        .child(S.document().schemaType("footer").documentId("footer")),
-
-      S.divider(),
       // List the site settings
       S.listItem()
         .title("Settings")
@@ -149,19 +142,8 @@ export const SideBarList = (S: any, context: any) =>
               S.listItem()
                 .title("Footer")
                 .child(S.document().schemaType("footer").documentId("footer")),
+
+              S.divider(),
             ])
         ),
-      /* List the other document types adding 'post' to the list to exclude */
-      // ...S.documentTypeListItems().filter(
-      //   (listItem: any) =>
-      //     ![
-      //       "siteSettings",
-      //       "header",
-      //       "footer",
-      //       "blog",
-      //       "page",
-      //       "author",
-      //       "category",
-      //     ].includes(listItem.getId())
-      // ),
     ])
