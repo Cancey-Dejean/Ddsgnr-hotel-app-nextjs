@@ -6,6 +6,5 @@ export type HeaderContentProps = {
   logoText?: string
   logoAlt?: string
   menuList: NavItem[]
-  menuPosition?: "Left" | "Center" | "Right"
   navCTA: ButtonProps[]
 }

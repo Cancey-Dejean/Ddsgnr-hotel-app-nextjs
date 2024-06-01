@@ -6,9 +6,9 @@ export default defineType({
   type: "document",
   fields: [
     {
-      name: "logo",
+      name: "logoImage",
+      type: "logo",
       title: "Logo",
-      type: "customImage",
     },
   ],
 })

@@ -30,6 +30,7 @@ import { cardPerk } from "./schemas/objects/cardPerk"
 import { gallery } from "./schemas/sections/gallery"
 import { review } from "./schemas/objects/review"
 import { reviews } from "./schemas/sections/reviews"
+import footer from "./schemas/singletons/footer"
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -66,6 +67,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     author,
     siteSettings,
     header,
+    footer,
     youtube,
     button,
   ],

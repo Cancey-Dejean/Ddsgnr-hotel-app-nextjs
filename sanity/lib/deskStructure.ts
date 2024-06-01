@@ -105,11 +105,18 @@ export const SideBarList = (S: any, context: any) =>
 
       // List of Menus
       S.listItem()
-        .title("Navigation")
+        .title("Menus")
         .icon(IoMenuOutline)
         .child(
           S.documentList().title("All Menus").filter('_type == "navigation"')
         ),
+
+      S.divider(),
+
+      S.listItem()
+        .title("Footer")
+        .icon(IoMenuOutline)
+        .child(S.document().schemaType("footer").documentId("footer")),
 
       S.divider(),
       // List the site settings

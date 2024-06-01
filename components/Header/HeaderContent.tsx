@@ -14,7 +14,6 @@ import { motion } from "framer-motion"
 import { HeaderContentProps } from "@/types/HeaderContent"
 
 export default function HeaderContent({
-  menuPosition,
   menuList,
   navCTA,
   logoSrc,
@@ -30,9 +29,9 @@ export default function HeaderContent({
   }
 
   const menuPositionStyles = {
-    Left: "md:justify-start",
-    Center: "md:justify-center",
-    Right: "md:justify-end",
+    left: `md:justify-start`,
+    center: `md:justify-center`,
+    right: `md:justify-end`,
   }
 
   return (
@@ -47,12 +46,7 @@ export default function HeaderContent({
         />
 
         {menuList && (
-          <div
-            className={cn(
-              "hidden md:flex md:grow",
-              menuPositionStyles[menuPosition]
-            )}
-          >
+          <div className="hidden md:flex md:grow justify-end">
             <nav role="navigation">
               <ul className={cn("flex items-center  gap-8 ")}>
                 {menuList.map((item) => (

@@ -19,18 +19,6 @@ export default defineType({
       title: "Logo",
     },
     {
-      name: "menuPosition",
-      title: "Menu Position",
-      type: "string",
-      options: {
-        list: [
-          { title: "Left", value: "left" },
-          { title: "Center", value: "center" },
-          { title: "Right", value: "right" },
-        ],
-      },
-    },
-    {
       name: "menuList",
       type: "array",
       title: "Menu List",
@@ -53,8 +41,5 @@ export default defineType({
         title,
       }
     },
-  },
-  initialValue: {
-    menuPosition: "left",
   },
 })

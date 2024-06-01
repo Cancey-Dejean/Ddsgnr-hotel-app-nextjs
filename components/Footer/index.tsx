@@ -5,8 +5,20 @@ import NewsletterSection from "../NewsletterSection"
 import Wrapper from "../Wrapper"
 import Paragraph from "../Paragraph"
 import TextLink from "../TextLink"
+import { sanityFetch } from "@/sanity/lib/fetch"
+import { FOOTER_QUERY } from "@/sanity/lib/queries"
+import { SanityDocument } from "next-sanity"
 
-const Footer = ({}) => {
+const Footer = async ({}) => {
+  const footer = await sanityFetch<SanityDocument>({
+    query: FOOTER_QUERY,
+  })
+
+  // const menuList = navigation.menuList
+  // const navCTA = navigation.ctaButtons
+
+  // console.log(navigation.logoImage)
+  console.log(footer.logoImage.brandLogo)
   const currentYear = new Date().getFullYear()
 
   return (
@@ -15,10 +27,10 @@ const Footer = ({}) => {
         <div className="flex flex-col gap-12 border border-black p-8 lg:flex-row lg:items-start lg:p-12">
           <div className="flex flex-col gap-6">
             <Logo
-              imgSrc="/images/logo.svg"
+              logoSrc={footer.logoImage.brandLogo}
               url="/"
-              text="Ddsgnr"
-              imgAlt="Ddsgnr Logo"
+              imgAlt={footer.logoImage.brandLogoAlt}
+              logoText={footer.logoImage.logoText}
             />
             <NewsletterSection />
           </div>
